@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浪晋小课堂专用demo</title>
+</head>
+<br>
+
+
+<h1>用户登陆</h1>
+    用户名： <input type="text" name="username" id="username" /><br/>
+    密  码：<input type="password" name="password" id="password"/><br/>
+    验证码：<input type="text" name="captcha" id="captcha"/><br/>
+
+    <button id="login" onclick="login()">登陆</button>
+<hr>
+
+
+
+
+
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script >
+
+function login(){
+        var username = $("#username").val(); // 通过id获取username的值
+        var password = $("#password").val(); // 通过id获取password的值
+        var captcha = $("#captcha").val();  // 通过id获取验证码的值
+
+        // 判断用户名不能为空
+        if (username == ""){
+            alert("用户名不能为空哟！");
+            return;
+        }
+
+        // 判断密码不能为空
+        if (password == ""){
+            alert("密码不能为空哟！");
+            return ;
+        }
+
+        // 判断验证码必须为9527
+        if (captcha != "9527"){
+            alert("验证码必须填9527哦！");
+            return ;
+        }
+
+        // 使用js构造json格式，发送给后端，后端才能正确识别
+        var datas = JSON.stringify({'username': username, 'password': password, 'captcha': captcha});
+
+        // ajax请求
+        $.ajax({
+            type: 'post', // post方法
+            url: '/userLogin', // 请求登录接口
+            contentType: "application/json", // 指定数据传输格式为json，后端才能正确识别
+            data: datas,                    // 把json格式的参数传给后端
+            success: function (str) {       // 如果返回值正常，后端接口没有报错，则执行这个方法
+                alert(str.msg);             // 打印返回值的msg消息，直接引用str.code 就能查看返回值的code
+            },
+            fail: function (err, status) {  // 如果接口报错了，则执行失败的方法
+                console.log(err);
+            }
+        });
+
+}
+
+</script>
+</html>

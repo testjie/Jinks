@@ -1,0 +1,788 @@
+/* Responsive CSS Style */
+@media only screen and (max-width: 1179px) {
+  /* line 5, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .breadcrumbs.is_zhuanti h1 {
+    top: 20px;
+  }
+}
+
+@media only screen and (min-width: 1080px) and (max-width: 1179px) {
+  /* line 10, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .container {
+    width: 1060px;
+  }
+  /* line 13, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .sf-menu li a {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  /* line 17, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary {
+    width: 680px;
+  }
+  /* line 20, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-slider,
+  #featured-slider.slider-with-grid {
+    float: none;
+    margin-bottom: 10px;
+  }
+  /* line 25, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-grid {
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  /* line 29, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-grid ul li {
+    float: left;
+    width: 32.33333%;
+    margin-right: 1.5%;
+  }
+  /* line 33, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-grid ul li:last-child {
+    margin-right: 0;
+  }
+  /* line 39, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .thumbnail-link {
+    width: 210px;
+  }
+  /* line 42, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-title {
+    margin-bottom: 10px;
+  }
+  /* line 45, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-summary {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1079px) {
+  /* line 52, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .container {
+    width: 940px;
+  }
+  /* line 55, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-menu {
+    margin-left: 10px;
+  }
+  /* line 58, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .sf-menu li a {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  /* line 64, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .header-right li {
+    font-size: 14px;
+  }
+  /* line 67, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary {
+    float: none;
+    width: 100%;
+  }
+  /* line 71, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #secondary {
+    display: none;
+  }
+  /* line 74, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-slider,
+  #featured-slider.slider-with-grid {
+    float: none;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  /* line 80, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-grid {
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  /* line 84, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-grid ul li {
+    float: left;
+    width: 32.33333%;
+    margin-right: 1.5%;
+  }
+  /* line 88, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-grid ul li:last-child {
+    margin-right: 0;
+  }
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  /* line 96, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  body {
+    background-color: #fff;
+  }
+  /* line 99, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .container {
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 104, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .top-bar {
+    display: none;
+  }
+  /* line 107, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .bx-controls-direction {
+    display: none;
+  }
+  /* line 110, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-header {
+    height: auto;
+    box-shadow: none;
+  }
+  /* line 113, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-header .header-search-icon {
+    top: -10px;
+  }
+  /* line 117, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-branding {
+    height: 60px;
+  }
+  /* line 120, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-branding #logo {
+    height: 60px;
+  }
+  /* line 123, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-branding img {
+    max-height: 54px;
+  }
+  /* line 126, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-title {
+    line-height: 60px;
+  }
+  /* line 129, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-desc {
+    font-size: 12px;
+    top: 16px;
+  }
+  /* line 133, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .header-right {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    line-height: 60px;
+  }
+  /* line 139, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .header-search {
+    top: 60px;
+  }
+  /* line 142, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-menu {
+    border-radius: 3px;
+    float: none;
+    margin: 0 !important;
+    padding: 9px 0;
+  }
+  /* line 147, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-menu:after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+  /* line 152, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-menu .fa {
+    display: none;
+  }
+  /* line 156, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .sf-menu {
+    clear: both;
+    float: none;
+  }
+  /* line 159, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .sf-menu ul {
+    display: none !important;
+  }
+  /* line 162, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .sf-menu li {
+    line-height: 1.5;
+  }
+  /* line 164, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .sf-menu li a,
+  .sf-menu li a:hover {
+    color: #fff !important;
+  }
+  /* line 170, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .sf-arrows .sf-with-ul:after {
+    display: none !important;
+  }
+  /* line 173, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary {
+    float: none;
+    width: 100%;
+  }
+  /* line 177, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .sidebar {
+    display: none;
+  }
+  /* line 180, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-slider,
+  #featured-slider.slider-with-grid {
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  /* line 186, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-grid {
+    float: none;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  /* line 190, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-grid ul li {
+    float: left;
+    width: 32.33333%;
+    margin-right: 1.5%;
+  }
+  /* line 194, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-grid ul li:last-child {
+    margin-right: 0;
+  }
+  /* line 199, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .home-zhuanti-section {
+    margin-bottom: 10px;
+  }
+  /* line 202, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-content {
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* line 206, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #secondary {
+    display: none;
+  }
+  /* line 209, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single-breadcrumbs {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0;
+  }
+  /* line 214, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .footer-content {
+    margin-bottom: 10px;
+  }
+  /* line 217, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .footer-columns {
+    display: none;
+  }
+  /* line 220, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .icon-contact,
+  .icon-weixin,
+  .icon-weibo {
+    display: none;
+  }
+  /* line 225, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .bottom-right {
+    bottom: 5px;
+  }
+  /* line 227, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .bottom-right .bottom-icon {
+    border: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  }
+  /* line 232, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #site-bottom {
+    text-align: center;
+  }
+  /* line 234, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #site-bottom .footer-left {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 244, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.tablet_menu_col_1 ul li {
+    width: 100%;
+  }
+  /* line 247, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.tablet_menu_col_2 ul li {
+    width: 50%;
+  }
+  /* line 250, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.tablet_menu_col_3 ul li {
+    width: 33.3333%;
+  }
+  /* line 253, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.tablet_menu_col_4 ul li {
+    width: 25%;
+  }
+  /* line 256, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.tablet_menu_col_5 ul li {
+    width: 20%;
+  }
+  /* line 259, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.tablet_menu_col_6 ul li {
+    width: 16.6666%;
+  }
+  /* line 262, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.tablet_menu_col_7 ul li {
+    width: 14.2857%;
+  }
+  /* line 265, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.tablet_menu_col_8 ul li {
+    width: 12.5%;
+  }
+  /* line 271, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-footer {
+    margin: 0;
+  }
+  /* line 277, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-grid .entry-meta,
+  .popular-content .entry-meta,
+  .related-content .entry-meta {
+    display: none;
+  }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  /* line 286, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.phone_menu_col_1 ul li {
+    width: 100%;
+  }
+  /* line 289, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.phone_menu_col_2 ul li {
+    width: 50%;
+  }
+  /* line 292, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.phone_menu_col_3 ul li {
+    width: 33.3333%;
+  }
+  /* line 295, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.phone_menu_col_4 ul li {
+    width: 25%;
+  }
+  /* line 298, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.phone_menu_col_5 ul li {
+    width: 20%;
+  }
+  /* line 301, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.phone_menu_col_6 ul li {
+    width: 16.6666%;
+  }
+  /* line 304, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.phone_menu_col_7 ul li {
+    width: 14.2857%;
+  }
+  /* line 307, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #primary-nav.phone_menu_col_8 ul li {
+    width: 12.5%;
+  }
+  /* line 315, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .home-zhuanti-list {
+    padding: 10px;
+  }
+  /* line 318, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .ribbon,
+  .posts-nav-menu,
+  .single-posts-nav {
+    display: none !important;
+  }
+  /* line 323, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .breadcrumbs,
+  .recent-heading,
+  .zhuanti-heading {
+    padding: 0 10px;
+  }
+  /* line 328, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-ad {
+    padding: 10px;
+  }
+  /* line 332, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-header {
+    margin-bottom: 5px;
+  }
+  /* line 335, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .hentry {
+    padding: 10px;
+  }
+  /* line 338, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-title {
+    line-height: 1;
+  }
+  /* line 341, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-category {
+    display: none;
+  }
+  /* line 345, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single-breadcrumbs {
+    padding-bottom: 0;
+  }
+  /* line 349, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single #primary .entry-author {
+    display: none;
+  }
+  /* line 353, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single #primary .entry-footer .entry-tags {
+    float: none;
+  }
+  /* line 355, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single #primary .entry-footer .entry-tags .tag-links span {
+    display: none;
+  }
+  /* line 359, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single #primary .entry-footer .entry-footer-right {
+    float: none;
+    margin-top: 10px;
+  }
+  /* line 365, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .entry-content p {
+    text-indent: 0 !important;
+  }
+  /* line 368, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .custom-share:before,
+  .related-content ul li .entry-meta {
+    display: none;
+  }
+  /* line 372, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-footer {
+    margin: 0;
+  }
+  /* line 376, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .error-404 .page-content .search-form input.search-field {
+    width: 200px;
+  }
+  /* line 380, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .breadcrumbs.is_zhuanti {
+    padding: 10px;
+  }
+  /* line 382, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .breadcrumbs.is_zhuanti h1 {
+    top: 10px;
+    left: 10px;
+  }
+  /* line 387, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .footer-partners .partner-title,
+  .friend .friend-title {
+    padding-right: 10px;
+    padding-left: 20px;
+  }
+  /* line 391, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .footer-partners .partner-title:before,
+  .friend .friend-title:before {
+    left: 10px;
+  }
+  /* line 395, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .friend-nav {
+    padding: 0 0 0 10px;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 403, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .thumbnail-link {
+    width: 32%;
+    margin-right: 15px;
+  }
+  /* line 407, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-title {
+    font-size: 1.1em;
+    line-height: 1.4;
+  }
+  /* line 411, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-meta {
+    display: none;
+  }
+  /* line 413, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-meta .entry-date,
+  .content-list .entry-meta .entry-category {
+    display: none;
+  }
+  /* line 418, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .gallery-list {
+    margin: 10px 0;
+  }
+  /* line 421, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-summary {
+    font-size: 13px;
+    margin-top: 0;
+  }
+  /* line 427, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single .site-main {
+    padding: 20px;
+  }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  /* line 439, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-title {
+    font-size: 24px;
+  }
+  /* line 442, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .sf-menu li a {
+    font-size: 14px;
+  }
+  /* line 445, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-slider,
+  #featured-slider.slider-with-grid {
+    margin-bottom: 6px;
+  }
+  /* line 448, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-slider .bx-wrapper .bx-pager,
+  #featured-slider.slider-with-grid .bx-wrapper .bx-pager {
+    right: 10px;
+    bottom: 9px;
+  }
+  /* line 453, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-slider .featured-slide .entry-header,
+  #featured-slider.slider-with-grid .featured-slide .entry-header {
+    height: 36px;
+  }
+  /* line 456, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-slider .featured-slide .entry-title,
+  #featured-slider.slider-with-grid .featured-slide .entry-title {
+    font-size: 0.95em;
+    padding: 0 70px 0 8px;
+    line-height: 36px;
+  }
+  /* line 463, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-slider {
+    margin-bottom: 10px;
+  }
+  /* line 466, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #featured-grid .entry-title {
+    font-size: 12px;
+  }
+  /* line 469, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #site-bottom {
+    padding: 10px;
+  }
+  /* line 472, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-ad {
+    padding: 12px 0;
+  }
+  /* line 476, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .hentry {
+    padding: 12px 0 12px;
+    margin-bottom: 0;
+  }
+  /* line 479, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .hentry:hover {
+    background-color: transparent;
+  }
+  /* line 482, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .hentry .thumbnail-link img {
+    border-radius: 3px;
+  }
+  /* line 486, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .thumbnail-link {
+    width: 32%;
+    margin: 0 10px 0 0;
+  }
+  /* line 492, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-header {
+    margin-bottom: 0;
+  }
+  /* line 495, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-title {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  /* line 501, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .gallery-list {
+    margin: 10px 0 5px 0;
+  }
+  /* line 504, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-summary,
+  .content-list .entry-date,
+  .content-list .entry-category {
+    display: none;
+  }
+  /* line 509, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-meta {
+    font-size: 12px;
+  }
+  /* line 511, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-meta .entry-category,
+  .content-list .entry-meta .entry-like,
+  .content-list .entry-meta .entry-comment {
+    margin-left: 0;
+    margin-right: 10px !important;
+  }
+  /* line 519, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .breadcrumbs.is_zhuanti {
+    margin: 0;
+    padding: 0;
+  }
+  /* line 522, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .breadcrumbs.is_zhuanti h1 {
+    font-size: 1em;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    left: 0;
+    top: 0;
+  }
+  /* line 531, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .home-zhuanti-section {
+    border: none;
+  }
+  /* line 534, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .zhuanti-heading,
+  .recent-heading,
+  .breadcrumbs.no_zhuanti {
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+  }
+  /* line 540, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .home-zhuanti-list {
+    padding: 10px 0 0 0;
+  }
+  /* line 542, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .home-zhuanti-list img {
+    border-radius: 3px;
+  }
+  /* line 546, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .site-main {
+    border: none;
+  }
+  /* line 549, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .zhuanti-heading .desc,
+  .friend .friend-desc,
+  .author-box .avatar,
+  .related-content .entry-meta {
+    display: none;
+  }
+  /* line 555, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .custom-share {
+    display: none !important;
+  }
+  /* line 558, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .pagination {
+    border: none;
+    border-top: 1px solid #eaeaea;
+  }
+  /* line 561, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .pagination .page-numbers {
+    font-size: 13px;
+    padding: 0 6px;
+    height: 30px;
+    line-height: 30px;
+  }
+  /* line 568, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .page-title,
+  .single h1.entry-title,
+  .page h1.entry-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  /* line 576, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single .site-main,
+  .page .site-main {
+    padding: 10px;
+  }
+  /* line 580, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single-breadcrumbs {
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    padding: 8px 10px;
+    margin: 10px 1.5% 0;
+  }
+  /* line 587, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single #primary .entry-header {
+    margin-bottom: 10px;
+  }
+  /* line 592, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single .gallery-slider li img {
+    margin-bottom: 0;
+  }
+  /* line 595, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .single .gallery-slider li .image-desc {
+    background-color: #333;
+    position: static;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 94%;
+  }
+  /* line 606, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .bx-wrapper .bx-controls-direction {
+    display: none;
+  }
+  /* line 610, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .entry-tags {
+    float: none;
+    text-align: center;
+  }
+  /* line 613, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .entry-tags span span {
+    display: none;
+  }
+  /* line 616, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .entry-tags .tag-links a {
+    font-size: 12px;
+  }
+  /* line 620, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .custom-share {
+    float: none;
+  }
+  /* line 625, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #comments .comment-metadata,
+  .comment-respond .comment-metadata {
+    display: none;
+  }
+  /* line 629, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .comment-form .comment-form-author,
+  .comment-form .comment-form-email,
+  .comment-form .comment-form-url {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  /* line 635, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .modal-content {
+    width: 290px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 640, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .entry-source,
+  .footer-partners {
+    display: none;
+  }
+  /* line 644, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .friend {
+    padding-bottom: 0;
+  }
+  /* line 647, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .footer-content {
+    padding: 0 0 10px 0;
+  }
+  /* line 650, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .friend-nav li {
+    margin-right: 10px;
+  }
+  /* line 653, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  #site-bottom .footer-nav li {
+    margin-right: 10px;
+  }
+  /* line 656, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .bottom-content {
+    padding: 30px;
+  }
+  /* line 658, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .bottom-content h3 {
+    font-size: 24px;
+  }
+  /* line 661, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .bottom-content .bottom-buttons a {
+    margin: 0 5px;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  /* line 667, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/responsive.scss */
+  .content-list .entry-meta .entry-like {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=../responsive.map */
