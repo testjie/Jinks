@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 __author__ = 'snake'
 
-import datetime
 import pymysql.cursors
 from config import DBConfig
+from datetime import datetime
 
 
 def query(sql=""):
@@ -17,7 +17,6 @@ def query(sql=""):
     cur = db.cursor()
     try:
         cur.execute(sql)  # 执行sql语句
-        print(_decode_result_date(cur.fetchall()))
         # 获得列名
         descs = []
         for desc in cur.description:

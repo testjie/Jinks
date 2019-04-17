@@ -1,861 +1,1220 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="HandheldFriendly" content="true">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<title>浪晋测试小课堂</title>
-<meta name='robots' content='noindex,follow' />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.zhutibaba.com\/demo\/iux\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
-			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-<link rel='stylesheet' id='wp-block-library-css'  href='./static/css/style.min.css?ver=5.1.1' type='text/css' media='all' />
-<link rel='stylesheet' id='usp_style-css'  href='./static/css/usp.css?ver=20180822' type='text/css' media='all' />
-<link rel='stylesheet' id='iux-style-css'  href='./static/css/style.css?ver=20181203' type='text/css' media='all' />
-<link rel='stylesheet' id='genericons-style-css'  href='./static/css/genericons.css?ver=5.1.1' type='text/css' media='all' />
-<link rel='stylesheet' id='flaticon-style-css'  href='./static/css/flaticon.css?ver=20181102' type='text/css' media='all' />
-<link rel='stylesheet' id='iux-responsive-style-css'  href='./static/css/responsive.css?ver=20181114' type='text/css' media='all' />
-<link rel='stylesheet' id='wsocial-css'  href='https://www.zhutibaba.com/demo/iux/wp-content/plugins/wechat-social-login/assets/css/social.css?ver=1.2.6' type='text/css' media='all' />
-<script type='text/javascript' src='./static/js/jquery.js?ver=1.12.4'></script>
-<script type='text/javascript' src='./static/js/jquery-migrate.min.js?ver=1.4.1'></script>
-<script type='text/javascript' src='./static/js/jquery.cookie.js?ver=20180822'></script>
-<script type='text/javascript' src='./static/js/jquery.parsley.min.js?ver=20180822'></script>
-<script type='text/javascript'>
-var usp_custom_field = "usp_custom_field"; var usp_custom_checkbox = "usp_custom_checkbox"; var usp_case_sensitivity = "false"; var usp_challenge_response = "2"; var usp_min_images = 0; var usp_max_images = 1; var usp_parsley_error = "\u9a8c\u8bc1\u9519\u8bef"; 
-</script>
-<script type='text/javascript' src='./static/js/jquery.usp.core.js?ver=20180822'></script>
-<script type='text/javascript'>
-</script>
-<script type='text/javascript' src='./static/js/simple-likes-public.js?ver=0.5'></script>
-<style type="text/css">
-	a:hover,
-	.site-title a,
-	.site-header .search-icon:hover .fa,
-	.posts-nav-menu ul li a:hover,
-	.sidebar .widget a:hover,
-	.site-footer .widget a:hover,
-	.author-box a:hover,
-	article.hentry .edit-link a:hover,
-	.comment-content a:hover,
-	.entry-meta a:hover,
-	.entry-title a:hover,
-	.content-list .entry-title a:hover,
-	.content-list .entry-title a:hover span,
-	.content-list .entry-category a:after,
-	.pagination .page-numbers:hover,
-	.pagination .page-numbers.current,
-	.author-box .author-meta .author-name a:hover,
-	article.hentry .edit-link a,
-	.author-box a,
-	.page-content a,
-	.entry-content a,
-	.comment-author a,
-	.comment-content a,
-	.comment-reply-title small a:hover,
-	.sidebar .widget a,
-	.friend-nav li a:hover,
-	.tooltip .left .contact-info h3,
-	.single #primary .entry-footer .entry-like a,
-	.single #primary .entry-footer .entry-sponsor span,
-	.zhuanti-heading .section-more a:hover,
-	.mini-page h4 a:hover,
-	.mini-page ul li a:hover,
-	.single-breadcrumbs a:hover,
-	.bottom-right span.icon-link .text,
-	.bottom-right a .text,
-	#site-bottom a:hover {
-		color: #00aeff;
-	}	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>浪晋测试小课堂</title>
+    <meta name='robots' content='noindex,follow'/>
+    <script type="text/javascript">
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/",
+            "svgExt": ".svg",
+            "source": {"concatemoji": "https:\/\/www.zhutibaba.com\/demo\/iux\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}
+        };
+        !function (a, b, c) {
+            function d(a, b) {
+                var c = String.fromCharCode;
+                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, a), 0, 0);
+                var d = k.toDataURL();
+                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, b), 0, 0);
+                var e = k.toDataURL();
+                return d === e
+            }
 
-	button,
-	.btn,
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	.friend .friend-title:before,
-	.partner-title:before,
-	.sidebar .widget .widget-title:before,
-	.related-content .section-title:before,
-	.comment-reply-title:before,
-	.comments-title:before,
-	.posts-nav-menu ul li a:after,
-	.single #primary .entry-footer .entry-like a:hover,
-	.single #primary .entry-footer .entry-sponsor span:hover,
-	.content-list .entry-category a,
-	.entry-tags .tag-links a:hover,
-	.must-log-in a,
-	.widget_tag_cloud .tagcloud a:hover {
-		background-color: #00aeff;		
-	}
-	.sf-menu li li a:hover {
-		background-color: #00aeff !important;
-	}
-	@media only screen and (max-width: 959px) {
-		#primary-menu {
-			background-color: #00aeff;
-		}
-	}
-	.single #primary .entry-footer .entry-like a,
-	.single #primary .entry-footer .entry-like a:hover,
-	.single #primary .entry-footer .entry-sponsor span {
-		border-color: #00aeff;
-	}
-	/* Secondary Color */
-	.content-list .entry-title span,
-	.page-content a:hover,
-	.entry-content a:hover,
-	article.hentry .edit-link a:hover,
-	.author-box .author-meta .author-name a:hover,
-	.sidebar .widget_custom_text h4 {
-		color: #ff4c4c;
-	}
-	.sidebar .widget_custom_text:hover {
-		border-color: #ff4c4c;
-	}
-	.sidebar .widget_custom_text .widget-title {
-		background-color: #ff4c4c;
-	}
+            function e(a) {
+                var b;
+                if (!l || !l.fillText) return !1;
+                switch (l.textBaseline = "top", l.font = "600 32px Arial", a) {
+                    case"flag":
+                        return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]), !b);
+                    case"emoji":
+                        return b = d([55358, 56760, 9792, 65039], [55358, 56760, 8203, 9792, 65039]), !b
+                }
+                return !1
+            }
 
-	/* Tertiary Color */
-	.header-submit a {
-		background-color: #76b852;
-	}
-	.content-list .entry-meta .entry-like a.liked {
-		color: #76b852 !important;
-	}
-			.entry-content p {
-			text-indent: 2em;
-		}
-	
-	 
-		#primary-menu {
-			margin-right: 30px;
-		}	
-	
-	/* Bottom Content Color */
-	.bottom-content {
-	    background: linear-gradient(105deg, #0ecad4, #0ecad4, #50e3c2);
-	}
-</style>
+            function f(a) {
+                var c = b.createElement("script");
+                c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c)
+            }
+
+            var g, h, i, j, k = b.createElement("canvas"), l = k.getContext && k.getContext("2d");
+            for (j = Array("flag", "emoji"), c.supports = {
+                everything: !0,
+                everythingExceptFlag: !0
+            }, i = 0; i < j.length; i++) c.supports[j[i]] = e(j[i]), c.supports.everything = c.supports.everything && c.supports[j[i]], "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[j[i]]);
+            c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () {
+                c.DOMReady = !0
+            }, c.supports.everything || (h = function () {
+                c.readyCallback()
+            }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1), a.addEventListener("load", h, !1)) : (a.attachEvent("onload", h), b.attachEvent("onreadystatechange", function () {
+                "complete" === b.readyState && c.readyCallback()
+            })), g = c.source || {}, g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css' href='./static/css/style.min.css?ver=5.1.1' type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='usp_style-css' href='./static/css/usp.css?ver=20180822' type='text/css' media='all'/>
+    <link rel='stylesheet' id='iux-style-css' href='./static/css/style.css?ver=20181203' type='text/css' media='all'/>
+    <link rel='stylesheet' id='genericons-style-css' href='./static/css/genericons.css?ver=5.1.1' type='text/css' media='all'/>
+    <link rel='stylesheet' id='flaticon-style-css' href='./static/css/flaticon.css?ver=20181102' type='text/css' media='all'/>
+    <link rel='stylesheet' id='iux-responsive-style-css' href='./static/css/responsive.css?ver=20181114' type='text/css' media='all'/>
+    <link rel='stylesheet' id='wsocial-css'
+          href='https://www.zhutibaba.com/demo/iux/wp-content/plugins/wechat-social-login/assets/css/social.css?ver=1.2.6'
+          type='text/css' media='all'/>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script type='text/javascript' src='./static/js/common/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='./static/js/common/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script type='text/javascript' src='./static/js/common/jquery.cookie.js?ver=20180822'></script>
+    <script type='text/javascript' src='./static/js/common/jquery.parsley.min.js?ver=20180822'></script>
+    <script type='text/javascript' src='./static/js/user/index.js'></script>
+
+    <script type='text/javascript'>
+        var usp_custom_field = "usp_custom_field";
+        var usp_custom_checkbox = "usp_custom_checkbox";
+        var usp_case_sensitivity = "false";
+        var usp_challenge_response = "2";
+        var usp_min_images = 0;
+        var usp_max_images = 1;
+        var usp_parsley_error = "\u9a8c\u8bc1\u9519\u8bef";
+    </script>
+    <script type='text/javascript' src='./static/js/common/jquery.usp.core.js?ver=20180822'></script>
+    <script type='text/javascript'>
+    </script>
+    <script type='text/javascript' src='./static/js/common/simple-likes-public.js?ver=0.5'></script>
+    <style type="text/css">
+        a:hover,
+        .site-title a,
+        .site-header .search-icon:hover .fa,
+        .posts-nav-menu ul li a:hover,
+        .sidebar .widget a:hover,
+        .site-footer .widget a:hover,
+        .author-box a:hover,
+        article.hentry .edit-link a:hover,
+        .comment-content a:hover,
+        .entry-meta a:hover,
+        .entry-title a:hover,
+        .content-list .entry-title a:hover,
+        .content-list .entry-title a:hover span,
+        .content-list .entry-category a:after,
+        .pagination .page-numbers:hover,
+        .pagination .page-numbers.current,
+        .author-box .author-meta .author-name a:hover,
+        article.hentry .edit-link a,
+        .author-box a,
+        .page-content a,
+        .entry-content a,
+        .comment-author a,
+        .comment-content a,
+        .comment-reply-title small a:hover,
+        .sidebar .widget a,
+        .friend-nav li a:hover,
+        .tooltip .left .contact-info h3,
+        .single #primary .entry-footer .entry-like a,
+        .single #primary .entry-footer .entry-sponsor span,
+        .zhuanti-heading .section-more a:hover,
+        .mini-page h4 a:hover,
+        .mini-page ul li a:hover,
+        .single-breadcrumbs a:hover,
+        .bottom-right span.icon-link .text,
+        .bottom-right a .text,
+        #site-bottom a:hover {
+            color: #00aeff;
+        }
+
+        button,
+        .btn,
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"],
+        .friend .friend-title:before,
+        .partner-title:before,
+        .sidebar .widget .widget-title:before,
+        .related-content .section-title:before,
+        .comment-reply-title:before,
+        .comments-title:before,
+        .posts-nav-menu ul li a:after,
+        .single #primary .entry-footer .entry-like a:hover,
+        .single #primary .entry-footer .entry-sponsor span:hover,
+        .content-list .entry-category a,
+        .entry-tags .tag-links a:hover,
+        .must-log-in a,
+        .widget_tag_cloud .tagcloud a:hover {
+            background-color: #00aeff;
+        }
+
+        .sf-menu li li a:hover {
+            background-color: #00aeff !important;
+        }
+
+        @media only screen and (max-width: 959px) {
+            #primary-menu {
+                background-color: #00aeff;
+            }
+        }
+
+        .single #primary .entry-footer .entry-like a,
+        .single #primary .entry-footer .entry-like a:hover,
+        .single #primary .entry-footer .entry-sponsor span {
+            border-color: #00aeff;
+        }
+
+        /* Secondary Color */
+        .content-list .entry-title span,
+        .page-content a:hover,
+        .entry-content a:hover,
+        article.hentry .edit-link a:hover,
+        .author-box .author-meta .author-name a:hover,
+        .sidebar .widget_custom_text h4 {
+            color: #ff4c4c;
+        }
+
+        .sidebar .widget_custom_text:hover {
+            border-color: #ff4c4c;
+        }
+
+        .sidebar .widget_custom_text .widget-title {
+            background-color: #ff4c4c;
+        }
+
+        /* Tertiary Color */
+        .header-submit a {
+            background-color: #76b852;
+        }
+
+        .content-list .entry-meta .entry-like a.liked {
+            color: #76b852 !important;
+        }
+
+        .entry-content p {
+            text-indent: 2em;
+        }
+
+        #primary-menu {
+            margin-right: 30px;
+        }
+
+        /* Bottom Content Color */
+        .bottom-content {
+            background: linear-gradient(105deg, #0ecad4, #0ecad4, #50e3c2);
+        }
+    </style>
 
 </head>
 
 <body class="home blog wp-custom-logo hfeed">
 <div id="page" class="site">
-		<div class="top-bar clear">
+    <div class="top-bar clear">
+        <!-- 导航条 -->
 
-		<div class="container">
+        <div class="container">
 
-			<nav id="top-nav" class="top-navigation">
-				<div class="menu-top-container"><ul id="top-menu" class="sf-menu"><li id="menu-item-830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-830"><a href="#">切换首页</a></li>
-<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-829"><a href="https://www.zhutibaba.com/demo/iux/zhuanti">专题列表</a>
-<ul class="sub-menu">
-	<li id="menu-item-828" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a href="https://www.zhutibaba.com/demo/iux/zhuanti-full">全宽专题列表</a></li>
-</ul>
-</li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-793"><a href="https://www.zhutibaba.com/demo/iux/pages">页面模版</a>
-<ul class="sub-menu">
-	<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="https://www.zhutibaba.com/demo/iux/posts-by-cat">最新文章 (按目录)</a></li>
-	<li id="menu-item-792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-792"><a href="https://www.zhutibaba.com/demo/iux/posts-100">最新文章 (100篇)</a></li>
-	<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="https://www.zhutibaba.com/demo/iux/full-width">全宽页面</a></li>
-</ul>
-</li>
-<li id="menu-item-789" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-789"><a target="_blank" href="https://www.zhutibaba.com/themes/iux/">购买主题</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-790"><a target="_blank" href="https://www.zhutibaba.com/vip">加入会员</a></li>
-</ul></div>			</nav><!-- #primary-nav -->
+            <nav id="top-nav" class="top-navigation">
+                <div class="menu-top-container">
+                    <ul id="top-menu" class="sf-menu">
+                        <li id="menu-item-830"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-830"><a href="#">回到首页</a>
+                        </li>
+                        <li id="menu-item-829"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-829">
+                            <a href="https://www.zhutibaba.com/demo/iux/zhuanti">专题列表</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-828"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a
+                                        href="https://www.zhutibaba.com/demo/iux/zhuanti-full">测试基础</a></li>
+                                <li id="menu-item-828"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a
+                                        href="https://www.zhutibaba.com/demo/iux/zhuanti-full">测试开发</a></li>
+                                <li id="menu-item-828"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a
+                                        href="https://www.zhutibaba.com/demo/iux/zhuanti-full">性能测试</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-790"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-790"><a
+                                target="_blank" href="https://www.zhutibaba.com/vip">加入会员</a></li>
+                    </ul>
+                </div>
+            </nav><!-- #primary-nav -->
 
-			<div class="header-right">
-				<ul>
-				
-											<li class="header-login">
-							<a href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F" title="登录">登录</a>
-						</li>
-					
-											<li class="header-register">
-							<a href="https://www.zhutibaba.com/demo/iux/register" title="注册">注册</a>
-						</li>
-						
+            <div class="header-right">
+                <ul>
 
-					
+                    <li class="header-login">
+                        <a href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F"
+                           title="登录">登录</a>
+                    </li>
 
-									<li class="header-submit">
-												<a href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F?redirect_to=https://www.zhutibaba.com/demo/iux/tougao" title="用户投稿">投稿</a>
-					</li>	
-				
-				</ul>
-		
-			</div><!-- .header-right -->
+                    <li class="header-register">
+                        <a href="https://www.zhutibaba.com/demo/iux/register" title="注册">注册</a>
+                    </li>
 
-		</div><!-- .container -->
 
-	</div><!--.top-bar-->
+                    <li class="header-submit">
+                        <a href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F?redirect_to=https://www.zhutibaba.com/demo/iux/tougao"
+                           title="用户投稿">投稿</a>
+                    </li>
 
-	
-	<header id="masthead" class="site-header clear">
-				<div class="container">
+                </ul>
 
-			<div class="site-branding">
+            </div><!-- .header-right -->
 
-				
-					<div id="logo">
-						<span class="helper"></span>
-						<a href="https://www.zhutibaba.com/demo/iux/" class="custom-logo-link" rel="home" itemprop="url"><img width="240" height="110" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/logo.png" class="custom-logo" alt="爱前端" itemprop="logo" /></a>					</div><!-- #logo -->
+        </div><!-- .container -->
 
-				
-								<div class="site-desc">
-										<div class="line1 has-line2">专业WP主题</div>
-					<div class="line2">新一代网站模版</div>
-				</div><!-- .site-desc -->
-				
-			</div><!-- .site-branding -->		
+    </div><!--.top-bar-->
 
-						<nav id="primary-nav" class="primary-navigation tablet_menu_col_8 phone_menu_col_4">
-				<div class="menu-primary-container"><ul id="primary-menu" class="sf-menu"><li id="menu-item-795" class="color1 menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-795"><a href="https://www.zhutibaba.com/demo/iux/" aria-current="page"><i class="fa fa-home"></i> 首页</a></li>
-<li id="menu-item-784" class="color2 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-784"><a href="https://www.zhutibaba.com/demo/iux/zhuanti"><i class="fa fa-tags"></i> 专题</a>
-<ul class="sub-menu">
-	<li id="menu-item-785" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-785"><a href="https://www.zhutibaba.com/demo/iux/zhuanti-full">全宽专题列表</a></li>
-	<li id="menu-item-771" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-771"><a href="https://www.zhutibaba.com/demo/iux/house">专题页面</a></li>
-</ul>
-</li>
-<li id="menu-item-734" class="color3 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-734"><a href="https://www.zhutibaba.com/demo/iux/news"><i class="fa fa-file-text"></i> 新闻</a>
-<ul class="sub-menu">
-	<li id="menu-item-742" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-742"><a href="https://www.zhutibaba.com/demo/iux/news">下拉菜单 1</a></li>
-	<li id="menu-item-741" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-741"><a href="https://www.zhutibaba.com/demo/iux/news">下拉菜单 2</a></li>
-	<li id="menu-item-743" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-743"><a href="https://www.zhutibaba.com/demo/iux/news">下拉菜单 3</a></li>
-</ul>
-</li>
-<li id="menu-item-736" class="color4 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-736"><a href="https://www.zhutibaba.com/demo/iux/tech"><i class="fa fa-bookmark"></i> 科技</a>
-<ul class="sub-menu">
-	<li id="menu-item-744" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-744"><a href="https://www.zhutibaba.com/demo/iux/tech">创业俱乐部</a></li>
-	<li id="menu-item-745" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-745"><a href="https://www.zhutibaba.com/demo/iux/tech">区块链</a></li>
-	<li id="menu-item-746" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-746"><a href="https://www.zhutibaba.com/demo/iux/tech">互联网</a></li>
-	<li id="menu-item-756" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-756"><a href="https://www.zhutibaba.com/demo/iux/tech">手机数码</a></li>
-	<li id="menu-item-757" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-757"><a href="https://www.zhutibaba.com/demo/iux/tech">WordPress</a></li>
-</ul>
-</li>
-<li id="menu-item-739" class="color5 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-739"><a href="https://www.zhutibaba.com/demo/iux/house"><i class="fa fa-heart"></i> 房产</a>
-<ul class="sub-menu">
-	<li id="menu-item-758" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-758"><a href="https://www.zhutibaba.com/demo/iux/house">新房</a></li>
-	<li id="menu-item-759" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-759"><a href="https://www.zhutibaba.com/demo/iux/house">二手房</a></li>
-	<li id="menu-item-762" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-762"><a href="https://www.zhutibaba.com/demo/iux/house">装修建材</a></li>
-	<li id="menu-item-760" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-760"><a href="https://www.zhutibaba.com/demo/iux/house">家具家居</a></li>
-	<li id="menu-item-761" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-761"><a href="https://www.zhutibaba.com/demo/iux/house">海外置业</a></li>
-</ul>
-</li>
-<li id="menu-item-735" class="color16 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-735"><a href="https://www.zhutibaba.com/demo/iux/auto"><i class="fa fa-car"></i> 汽车</a>
-<ul class="sub-menu">
-	<li id="menu-item-747" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-747"><a href="https://www.zhutibaba.com/demo/iux/auto">上市新车</a></li>
-	<li id="menu-item-754" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-754"><a href="https://www.zhutibaba.com/demo/iux/auto">用车小百科</a></li>
-	<li id="menu-item-748" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-748"><a href="https://www.zhutibaba.com/demo/iux/auto">车型对比</a></li>
-	<li id="menu-item-755" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-755"><a href="https://www.zhutibaba.com/demo/iux/auto">汽车测评</a></li>
-</ul>
-</li>
-<li id="menu-item-738" class="color17 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-738"><a href="https://www.zhutibaba.com/demo/iux/finance"><i class="fa fa-paper-plane"></i> 财经</a></li>
-<li id="menu-item-737" class="color16 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-737"><a href="https://www.zhutibaba.com/demo/iux/food"><i class="fa fa-coffee"></i> 美食</a></li>
-</ul></div>			</nav><!-- #primary-nav -->
 
-			 
-				<div class="header-search-icon">
+    <header id="masthead" class="site-header clear">
+        <div class="container">
+
+            <div class="site-branding">
+
+
+                <div id="logo">
+                    <span class="helper"></span>
+                    <a href="https://www.zhutibaba.com/demo/iux/" class="custom-logo-link" rel="home"
+                       itemprop="url"><img width="240" height="110"
+                                           src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/logo.png"
+                                           class="custom-logo" alt="爱前端" itemprop="logo"/></a></div><!-- #logo -->
+
+
+                <div class="site-desc">
+                    <div class="line1 has-line2">专业WP主题</div>
+                    <div class="line2">新一代网站模版</div>
+                </div><!-- .site-desc -->
+
+            </div><!-- .site-branding -->
+
+            <nav id="primary-nav" class="primary-navigation tablet_menu_col_8 phone_menu_col_4">
+                <div class="menu-primary-container">
+                    <ul id="primary-menu" class="sf-menu">
+                        <li id="menu-item-795"
+                            class="color1 menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-795">
+                            <a href="https://www.zhutibaba.com/demo/iux/" aria-current="page"><i class="fa fa-home"></i>
+                                首页</a></li>
+                        <li id="menu-item-784"
+                            class="color2 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-784">
+                            <a href="https://www.zhutibaba.com/demo/iux/zhuanti"><i class="fa fa-tags"></i> 专题</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-785"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-785"><a
+                                        href="https://www.zhutibaba.com/demo/iux/zhuanti-full">全宽专题列表</a></li>
+                                <li id="menu-item-771"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-771"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">专题页面</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-734"
+                            class="color3 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-734">
+                            <a href="https://www.zhutibaba.com/demo/iux/news"><i class="fa fa-file-text"></i> 新闻</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-742"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-742"><a
+                                        href="https://www.zhutibaba.com/demo/iux/news">下拉菜单 1</a></li>
+                                <li id="menu-item-741"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-741"><a
+                                        href="https://www.zhutibaba.com/demo/iux/news">下拉菜单 2</a></li>
+                                <li id="menu-item-743"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-743"><a
+                                        href="https://www.zhutibaba.com/demo/iux/news">下拉菜单 3</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-736"
+                            class="color4 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-736">
+                            <a href="https://www.zhutibaba.com/demo/iux/tech"><i class="fa fa-bookmark"></i> 科技</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-744"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-744"><a
+                                        href="https://www.zhutibaba.com/demo/iux/tech">创业俱乐部</a></li>
+                                <li id="menu-item-745"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-745"><a
+                                        href="https://www.zhutibaba.com/demo/iux/tech">区块链</a></li>
+                                <li id="menu-item-746"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-746"><a
+                                        href="https://www.zhutibaba.com/demo/iux/tech">互联网</a></li>
+                                <li id="menu-item-756"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-756"><a
+                                        href="https://www.zhutibaba.com/demo/iux/tech">手机数码</a></li>
+                                <li id="menu-item-757"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-757"><a
+                                        href="https://www.zhutibaba.com/demo/iux/tech">WordPress</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-739"
+                            class="color5 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-739">
+                            <a href="https://www.zhutibaba.com/demo/iux/house"><i class="fa fa-heart"></i> 房产</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-758"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-758"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">新房</a></li>
+                                <li id="menu-item-759"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-759"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">二手房</a></li>
+                                <li id="menu-item-762"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-762"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">装修建材</a></li>
+                                <li id="menu-item-760"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-760"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">家具家居</a></li>
+                                <li id="menu-item-761"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-761"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">海外置业</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-735"
+                            class="color16 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-735">
+                            <a href="https://www.zhutibaba.com/demo/iux/auto"><i class="fa fa-car"></i> 汽车</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-747"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-747"><a
+                                        href="https://www.zhutibaba.com/demo/iux/auto">上市新车</a></li>
+                                <li id="menu-item-754"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-754"><a
+                                        href="https://www.zhutibaba.com/demo/iux/auto">用车小百科</a></li>
+                                <li id="menu-item-748"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-748"><a
+                                        href="https://www.zhutibaba.com/demo/iux/auto">车型对比</a></li>
+                                <li id="menu-item-755"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-755"><a
+                                        href="https://www.zhutibaba.com/demo/iux/auto">汽车测评</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-738"
+                            class="color17 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-738"><a
+                                href="https://www.zhutibaba.com/demo/iux/finance"><i class="fa fa-paper-plane"></i>
+                            财经</a></li>
+                        <li id="menu-item-737"
+                            class="color16 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-737"><a
+                                href="https://www.zhutibaba.com/demo/iux/food"><i class="fa fa-coffee"></i> 美食</a></li>
+                    </ul>
+                </div>
+            </nav><!-- #primary-nav -->
+
+
+            <div class="header-search-icon">
 					<span class="search-icon">
 						<i class="fa fa-search"></i>
 						<i class="fa fa-close"></i>			
 					</span>
-				</div>
-			
-			 
-				<div class="header-search">
-					<form id="searchform" method="get" action="https://www.zhutibaba.com/demo/iux/">
-	<input type="search" name="s" class="search-input" placeholder="请输入关键词" autocomplete="off">
-	<button type="submit" class="search-submit">搜索</button>		
-</form>				</div><!-- .header-search -->
-					
-
-		</div><!-- .container -->
-
-	</header><!-- #masthead -->	
-
-	<div class="header-space"></div>
-
-	
-<div id="content" class="site-content site_container container clear">
-
-	<div id="primary" class="content-area clear">	
-
-		
-<div id="featured-slider" class="slider-with-grid">
-
-	<ul class="bxslider">	
-
-		
-
-	<li class="featured-slide hentry">
-
-					<a class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/825.html">
-				<div class="thumbnail-wrap">
-					<img width="600" height="350" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/Tang-Wei-600x350.png" class="attachment-iux_featured_large_thumb2 size-iux_featured_large_thumb2 wp-post-image" alt="" />				</div><!-- .thumbnail-wrap -->
-			</a>
-		
-		<div class="entry-header clear">			
-			<h2 class="entry-title"><a target="_blank" href="https://www.zhutibaba.com/demo/iux/825.html">百度地图宣布汤唯正式签约代言人</a></h2>
-		</div><!-- .entry-header -->
-		<div class="gradient"></div>
-	</li><!-- .featured-slide .hentry -->
-
-		
-
-	<li class="featured-slide hentry">
-
-					<a class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/836.html">
-				<div class="thumbnail-wrap">
-					<img width="600" height="350" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/WeChat_logo_wordmark-600x350.png" class="attachment-iux_featured_large_thumb2 size-iux_featured_large_thumb2 wp-post-image" alt="" />				</div><!-- .thumbnail-wrap -->
-			</a>
-		
-		<div class="entry-header clear">			
-			<h2 class="entry-title"><a target="_blank" href="https://www.zhutibaba.com/demo/iux/836.html">从微信7.0看张小龙思想的嬗变</a></h2>
-		</div><!-- .entry-header -->
-		<div class="gradient"></div>
-	</li><!-- .featured-slide .hentry -->
-
-		
-
-	<li class="featured-slide hentry">
-
-					<a class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/832.html">
-				<div class="thumbnail-wrap">
-					<img width="600" height="350" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/bc-600x350.png" class="attachment-iux_featured_large_thumb2 size-iux_featured_large_thumb2 wp-post-image" alt="" />				</div><!-- .thumbnail-wrap -->
-			</a>
-		
-		<div class="entry-header clear">			
-			<h2 class="entry-title"><a target="_blank" href="https://www.zhutibaba.com/demo/iux/832.html">比特币大幅缩水 区块链未来如何发展</a></h2>
-		</div><!-- .entry-header -->
-		<div class="gradient"></div>
-	</li><!-- .featured-slide .hentry -->
-
-	
-	</ul><!-- .bxslider -->
-			<div class="ribbon"><span>编辑推荐</span></div>
-		
-</div><!-- #featured-slider -->
+            </div>
 
 
-	
-
-<div id="featured-grid">
-
-	<ul class="clear">	
-
-	<li class="featured-post hentry">
-
-		<a target="_blank" class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/820.html">
-			
-			<div class="thumbnail-wrap">
-				<img width="380" height="220" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/ofo-380x220.jpg" class="attachment-iux_featured_small_thumb2 size-iux_featured_small_thumb2 wp-post-image" alt="" />			</div><!-- .thumbnail-wrap -->
-		</a>
-
-		<div class="entry-header">			
-			<h2 class="entry-title"><a target="_blank" href="https://www.zhutibaba.com/demo/iux/820.html">这是一条自定义文章标题</a></h2>	
-		</div><!-- .entry-header -->
-		<div class="gradient"></div>
-	</li><!-- .featured-slide .hentry -->
-
-		
-
-	<li class="featured-post hentry">
-
-		<a target="_blank" class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/815.html">
-			
-			<div class="thumbnail-wrap">
-				<img width="380" height="220" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/f3-380x220.jpg" class="attachment-iux_featured_small_thumb2 size-iux_featured_small_thumb2 wp-post-image" alt="" />			</div><!-- .thumbnail-wrap -->
-		</a>
-
-		<div class="entry-header">			
-			<h2 class="entry-title"><a target="_blank" href="https://www.zhutibaba.com/demo/iux/815.html">微软纳德拉获最佳CEO称号</a></h2>	
-		</div><!-- .entry-header -->
-		<div class="gradient"></div>
-	</li><!-- .featured-slide .hentry -->
-
-		
-
-	<li class="featured-post hentry">
-
-		<a target="_blank" class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/843.html">
-			
-			<div class="thumbnail-wrap">
-				<img width="380" height="220" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/wp-bg-380x220.png" class="attachment-iux_featured_small_thumb2 size-iux_featured_small_thumb2 wp-post-image" alt="" />			</div><!-- .thumbnail-wrap -->
-		</a>
-
-		<div class="entry-header">			
-			<h2 class="entry-title"><a target="_blank" href="https://www.zhutibaba.com/demo/iux/843.html">使用WordPress建站的好处</a></h2>	
-		</div><!-- .entry-header -->
-		<div class="gradient"></div>
-	</li><!-- .featured-slide .hentry -->
-
-	
-	</ul><!-- .featured-grid -->
-		
-</div><!-- #featured-grid -->
+            <div class="header-search">
+                <form id="searchform" method="get" action="https://www.zhutibaba.com/demo/iux/">
+                    <input type="search" name="s" class="search-input" placeholder="请输入关键词" autocomplete="off">
+                    <button type="submit" class="search-submit">搜索</button>
+                </form>
+            </div><!-- .header-search -->
 
 
+        </div><!-- .container -->
 
-		<div class="clear"></div>
+    </header><!-- #masthead -->
 
-				<div class="home-zhuanti-section">
-			
-			<div class="zhuanti-heading clear">
-				<div class="custom-wrap clear">
-					<h2>专题列表</h2>
-					<div class="desc">
-						自定义文字描述					</div>
-					<div class="section-more">
-						<a target="_blank" href="https://www.zhutibaba.com/demo/iux/zhuanti">查看所有专题 <i class="fa fa-angle-right"></i></a>
-					</div>
-				</div>
-			</div>
+    <div class="header-space"></div>
 
-			<div class="home-zhuanti-list clear">
-			<div class="zhuanti-list-item ht_custom_grid_1_4"><a target="_blank" class="thumbnail-link" href=https://www.zhutibaba.com/demo/iux/sports><div class="thumbnail-wrap"><img src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/thumb.php?src=https://www.zhutibaba.com/wp-content/uploads/2018/10/sports.jpeg&w=600&h=380" alt="体育"/></div></a><h3 class="zhuanti-title"><a target="_blank" href=https://www.zhutibaba.com/demo/iux/sports>体育</a></h3></div><div class="zhuanti-list-item ht_custom_grid_1_4"><a target="_blank" class="thumbnail-link" href=https://www.zhutibaba.com/demo/iux/house><div class="thumbnail-wrap"><img src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/thumb.php?src=https://www.zhutibaba.com/wp-content/uploads/2018/10/house.jpeg&w=600&h=380" alt="房产"/></div></a><h3 class="zhuanti-title"><a target="_blank" href=https://www.zhutibaba.com/demo/iux/house>房产</a></h3></div><div class="zhuanti-list-item ht_custom_grid_1_4"><a target="_blank" class="thumbnail-link" href=https://www.zhutibaba.com/demo/iux/edu><div class="thumbnail-wrap"><img src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/thumb.php?src=https://www.zhutibaba.com/wp-content/uploads/2018/10/edu.jpeg&w=600&h=380" alt="教育"/></div></a><h3 class="zhuanti-title"><a target="_blank" href=https://www.zhutibaba.com/demo/iux/edu>教育</a></h3></div><div class="zhuanti-list-item ht_custom_grid_1_4"><a target="_blank" class="thumbnail-link" href=https://www.zhutibaba.com/demo/iux/travel><div class="thumbnail-wrap"><img src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/thumb.php?src=https://www.zhutibaba.com/wp-content/uploads/2018/10/travel.jpeg&w=600&h=380" alt="旅游"/></div></a><h3 class="zhuanti-title"><a target="_blank" href=https://www.zhutibaba.com/demo/iux/travel>旅游</a></h3></div>			</div><!-- .home-zhuanti-list -->
 
-		</div>
+    <div id="content" class="site-content site_container container clear">
 
-		
-		
-		<main id="main" class="site-main clear">
+        <div id="primary" class="content-area clear">
 
-				<div class="recent-heading">
-					<h2 class="section-title">
-						<span class="title">最新文章</span> 
-					</h2>
-					<div class="posts-nav-menu">
-					<div class="menu-posts-container"><ul id="posts-menu" class="posts-menu"><li id="menu-item-781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-781"><a href="https://www.zhutibaba.com/demo/iux/zhuanti-full">全宽专题</a></li>
-<li id="menu-item-777" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-777"><a target="_blank" href="https://www.zhutibaba.com/themes/iux">直达链接</a></li>
-<li id="menu-item-778" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-778"><a target="_blank" href="https://www.zhutibaba.com/themes">购买主题</a></li>
-<li id="menu-item-779" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-779"><a target="_blank" href="https://www.zhutibaba.com/demo/iux/posts-by-cat">按目录分类</a></li>
-<li id="menu-item-780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-780"><a target="_blank" href="https://www.zhutibaba.com/demo/iux/posts-100">最新100篇</a></li>
-</ul></div>					</div>				
-				</div>
+            <div id="featured-slider" class="slider-with-grid">
+                <ul class="bxslider" id="carouselList">
 
-			<div id="recent-content" class="content-list">
+                    <!-- 轮播图-->
+{#                    <li class="featured-slide hentry">#}
+{#                        <a class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/825.html">#}
+{#                            <div class="thumbnail-wrap">#}
+{#                                <img width="600" height="350"#}
+{#                                     src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/Tang-Wei-600x350.png"#}
+{#                                     class="attachment-iux_featured_large_thumb2 size-iux_featured_large_thumb2 wp-post-image"#}
+{#                                     alt=""/></div><!-- .thumbnail-wrap -->#}
+{#                        </a>#}
+{##}
+{#                        <div class="entry-header clear">#}
+{#                            <h2 class="entry-title"><a target="_blank"#}
+{#                                                       href="https://www.zhutibaba.com/demo/iux/825.html">百度地图宣布汤唯正式签约代言人</a>#}
+{#                            </h2>#}
+{#                        </div><!-- .entry-header -->#}
+{#                        <div class="gradient"></div>#}
+{#                    </li><!-- .featured-slide .hentry -->#}
+{##}
+{#                    <li class="featured-slide hentry">#}
+{##}
+{#                        <a class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/836.html">#}
+{#                            <div class="thumbnail-wrap">#}
+{#                                <img width="600" height="350"#}
+{#                                     src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/WeChat_logo_wordmark-600x350.png"#}
+{#                                     class="attachment-iux_featured_large_thumb2 size-iux_featured_large_thumb2 wp-post-image"#}
+{#                                     alt=""/></div><!-- .thumbnail-wrap -->#}
+{#                        </a>#}
+{##}
+{#                        <div class="entry-header clear">#}
+{#                            <h2 class="entry-title"><a target="_blank"#}
+{#                                                       href="https://www.zhutibaba.com/demo/iux/836.html">从微信7.0看张小龙思想的嬗变</a>#}
+{#                            </h2>#}
+{#                        </div><!-- .entry-header -->#}
+{#                        <div class="gradient"></div>#}
+{#                    </li><!-- .featured-slide .hentry -->#}
+{##}
+{#                    <li class="featured-slide hentry">#}
+{##}
+{#                        <a class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/832.html">#}
+{#                            <div class="thumbnail-wrap">#}
+{#                                <img width="600" height="350"#}
+{#                                     src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/bc-600x350.png"#}
+{#                                     class="attachment-iux_featured_large_thumb2 size-iux_featured_large_thumb2 wp-post-image"#}
+{#                                     alt=""/></div><!-- .thumbnail-wrap -->#}
+{#                        </a>#}
+{##}
+{#                        <div class="entry-header clear">#}
+{#                            <h2 class="entry-title"><a target="_blank"#}
+{#                                                       href="https://www.zhutibaba.com/demo/iux/832.html">比特币大幅缩水#}
+{#                                区块链未来如何发展</a></h2>#}
+{#                        </div><!-- .entry-header -->#}
+{#                        <div class="gradient"></div>#}
+{#                    </li><!-- .featured-slide .hentry -->#}
 
-				<div class="posts-loop clear">
-<div id="post-582" class="clear post-582 post type-post status-publish format-standard has-post-thumbnail hentry category-tech tag-25 tag-26 tag-27">	
 
-	
-					<a target="_blank" class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/582.html">
-				<div class="thumbnail-wrap">
-						<img width="300" height="193" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-300x193.jpg" class="attachment-iux_list_thumb size-iux_list_thumb wp-post-image" alt="" />				</div><!-- .thumbnail-wrap -->
-			</a>
-		
-	
-	<header class="entry-header">
+                </ul><!-- .bxslider -->
+                <div class="ribbon"><span>编辑推荐</span></div>
+
+            </div><!-- #featured-slider -->
+
+
+            <div id="featured-grid">
+
+                <ul class="clear">
+
+                    <!-- 右边轮播图 -->
+                    <li class="featured-post hentry">
+
+                        <a target="_blank" class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/820.html">
+
+                            <div class="thumbnail-wrap">
+                                <img width="380" height="220"
+                                     src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/ofo-380x220.jpg"
+                                     class="attachment-iux_featured_small_thumb2 size-iux_featured_small_thumb2 wp-post-image"
+                                     alt=""/></div><!-- .thumbnail-wrap -->
+                        </a>
+
+                        <div class="entry-header">
+                            <h2 class="entry-title"><a target="_blank"
+                                                       href="https://www.zhutibaba.com/demo/iux/820.html">这是一条自定义文章标题</a>
+                            </h2>
+                        </div><!-- .entry-header -->
+                        <div class="gradient"></div>
+                    </li><!-- .featured-slide .hentry -->
+
+                    <li class="featured-post hentry">
+
+                        <a target="_blank" class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/815.html">
+
+                            <div class="thumbnail-wrap">
+                                <img width="380" height="220"
+                                     src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/f3-380x220.jpg"
+                                     class="attachment-iux_featured_small_thumb2 size-iux_featured_small_thumb2 wp-post-image"
+                                     alt=""/></div><!-- .thumbnail-wrap -->
+                        </a>
+
+                        <div class="entry-header">
+                            <h2 class="entry-title"><a target="_blank"
+                                                       href="https://www.zhutibaba.com/demo/iux/815.html">微软纳德拉获最佳CEO称号</a>
+                            </h2>
+                        </div><!-- .entry-header -->
+                        <div class="gradient"></div>
+                    </li><!-- .featured-slide .hentry -->
+
+                    <li class="featured-post hentry">
+
+                        <a target="_blank" class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/843.html">
+
+                            <div class="thumbnail-wrap">
+                                <img width="380" height="220"
+                                     src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/12/wp-bg-380x220.png"
+                                     class="attachment-iux_featured_small_thumb2 size-iux_featured_small_thumb2 wp-post-image"
+                                     alt=""/></div><!-- .thumbnail-wrap -->
+                        </a>
+
+                        <div class="entry-header">
+                            <h2 class="entry-title"><a target="_blank"
+                                                       href="https://www.zhutibaba.com/demo/iux/843.html">使用WordPress建站的好处</a>
+                            </h2>
+                        </div><!-- .entry-header -->
+                        <div class="gradient"></div>
+                    </li><!-- .featured-slide .hentry -->
+
+                </ul><!-- .featured-grid -->
+
+            </div><!-- #featured-grid -->
+
+
+            <div class="clear"></div>
+
+            <div class="home-zhuanti-section">
+
+                <!-- 文章分类列表 -->
+                <div class="zhuanti-heading clear">
+                    <div class="custom-wrap clear">
+                        <h2>专题列表</h2>
+                        <div class="desc">
+                            自定义文字描述
+                        </div>
+                        <div class="section-more">
+                            <a target="_blank" href="https://www.zhutibaba.com/demo/iux/zhuanti">查看所有专题 <i
+                                    class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 文章分类 -->
+                <div class="home-zhuanti-list clear">
+                    <div class="zhuanti-list-item ht_custom_grid_1_4"><a target="_blank" class="thumbnail-link"
+                                                                         href=https://www.zhutibaba.com/demo/iux/sports>
+                        <div class="thumbnail-wrap"><img
+                                src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/thumb.php?src=https://www.zhutibaba.com/wp-content/uploads/2018/10/sports.jpeg&w=600&h=380"
+                                alt="体育"/></div>
+                    </a>
+                        <h3 class="zhuanti-title"><a target="_blank"
+                                                     href=https://www.zhutibaba.com/demo/iux/sports>体育</a></h3></div>
+                    <div class="zhuanti-list-item ht_custom_grid_1_4"><a target="_blank" class="thumbnail-link"
+                                                                         href=https://www.zhutibaba.com/demo/iux/house>
+                        <div class="thumbnail-wrap"><img
+                                src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/thumb.php?src=https://www.zhutibaba.com/wp-content/uploads/2018/10/house.jpeg&w=600&h=380"
+                                alt="房产"/></div>
+                    </a>
+                        <h3 class="zhuanti-title"><a target="_blank"
+                                                     href=https://www.zhutibaba.com/demo/iux/house>房产</a></h3></div>
+                    <div class="zhuanti-list-item ht_custom_grid_1_4"><a target="_blank" class="thumbnail-link"
+                                                                         href=https://www.zhutibaba.com/demo/iux/edu>
+                        <div class="thumbnail-wrap"><img
+                                src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/thumb.php?src=https://www.zhutibaba.com/wp-content/uploads/2018/10/edu.jpeg&w=600&h=380"
+                                alt="教育"/></div>
+                    </a>
+                        <h3 class="zhuanti-title"><a target="_blank" href=https://www.zhutibaba.com/demo/iux/edu>教育</a>
+                        </h3></div>
+                    <div class="zhuanti-list-item ht_custom_grid_1_4"><a target="_blank" class="thumbnail-link"
+                                                                         href=https://www.zhutibaba.com/demo/iux/travel>
+                        <div class="thumbnail-wrap"><img
+                                src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/thumb.php?src=https://www.zhutibaba.com/wp-content/uploads/2018/10/travel.jpeg&w=600&h=380"
+                                alt="旅游"/></div>
+                    </a>
+                        <h3 class="zhuanti-title"><a target="_blank"
+                                                     href=https://www.zhutibaba.com/demo/iux/travel>旅游</a></h3></div>
+                </div><!-- .home-zhuanti-list -->
+
+            </div>
+
+
+            <main id="main" class="site-main clear">
+
+                <div class="recent-heading">
+                    <h2 class="section-title">
+                        <span class="title">最新文章</span>
+                    </h2>
+                    <div class="posts-nav-menu">
+                        <div class="menu-posts-container">
+                            <ul id="posts-menu" class="posts-menu">
+                                <li id="menu-item-781"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-781"><a
+                                        href="https://www.zhutibaba.com/demo/iux/zhuanti-full">全宽专题</a></li>
+                                <li id="menu-item-777"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-777"><a
+                                        target="_blank" href="https://www.zhutibaba.com/themes/iux">直达链接</a></li>
+                                <li id="menu-item-779"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-779"><a
+                                        target="_blank" href="https://www.zhutibaba.com/demo/iux/posts-by-cat">按目录分类</a>
+                                </li>
+                                <li id="menu-item-780"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-780"><a
+                                        target="_blank" href="https://www.zhutibaba.com/demo/iux/posts-100">最新100篇</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="recent-content" class="content-list">
+
+                    <div class="posts-loop clear">
+                        <div id="post-582"
+                             class="clear post-582 post type-post status-publish format-standard has-post-thumbnail hentry category-tech tag-25 tag-26 tag-27">
+
+
+                            <a target="_blank" class="thumbnail-link"
+                               href="https://www.zhutibaba.com/demo/iux/582.html">
+                                <div class="thumbnail-wrap">
+                                    <img width="300" height="193"
+                                         src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-300x193.jpg"
+                                         class="attachment-iux_list_thumb size-iux_list_thumb wp-post-image" alt=""/>
+                                </div><!-- .thumbnail-wrap -->
+                            </a>
+
+
+                            <header class="entry-header">
 	
 		<span class="entry-category">
-			<a target="_blank" href="https://www.zhutibaba.com/demo/iux/tech " >科技</a> 	
+			<a target="_blank" href="https://www.zhutibaba.com/demo/iux/tech ">科技</a>
 		</span><!-- .entry-category -->
 
-	
-	<h2 class="entry-title"><a target="_blank" href="https://www.zhutibaba.com/demo/iux/582.html">苹果新品iPhone 9即将发布 颜值和配置有惊喜</a></h2>
-	</header>
-	
-	<div class="entry-overview 	">
 
-		
-		<div class="entry-meta">
+                                <h2 class="entry-title"><a target="_blank"
+                                                           href="https://www.zhutibaba.com/demo/iux/582.html">苹果新品iPhone
+                                    9即将发布 颜值和配置有惊喜</a></h2>
+                            </header>
+
+                            <div class="entry-overview 	">
+
+
+                                <div class="entry-meta">
 
 		
 			<span class="entry-date">
 				2018-11-13			</span><!-- .entry-date -->
 
-		
-						<span class="entry-like">
-					<span class="sl-wrapper"><a href="https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&post_id=582&nonce=2eb9326105&is_comment=0&disabled=true" class="sl-button sl-button-582" data-nonce="2eb9326105" data-post-id="582" data-iscomment="0" title="点赞这篇文章"><span class="sl-count"><i class="fa fa-thumbs-o-up"></i> 57<em>赞</em></span></a><span class="sl-loader"></span></span>				</span><!-- .entry-like -->
 
-		
-					<span class="entry-views"><a href="https://www.zhutibaba.com/demo/iux/582.html"><i class="flaticon-eye"></i> 1,406<em>阅读</em></a></span>
-		
-					<span class="entry-comment"><a href="https://www.zhutibaba.com/demo/iux/582.html#comments" class="comments-link" ><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 3<em>评论</em></a></span>
-		
-</div><!-- .entry-meta -->
-		
-			<div class="entry-summary">
-				<p>来自外媒的报道称，即将上市的iPhone 9在外观和颜值上都做出了巨大的变革，再加上更合理的价格，果粉圈迅速沸腾了。</p>
-			</div><!-- .entry-summary -->
+                                    <span class="entry-like">
+					<span class="sl-wrapper"><a
+                            href="https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&post_id=582&nonce=2eb9326105&is_comment=0&disabled=true"
+                            class="sl-button sl-button-582" data-nonce="2eb9326105" data-post-id="582"
+                            data-iscomment="0" title="点赞这篇文章"><span class="sl-count"><i class="fa fa-thumbs-o-up"></i> 57<em>赞</em></span></a><span
+                            class="sl-loader"></span></span>				</span><!-- .entry-like -->
 
-					
-	</div><!-- .entry-overview -->
 
-</div><!-- #post-582 -->
-<div id="post-375" class="clear post-375 post type-post status-publish format-standard has-post-thumbnail hentry category-finance tag-25 tag-27 tag-36">	
+                                    <span class="entry-views"><a href="https://www.zhutibaba.com/demo/iux/582.html"><i
+                                            class="flaticon-eye"></i> 1,406<em>阅读</em></a></span>
 
-	
-					<a target="_blank" class="thumbnail-link" href="https://www.zhutibaba.com/demo/iux/375.html">
-				<div class="thumbnail-wrap">
-						<img width="300" height="193" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/10/p2-300x193.jpeg" class="attachment-iux_list_thumb size-iux_list_thumb wp-post-image" alt="" />				</div><!-- .thumbnail-wrap -->
-			</a>
-		
-	
-	<header class="entry-header">
+                                    <span class="entry-comment"><a
+                                            href="https://www.zhutibaba.com/demo/iux/582.html#comments"
+                                            class="comments-link"><i
+                                            class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 3<em>评论</em></a></span>
+
+                                </div><!-- .entry-meta -->
+
+                                <div class="entry-summary">
+                                    <p>来自外媒的报道称，即将上市的iPhone 9在外观和颜值上都做出了巨大的变革，再加上更合理的价格，果粉圈迅速沸腾了。</p>
+                                </div><!-- .entry-summary -->
+
+
+                            </div><!-- .entry-overview -->
+
+                        </div><!-- #post-582 -->
+                        <div id="post-375"
+                             class="clear post-375 post type-post status-publish format-standard has-post-thumbnail hentry category-finance tag-25 tag-27 tag-36">
+
+
+                            <a target="_blank" class="thumbnail-link"
+                               href="https://www.zhutibaba.com/demo/iux/375.html">
+                                <div class="thumbnail-wrap">
+                                    <img width="300" height="193"
+                                         src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/10/p2-300x193.jpeg"
+                                         class="attachment-iux_list_thumb size-iux_list_thumb wp-post-image" alt=""/>
+                                </div><!-- .thumbnail-wrap -->
+                            </a>
+
+
+                            <header class="entry-header">
 	
 		<span class="entry-category">
-			<a target="_blank" href="https://www.zhutibaba.com/demo/iux/finance " >财经</a> 	
+			<a target="_blank" href="https://www.zhutibaba.com/demo/iux/finance ">财经</a>
 		</span><!-- .entry-category -->
 
-	
-	<h2 class="entry-title"><a target="_blank" href="https://www.zhutibaba.com/demo/iux/375.html">这款WordPress主题完美支持<span>自定义标题</span></a></h2>
-	</header>
-	
-	<div class="entry-overview 	">
 
-		
-		<div class="entry-meta">
+                                <h2 class="entry-title"><a target="_blank"
+                                                           href="https://www.zhutibaba.com/demo/iux/375.html">这款WordPress主题完美支持<span>自定义标题</span></a>
+                                </h2>
+                            </header>
+
+                            <div class="entry-overview 	">
+
+
+                                <div class="entry-meta">
 
 		
 			<span class="entry-date">
 				2018-10-02			</span><!-- .entry-date -->
 
-		
-						<span class="entry-like">
-					<span class="sl-wrapper"><a href="https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&post_id=375&nonce=2eb9326105&is_comment=0&disabled=true" class="sl-button sl-button-375" data-nonce="2eb9326105" data-post-id="375" data-iscomment="0" title="点赞这篇文章"><span class="sl-count"><i class="fa fa-thumbs-o-up"></i> 81<em>赞</em></span></a><span class="sl-loader"></span></span>				</span><!-- .entry-like -->
 
-		
-					<span class="entry-views"><a href="https://www.zhutibaba.com/demo/iux/375.html"><i class="flaticon-eye"></i> 1,377<em>阅读</em></a></span>
-		
-					<span class="entry-comment"><a href="https://www.zhutibaba.com/demo/iux/375.html#respond" class="comments-link" ><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 0<em>评论</em></a></span>
-		
-</div><!-- .entry-meta -->
-		
-			<div class="entry-summary">
-				<p>美国农场主支持自由贸易组织执行主任布莱恩·屈尔则表示，农场主需要合同而非补贴，有了合同，他们就能安心制定未来计划。</p>
-			</div><!-- .entry-summary -->
-
-					
-	</div><!-- .entry-overview -->
+                                    <span class="entry-like">
+					<span class="sl-wrapper"><a
+                            href="https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&post_id=375&nonce=2eb9326105&is_comment=0&disabled=true"
+                            class="sl-button sl-button-375" data-nonce="2eb9326105" data-post-id="375"
+                            data-iscomment="0" title="点赞这篇文章"><span class="sl-count"><i class="fa fa-thumbs-o-up"></i> 81<em>赞</em></span></a><span
+                            class="sl-loader"></span></span>				</span><!-- .entry-like -->
 
 
-			</div><!-- #recent-content -->		
+                                    <span class="entry-views"><a href="https://www.zhutibaba.com/demo/iux/375.html"><i
+                                            class="flaticon-eye"></i> 1,377<em>阅读</em></a></span>
 
-		</main><!-- .site-main -->
+                                    <span class="entry-comment"><a
+                                            href="https://www.zhutibaba.com/demo/iux/375.html#respond"
+                                            class="comments-link"><i
+                                            class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 0<em>评论</em></a></span>
 
-		
+                                </div><!-- .entry-meta -->
 
-	<nav class="navigation pagination" role="navigation">
-		<h2 class="screen-reader-text">文章导航</h2>
-		<div class="nav-links"><span aria-current='page' class='page-numbers current'>1</span>
-<a class='page-numbers' href='https://www.zhutibaba.com/demo/iux/page/2'>2</a>
-<span class="page-numbers dots">&hellip;</span>
-<a class='page-numbers' href='https://www.zhutibaba.com/demo/iux/page/6'>6</a>
-<a class="next page-numbers" href="https://www.zhutibaba.com/demo/iux/page/2">下一页</a></div>
-	</nav>
-
-				
-	</div><!-- #primary -->
+                                <div class="entry-summary">
+                                    <p>美国农场主支持自由贸易组织执行主任布莱恩·屈尔则表示，农场主需要合同而非补贴，有了合同，他们就能安心制定未来计划。</p>
+                                </div><!-- .entry-summary -->
 
 
-<aside id="secondary" class="widget-area sidebar">
-	<div class="sidebar__inner">
-		<div id="iux-custom-text-2" class="widget widget_custom_text custom-text-widget"><a class="widget-link" href="#" target="_blank"><h2 class="widget-title">本站推荐</h2><h4>爱前端: 大师级WP主题</h4><div class="custom-text">一款由主题巴巴原创开发的WordPress主题，适合用于各类博客、自媒体网站或个人站点。购买主题后，您将享受永久主题更新升级和终身技术支持服务。</div></a></div><div id="iux-views-2" class="widget widget-iux-views widget_posts_thumbnail"><h2 class="widget-title">热门文章</h2><ul><li class="clear"><a href="https://www.zhutibaba.com/demo/iux/294.html" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="90" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/g17-150x90.jpg" class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image" alt="" /></div></a><div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/294.html" rel="bookmark">超美的三亚,5天4晚全五星酒店高大上自由行</a><div class="entry-meta">2018-07-27</div></div></li><li class="clear"><a href="https://www.zhutibaba.com/demo/iux/582.html" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="90" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-150x90.jpg" class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image" alt="" /></div></a><div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/582.html" rel="bookmark">苹果新品iPhone 9即将发布 颜值和配置有惊喜</a><div class="entry-meta">2018-11-13</div></div></li><li class="clear"><a href="https://www.zhutibaba.com/demo/iux/375.html" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="90" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/10/p2-150x90.jpeg" class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image" alt="" /></div></a><div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/375.html" rel="bookmark">美拟补贴贸易战中受损农场主遭反对: 不要补贴要市场</a><div class="entry-meta">2018-10-02</div></div></li><li class="clear"><a href="https://www.zhutibaba.com/demo/iux/176.html" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="90" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/g8-150x90.jpg" class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image" alt="" /></div></a><div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/176.html" rel="bookmark">呼伦贝尔: 你不可错过的辽阔草原和兴安秋色!</a><div class="entry-meta">2018-08-03</div></div></li><li class="clear"><a href="https://www.zhutibaba.com/demo/iux/560.html" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="90" src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/b47-150x90.png" class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image" alt="" /></div></a><div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/560.html" rel="bookmark">多地住房公积金政策收紧 异地购房提取难度加大</a><div class="entry-meta">2018-07-29</div></div></li></ul></div><div id="media_gallery-2" class="widget widget_media_gallery"><h2 class="widget-title">今日美图</h2><ul class="gallery-slider"><li><img src='https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/08/sticky6-780x460.jpeg' alt="" /></li><li><img src='https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/08/sticky4-780x460.jpeg' alt="" /></li><li><img src='https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/08/featured1-780x460.jpeg' alt="" /></li></ul></div><div id="tag_cloud-2" class="widget widget_tag_cloud"><h2 class="widget-title">热门标签</h2><div class="tagcloud"><a href="https://www.zhutibaba.com/demo/iux/tag/c%e7%bd%97" class="tag-cloud-link tag-link-11 tag-link-position-1" style="font-size: 8pt;" aria-label="C罗 (1个项目)">C罗<span class="tag-link-count"> (1)</span></a>
-<a href="#" class="tag-cloud-link tag-link-13 tag-link-position-3" style="font-size: 8pt;" aria-label="iPhone (1个项目)">iPhone<span class="tag-link-count"> (1)</span></a>
-<a href="#" class="tag-cloud-link tag-link-17 tag-link-position-8" style="font-size: 8pt;" aria-label="公积金 (1个项目)">公积金<span class="tag-link-count"> (1)</span></a>
-</div>	</div><!-- .sidebar__inner -->
-</aside><!-- #secondary -->
-
-	</div><!-- #content .site-content -->
-
-	<footer id="colophon" class="site-footer clear">
+                            </div><!-- .entry-overview -->
 
 
-		
-		<div id="site-bottom" class="clear">
+                        </div><!-- #recent-content -->
 
-			<div class="container">
-				
-				
-				<div class="menu-posts-container"><ul id="footer-menu" class="footer-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-781"><a href="https://www.zhutibaba.com/demo/iux/zhuanti-full">全宽专题</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-777"><a target="_blank" href="#">直达链接</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-778"><a target="_blank" href="#">购买主题</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-779"><a target="_blank" href="#">按目录分类</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-780"><a target="_blank" href="#">最新100篇</a></li>
-</ul></div>	
+            </main><!-- .site-main -->
 
-				<div class="site-info">
 
-					
-						&copy; 2019 <a href="#">浪晋测试小课堂</a> 	- 	流云</a>
+            <nav class="navigation pagination" role="navigation">
+                <h2 class="screen-reader-text">文章导航</h2>
+                <div class="nav-links"><span aria-current='page' class='page-numbers current'>1</span>
+                    <a class='page-numbers' href='https://www.zhutibaba.com/demo/iux/page/2'>2</a>
+                    <span class="page-numbers dots">&hellip;</span>
+                    <a class='page-numbers' href='https://www.zhutibaba.com/demo/iux/page/6'>6</a>
+                    <a class="next page-numbers" href="https://www.zhutibaba.com/demo/iux/page/2">下一页</a></div>
+            </nav>
 
-					
-				</div><!-- .site-info -->
-				
-			</div><!-- .container -->
 
-		</div>
-		<!-- #site-bottom -->
-							
-	</footer><!-- #colophon -->
-	
+        </div><!-- #primary -->
+
+
+        <aside id="secondary" class="widget-area sidebar">
+            <div class="sidebar__inner">
+                <div id="iux-custom-text-2" class="widget widget_custom_text custom-text-widget"><a class="widget-link"
+                                                                                                    href="#"
+                                                                                                    target="_blank"><h2
+                        class="widget-title">我们推荐</h2><h4>好好学习，天天向上</h4>
+                    <div class="custom-text">这就是测试的文章，怎么样，是不是很炫酷。                   </div>
+                </a></div>
+                <div id="iux-views-2" class="widget widget-iux-views widget_posts_thumbnail"><h2 class="widget-title">
+                    热门文章</h2>
+                    <ul>
+                        <li class="clear"><a href="https://www.zhutibaba.com/demo/iux/294.html" rel="bookmark">
+                            <div class="thumbnail-wrap"><img width="150" height="90"
+                                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/g17-150x90.jpg"
+                                                             class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image"
+                                                             alt=""/></div>
+                        </a>
+                            <div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/294.html"
+                                                       rel="bookmark">超美的三亚,5天4晚全五星酒店高大上自由行</a>
+                                <div class="entry-meta">2018-07-27</div>
+                            </div>
+                        </li>
+                        <li class="clear"><a href="https://www.zhutibaba.com/demo/iux/582.html" rel="bookmark">
+                            <div class="thumbnail-wrap"><img width="150" height="90"
+                                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-150x90.jpg"
+                                                             class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image"
+                                                             alt=""/></div>
+                        </a>
+                            <div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/582.html"
+                                                       rel="bookmark">苹果新品iPhone 9即将发布 颜值和配置有惊喜</a>
+                                <div class="entry-meta">2018-11-13</div>
+                            </div>
+                        </li>
+                        <li class="clear"><a href="https://www.zhutibaba.com/demo/iux/375.html" rel="bookmark">
+                            <div class="thumbnail-wrap"><img width="150" height="90"
+                                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/10/p2-150x90.jpeg"
+                                                             class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image"
+                                                             alt=""/></div>
+                        </a>
+                            <div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/375.html"
+                                                       rel="bookmark">美拟补贴贸易战中受损农场主遭反对: 不要补贴要市场</a>
+                                <div class="entry-meta">2018-10-02</div>
+                            </div>
+                        </li>
+                        <li class="clear"><a href="https://www.zhutibaba.com/demo/iux/176.html" rel="bookmark">
+                            <div class="thumbnail-wrap"><img width="150" height="90"
+                                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/g8-150x90.jpg"
+                                                             class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image"
+                                                             alt=""/></div>
+                        </a>
+                            <div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/176.html"
+                                                       rel="bookmark">呼伦贝尔: 你不可错过的辽阔草原和兴安秋色!</a>
+                                <div class="entry-meta">2018-08-03</div>
+                            </div>
+                        </li>
+                        <li class="clear"><a href="https://www.zhutibaba.com/demo/iux/560.html" rel="bookmark">
+                            <div class="thumbnail-wrap"><img width="150" height="90"
+                                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/b47-150x90.png"
+                                                             class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image"
+                                                             alt=""/></div>
+                        </a>
+                            <div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/560.html"
+                                                       rel="bookmark">多地住房公积金政策收紧 异地购房提取难度加大</a>
+                                <div class="entry-meta">2018-07-29</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="media_gallery-2" class="widget widget_media_gallery"><h2 class="widget-title">今日美图</h2>
+                    <ul class="gallery-slider">
+                        <li><img
+                                src='https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/08/sticky6-780x460.jpeg'
+                                alt=""/></li>
+                        <li><img
+                                src='https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/08/sticky4-780x460.jpeg'
+                                alt=""/></li>
+                        <li><img
+                                src='https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/08/featured1-780x460.jpeg'
+                                alt=""/></li>
+                    </ul>
+                </div>
+                <div id="tag_cloud-2" class="widget widget_tag_cloud"><h2 class="widget-title">热门标签</h2>
+                    <div class="tagcloud"><a href="https://www.zhutibaba.com/demo/iux/tag/c%e7%bd%97"
+                                             class="tag-cloud-link tag-link-11 tag-link-position-1"
+                                             style="font-size: 8pt;" aria-label="C罗 (1个项目)">C罗<span
+                            class="tag-link-count"> (1)</span></a>
+                        <a href="#" class="tag-cloud-link tag-link-13 tag-link-position-3" style="font-size: 8pt;"
+                           aria-label="iPhone (1个项目)">iPhone<span class="tag-link-count"> (1)</span></a>
+                        <a href="#" class="tag-cloud-link tag-link-17 tag-link-position-8" style="font-size: 8pt;"
+                           aria-label="公积金 (1个项目)">公积金<span class="tag-link-count"> (1)</span></a>
+                    </div>
+                </div><!-- .sidebar__inner -->
+        </aside><!-- #secondary -->
+
+    </div><!-- #content .site-content -->
+
+    <footer id="colophon" class="site-footer clear">
+
+
+        <div id="site-bottom" class="clear">
+
+            <div class="container">
+
+
+                <div class="menu-posts-container">
+                    <ul id="footer-menu" class="footer-nav">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-781"><a
+                                href="https://www.zhutibaba.com/demo/iux/zhuanti-full">全宽专题</a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-777"><a
+                                target="_blank" href="#">直达链接</a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-778"><a
+                                target="_blank" href="#">购买主题</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-779"><a
+                                target="_blank" href="#">按目录分类</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-780"><a
+                                target="_blank" href="#">最新100篇</a></li>
+                    </ul>
+                </div>
+
+                <div class="site-info">
+
+
+                    &copy; 2019 <a href="#">浪晋测试小课堂</a> - 流云</a>
+
+
+                </div><!-- .site-info -->
+
+            </div><!-- .container -->
+
+        </div>
+        <!-- #site-bottom -->
+
+    </footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <div class="bottom-right">
-		<div class="icon-contact tooltip bottom-icon">
+    <div class="icon-contact tooltip bottom-icon">
 		<span class="icon-link">
 			<span class="icon"><i class="fa fa-phone"></i></span>
 			<span class="text">联系我们</span>
 		</span>
-	    <div class="left-space">
-		    <div class="left">
-		    	<div class="contact-info">
-			        <h3>联系我们</h3>
+        <div class="left-space">
+            <div class="left">
+                <div class="contact-info">
+                    <h3>联系我们</h3>
 
-			        			        	<strong>0898-88881688</strong>
-			    	
-			    				        	<p>在线咨询: <a href="http://wpa.qq.com/msgrd?v=3&uin=3599145122&site=qq&menu=yes" target="_blank"><img src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/img/qqchat.gif" alt="QQ交谈"/></a></p>
-			        
-			        			       		<p>邮箱: email@wangzhan.com</p>	
-			        
-			        <p>工作时间：周一至周五，9:00-17:30，节假日休息</p>		    	</div>
-		        <i></i>		        
-		    </div>
-		</div>				
-	</div>
-	
-		
-	<div class="icon-weixin tooltip bottom-icon">
+                    <strong>0898-88881688</strong>
+
+                    <p>在线咨询: <a href="http://wpa.qq.com/msgrd?v=3&uin=3599145122&site=qq&menu=yes" target="_blank"><img
+                            src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/img/qqchat.gif"
+                            alt="QQ交谈"/></a></p>
+
+                    <p>邮箱: email@wangzhan.com</p>
+
+                    <p>工作时间：周一至周五，9:00-17:30，节假日休息</p></div>
+                <i></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="icon-weixin tooltip bottom-icon">
 		<span class="icon-link">
 			<span class="icon"><i class="fa fa-wechat"></i></span>
 			<span class="text">关注微信</span>
-		</span>		
-	    <div class="left-space">
-		    <div class="left">
-		        <img src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/img/weixin-qrcode.png" alt="微信扫一扫关注我们"/>
-		        <h3>微信扫一扫关注我们</h3>
-		        <i></i>
-		    </div>
-		</div>		
-	</div>
-	
-		
-	<div class="icon-weibo bottom-icon">
-		<a href="https://weibo.com/zhutibaba" target="_blank">
-			<span class="icon"><i class="fa fa-weibo"></i></span>
-			<span class="text">关注微博</span>
-		</a>		
-	</div>
-	
-		<div id="back-top" class="bottom-icon">
-		<a href="#top" title="返回顶部">
-			<span class="icon"><i class="fa fa-chevron-up"></i></span>
-			<span class="text">返回顶部</span>
-		</a>
-	</div>
-	</div><!-- .bottom-right -->
+		</span>
+        <div class="left-space">
+            <div class="left">
+                <img src="https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/img/weixin-qrcode.png"
+                     alt="微信扫一扫关注我们"/>
+                <h3>微信扫一扫关注我们</h3>
+                <i></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="icon-weibo bottom-icon">
+        <a href="https://weibo.com/zhutibaba" target="_blank">
+            <span class="icon"><i class="fa fa-weibo"></i></span>
+            <span class="text">关注微博</span>
+        </a>
+    </div>
+
+    <div id="back-top" class="bottom-icon">
+        <a href="#top" title="返回顶部">
+            <span class="icon"><i class="fa fa-chevron-up"></i></span>
+            <span class="text">返回顶部</span>
+        </a>
+    </div>
+</div><!-- .bottom-right -->
 
 <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?adffbbfa4c220a656094574941c145dc";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script><script type='text/javascript' src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/superfish.js?ver=5.1.1'></script>
-<script type='text/javascript' src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/jquery.slicknav.js?ver=5.1.1'></script>
-<script type='text/javascript' src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/modernizr.js?ver=5.1.1'></script>
-<script type='text/javascript' src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/html5.js?ver=5.1.1'></script>
-<script type='text/javascript' src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/jquery.bxslider.js?ver=5.1.1'></script>
-<script type='text/javascript' src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/jquery.custom.js?ver=20181120'></script>
-<script type='text/javascript' src='https://www.zhutibaba.com/demo/iux/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
-<script type="text/javascript">if(jQuery){jQuery(function($){$.ajax({url: 'https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=xunhuweb_cron',type: 'post',timeout: 60 * 1000,async: true,cache: false});});}</script><div id="wsocial-dialog-login" style="display:none;position: fixed;z-index: 999;">
-	<div class="xh-cover"></div>
-	<div class="xh-regbox xh-window">
-		<div class="xh-title">登录</div>
-<form class="xh-form">
-	<div class="commonlogin631790736b834aa61cb9c5b6cbdec8ec0 fields-error"></div>
-                <div class="xh-form-group">
-            <label class="required">用户名/邮箱/手机</label>
-            <input type="text" id="login631790736b834aa61cb9c5b6cbdec8ec0_login_name" name="login_name" value="" placeholder="请输入用户名，邮箱或手机" class="form-control " style=""   />
-                    </div>
-              <script type="text/javascript">
-      	(function($){
-			$(document).bind('on_form_login631790736b834aa61cb9c5b6cbdec8ec0_submit',function(e,m){
-				m.login_name=$('#login631790736b834aa61cb9c5b6cbdec8ec0_login_name').val();
-			});
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?adffbbfa4c220a656094574941c145dc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script type='text/javascript'
+        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/superfish.js?ver=5.1.1'></script>
+<script type='text/javascript'
+        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/jquery.slicknav.js?ver=5.1.1'></script>
+<script type='text/javascript'
+        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/modernizr.js?ver=5.1.1'></script>
+<script type='text/javascript'
+        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/html5.js?ver=5.1.1'></script>
+<script type='text/javascript'
+        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/jquery.bxslider.js?ver=5.1.1'></script>
+<script type='text/javascript'
+        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/jquery.custom.js?ver=20181120'></script>
+<script type='text/javascript'
+        src='https://www.zhutibaba.com/demo/iux/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
+<script type="text/javascript">if (jQuery) {
+    jQuery(function ($) {
+        $.ajax({
+            url: 'https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=xunhuweb_cron',
+            type: 'post',
+            timeout: 60 * 1000,
+            async: true,
+            cache: false
+        });
+    });
+}</script>
+<div id="wsocial-dialog-login" style="display:none;position: fixed;z-index: 999;">
+    <div class="xh-cover"></div>
+    <div class="xh-regbox xh-window">
+        <div class="xh-title">登录</div>
+        <form class="xh-form">
+            <div class="commonlogin631790736b834aa61cb9c5b6cbdec8ec0 fields-error"></div>
+            <div class="xh-form-group">
+                <label class="required">用户名/邮箱/手机</label>
+                <input type="text" id="login631790736b834aa61cb9c5b6cbdec8ec0_login_name" name="login_name" value=""
+                       placeholder="请输入用户名，邮箱或手机" class="form-control " style=""/>
+            </div>
+            <script type="text/javascript">
+                (function ($) {
+                    $(document).bind('on_form_login631790736b834aa61cb9c5b6cbdec8ec0_submit', function (e, m) {
+                        m.login_name = $('#login631790736b834aa61cb9c5b6cbdec8ec0_login_name').val();
+                    });
 
-		})(jQuery);
-		</script>
-              <div class="xh-form-group">
-            <label class="required">密码</label>
-            <input type="password" id="login631790736b834aa61cb9c5b6cbdec8ec0_login_password" name="login_password" value="" placeholder="" class="form-control " style=""   />
-                    </div>
-              <script type="text/javascript">
-      	(function($){
-			$(document).bind('on_form_login631790736b834aa61cb9c5b6cbdec8ec0_submit',function(e,m){
-				m.login_password=$('#login631790736b834aa61cb9c5b6cbdec8ec0_login_password').val();
-			});
+                })(jQuery);
+            </script>
+            <div class="xh-form-group">
+                <label class="required">密码</label>
+                <input type="password" id="login631790736b834aa61cb9c5b6cbdec8ec0_login_password" name="login_password"
+                       value="" placeholder="" class="form-control " style=""/>
+            </div>
+            <script type="text/javascript">
+                (function ($) {
+                    $(document).bind('on_form_login631790736b834aa61cb9c5b6cbdec8ec0_submit', function (e, m) {
+                        m.login_password = $('#login631790736b834aa61cb9c5b6cbdec8ec0_login_password').val();
+                    });
 
-		})(jQuery);
-		</script>
-              <div class="xh-form-group mt10">
-            <button type="button" id="btn-login" onclick="window.xh_social_view.login();" class="xh-btn xh-btn-primary xh-btn-block xh-btn-lg">登录</button>
+                })(jQuery);
+            </script>
+            <div class="xh-form-group mt10">
+                <button type="button" id="btn-login" onclick="window.xh_social_view.login();"
+                        class="xh-btn xh-btn-primary xh-btn-block xh-btn-lg">登录
+                </button>
+            </div>
+        </form>
+        <script type="text/javascript">
+            (function ($) {
+                if (!window.xh_social_view) {
+                    window.xh_social_view = {};
+                }
+
+                window.xh_social_view.reset = function () {
+                    $('.xh-alert').empty().css('display', 'none');
+                };
+
+                window.xh_social_view.error = function (msg, parent) {
+                    var s = parent ? (parent + '.fields-error') : '.fields-error';
+                    $(s).html('<div class="xh-alert xh-alert-danger" role="alert">' + msg + '</div>').css('display', 'block');
+                };
+
+                window.xh_social_view.warning = function (msg, parent) {
+                    var s = parent ? (parent + '.fields-error') : '.fields-error';
+                    $(s).html('<div class="xh-alert xh-alert-warning" role="alert">' + msg + '</div>').css('display', 'block');
+                };
+
+                window.xh_social_view.success = function (msg, parent) {
+                    var s = parent ? (parent + '.fields-error') : '.fields-error';
+                    $(s).html('<div class="xh-alert xh-alert-success" role="alert">' + msg + '</div>').css('display', 'block');
+                };
+            })(jQuery);
+        </script>
+        <script type="text/javascript">
+            (function ($) {
+                $(document).keypress(function (e) {
+                    if (window.__wsocial_enable_entrl_submit) {
+                        if (e.which == 13) {
+                            window.xh_social_view.login();
+                        }
+                    }
+                });
+
+                window.xh_social_view.login = function () {
+                    window.xh_social_view.reset();
+                    var data = {};
+                    $(document).trigger('on_form_login631790736b834aa61cb9c5b6cbdec8ec0_submit', data);
+                    $('#btn-login').attr('disabled', 'disabled').text('加载中...');
+                    this.loading = true;
+
+                    jQuery.ajax({
+                        url: 'https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=xh_social_add_ons_login&tab=login&xh_social_add_ons_login=5fe80d3e47&notice_str=5513150235&hash=c0fb46d1657598fa3cc15e8eb290d4a4',
+                        type: 'post',
+                        timeout: 60 * 1000,
+                        async: true,
+                        cache: false,
+                        data: data,
+                        dataType: 'json',
+                        complete: function () {
+                            $('#btn-login').removeAttr('disabled').text('登录');
+                        },
+                        success: function (m) {
+                            if (m.errcode == 405 || m.errcode == 0) {
+                                window.xh_social_view.success('登录成功！', '.commonlogin631790736b834aa61cb9c5b6cbdec8ec0');
+
+                                if (window.top && window.top != window.self) {
+                                    var $wp_dialog = jQuery('#wp-auth-check-wrap', window.top.document);
+                                    if ($wp_dialog.length > 0) {
+                                        $wp_dialog.hide();
+                                        return;
+                                    }
+                                }
+
+                                location.href = 'https://www.zhutibaba.com/demo/iux/';
+                                return;
+                            }
+
+                            window.xh_social_view.error(m.errmsg, '.commonlogin631790736b834aa61cb9c5b6cbdec8ec0');
+                        },
+                        error: function (e) {
+                            window.xh_social_view.error('系统内部错误！', '.commonlogin631790736b834aa61cb9c5b6cbdec8ec0');
+                            console.error(e.responseText);
+                        }
+                    });
+                };
+            })(jQuery);
+        </script>
+        <div class="xh-user-register xh-w">
+            <a href="https://www.zhutibaba.com/demo/iux/register">注册</a>|<a
+                href="https://www.zhutibaba.com/demo/iux/findpassword">忘记密码？</a>
         </div>
-    	</form>
-<script type="text/javascript">
-	(function($){
-		if(!window.xh_social_view){
-			window.xh_social_view={};
-		}
-
-		window.xh_social_view.reset=function(){
-			$('.xh-alert').empty().css('display','none');
-		};
-
-		window.xh_social_view.error=function(msg,parent){
-			var s = parent?(parent+'.fields-error'):'.fields-error';
-			$(s).html('<div class="xh-alert xh-alert-danger" role="alert">'+msg+'</div>').css('display','block');
-		};
-
-		window.xh_social_view.warning=function(msg,parent){
-			var s = parent?(parent+'.fields-error'):'.fields-error';
-			$(s).html('<div class="xh-alert xh-alert-warning" role="alert">'+msg+'</div>').css('display','block');
-		};
-
-		window.xh_social_view.success=function(msg,parent){
-			var s = parent?(parent+'.fields-error'):'.fields-error';
-			$(s).html('<div class="xh-alert xh-alert-success" role="alert">'+msg+'</div>').css('display','block');
-		};
-	})(jQuery);
-</script><script type="text/javascript">
-	(function($){
-	   $(document).keypress(function(e) {
-		   if(window.__wsocial_enable_entrl_submit){
-    			if (e.which == 13){
-    			　　window.xh_social_view.login();
-    			}
-		   }
-		});
-		
-	   window.xh_social_view.login=function(){
-		   window.xh_social_view.reset();
-			var data={};
-			       $(document).trigger('on_form_login631790736b834aa61cb9c5b6cbdec8ec0_submit',data);
-       			$('#btn-login').attr('disabled','disabled').text('加载中...');
-			this.loading=true;
-
-			jQuery.ajax({
-	            url: 'https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=xh_social_add_ons_login&tab=login&xh_social_add_ons_login=5fe80d3e47&notice_str=5513150235&hash=c0fb46d1657598fa3cc15e8eb290d4a4',
-	            type: 'post',
-	            timeout: 60 * 1000,
-	            async: true,
-	            cache: false,
-	            data: data,
-	            dataType: 'json',
-	            complete: function() {
-	            	$('#btn-login').removeAttr('disabled').text('登录');
-	            },
-	            success: function(m) {
-	            	if(m.errcode==405||m.errcode==0){
-	            		window.xh_social_view.success('登录成功！','.commonlogin631790736b834aa61cb9c5b6cbdec8ec0');   				           
-
-	            		if (window.top&&window.top != window.self) {
-		            		var $wp_dialog = jQuery('#wp-auth-check-wrap',window.top.document);
-		            		if($wp_dialog.length>0){$wp_dialog.hide();return;}
-	            	    }
-	            	    
-	            		location.href='https://www.zhutibaba.com/demo/iux/';
-						return;
-					}
-	            	
-	            	window.xh_social_view.error(m.errmsg,'.commonlogin631790736b834aa61cb9c5b6cbdec8ec0');
-	            },
-	            error:function(e){
-	            	window.xh_social_view.error('系统内部错误！','.commonlogin631790736b834aa61cb9c5b6cbdec8ec0');
-	            	console.error(e.responseText);
-	            }
-	         });
-		};
-	})(jQuery);
-</script>         <div class="xh-user-register xh-w">
-           <a href="https://www.zhutibaba.com/demo/iux/register">注册</a>|<a href="https://www.zhutibaba.com/demo/iux/findpassword">忘记密码？</a>
-        </div>
-		<a class="xh-close" href="javascript:void(0);"></a>
-	</div>
+        <a class="xh-close" href="javascript:void(0);"></a>
+    </div>
 </div>
 
 
 <script type="text/javascript">
-    (function($){
-    	$('#wsocial-dialog-login .xh-close,#wsocial-dialog-login .xh-cover').click(function(){
-    		window.__wsocial_enable_entrl_submit=false;
-    		$('#wsocial-dialog-login').hide();
-    	});
-    	window.wsocial_dialog_login_show=function(){
-        	$('#wsocial-dialog-login').css('display','block');
-    	    window.__wsocial_enable_entrl_submit=true;
-			window.__modal_wsocial_login_resize();
-        };
-        $(function(){
-			$('.btn-wsocial-login').click(function(event){
-				event.stopPropagation(); 
-				window.wsocial_dialog_login_show();
-				return false;
-			});
+    (function ($) {
+        $('#wsocial-dialog-login .xh-close,#wsocial-dialog-login .xh-cover').click(function () {
+            window.__wsocial_enable_entrl_submit = false;
+            $('#wsocial-dialog-login').hide();
         });
-        window.__modal_wsocial_login_resize=function(){
-			var $ul =$('#wsocial-dialog-login');
-			var width = window.innerWidth,height = window.innerHeight;
-			if (typeof width != 'number') { 
-			    if (document.compatMode == 'CSS1Compat') {
-			        width = document.documentElement.clientWidth;
-			        height = document.documentElement.clientHeight;
-			    } else {
-			        width = document.body.clientWidth;
-			        height = document.body.clientHeight; 
-			    }
-			}
-			$ul.css({
-				top:((height - $ul.height()) / 2) + "px",
-				left:((width - $ul.width()) / 2) + "px"
-			});
-		};
-    	$(window).resize(function(){
-    		window.__modal_wsocial_login_resize();
-    	});
+        window.wsocial_dialog_login_show = function () {
+            $('#wsocial-dialog-login').css('display', 'block');
+            window.__wsocial_enable_entrl_submit = true;
+            window.__modal_wsocial_login_resize();
+        };
+        $(function () {
+            $('.btn-wsocial-login').click(function (event) {
+                event.stopPropagation();
+                window.wsocial_dialog_login_show();
+                return false;
+            });
+        });
+        window.__modal_wsocial_login_resize = function () {
+            var $ul = $('#wsocial-dialog-login');
+            var width = window.innerWidth, height = window.innerHeight;
+            if (typeof width != 'number') {
+                if (document.compatMode == 'CSS1Compat') {
+                    width = document.documentElement.clientWidth;
+                    height = document.documentElement.clientHeight;
+                } else {
+                    width = document.body.clientWidth;
+                    height = document.body.clientHeight;
+                }
+            }
+            $ul.css({
+                top: ((height - $ul.height()) / 2) + "px",
+                left: ((width - $ul.width()) / 2) + "px"
+            });
+        };
+        $(window).resize(function () {
+            window.__modal_wsocial_login_resize();
+        });
     })(jQuery);
 </script>
 
 <script>
-(function($){ //create closure so we can safely use $ as alias for jQuery
+    (function ($) { //create closure so we can safely use $ as alias for jQuery
 
-    $(document).ready(function(){
+        $(document).ready(function () {
 
-        "use strict";
+            "use strict";
 
-        /*-----------------------------------------------------------------------------------*/
-        /*  Slick Mobile Menu
-        /*-----------------------------------------------------------------------------------*/
-        $('#primary-menu').slicknav({
-            prependTo: '#slick-mobile-menu',
-            allowParentLinks: true,
-            label: '导航'
-        });    		
+            /*-----------------------------------------------------------------------------------*/
+            /*  Slick Mobile Menu
+            /*-----------------------------------------------------------------------------------*/
+            $('#primary-menu').slicknav({
+                prependTo: '#slick-mobile-menu',
+                allowParentLinks: true,
+                label: '导航'
+            });
 
-    });
+        });
 
-})(jQuery);
+    })(jQuery);
 
 </script>
 
@@ -864,56 +1223,56 @@ var _hmt = _hmt || [];
 
 <script>
 
-(function($){ //create closure so we can safely use $ as alias for jQuery
+    (function ($) { //create closure so we can safely use $ as alias for jQuery
 
-    $(document).ready(function(){
+        $(document).ready(function () {
 
-        "use strict";
-		$(window).load(function() {
-			var stickySidebar = new StickySidebar('#secondary', {
-				topSpacing: 20,
-				bottomSpacing: 20,
-				containerSelector: '.site_container',
-				innerWrapperSelector: '.sidebar__inner'
-			});
-		});	
+            "use strict";
+            $(window).load(function () {
+                var stickySidebar = new StickySidebar('#secondary', {
+                    topSpacing: 20,
+                    bottomSpacing: 20,
+                    containerSelector: '.site_container',
+                    innerWrapperSelector: '.sidebar__inner'
+                });
+            });
 
-    });
+        });
 
 
-})(jQuery);
+    })(jQuery);
 </script>
 
 
 <script>
-(function($){ //create closure so we can safely use $ as alias for jQuery
+    (function ($) { //create closure so we can safely use $ as alias for jQuery
 
-    $(document).ready(function(){
+        $(document).ready(function () {
 
-        "use strict";
+            "use strict";
 
-		if ($(window).width() >= 960) {
+            if ($(window).width() >= 960) {
 
-			var mn  = $(".site-header");
-			var mns = "main-nav-scrolled";
-			var hdr = $('.top-bar').height();
-  
-			$(window).scroll(function() {
-			  if( $(this).scrollTop() > hdr ) {
-			    mn.addClass(mns);
-			    $('.header-space').css('display','block');
-			  } else {
-			    mn.removeClass(mns);
-			    $('.header-space').css('display','none');
-			  }
-			});	
+                var mn = $(".site-header");
+                var mns = "main-nav-scrolled";
+                var hdr = $('.top-bar').height();
 
-		}
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > hdr) {
+                        mn.addClass(mns);
+                        $('.header-space').css('display', 'block');
+                    } else {
+                        mn.removeClass(mns);
+                        $('.header-space').css('display', 'none');
+                    }
+                });
 
-    });
+            }
+
+        });
 
 
-})(jQuery);	
+    })(jQuery);
 </script>
 
 </body>
