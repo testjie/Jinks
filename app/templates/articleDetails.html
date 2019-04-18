@@ -85,11 +85,17 @@
     <link rel="stylesheet" id="flaticon-style-css" href="./static/css/flaticon.css" type="text/css" media="all">
     <link rel="stylesheet" id="iux-responsive-style-css" href="./static/css/responsive.css" type="text/css" media="all">
     <link rel="stylesheet" id="wsocial-css" href="./static/css/social.css" type="text/css" media="all">
+
+    {#    添加markdown支持#}
+    <link rel="stylesheet" href="./static/editormd/css/editormd.css"/>
+
+
     <script type="text/javascript" src="./static/js/common/jquery.js"></script>
     <style type="text/css" abt="234"></style>
     <script type="text/javascript" src="./static/js/common/jquery-migrate.min.js"></script>
     <script type="text/javascript" src="./static/js/common/jquery.cookie.js"></script>
     <script type="text/javascript" src="./static/js/common/jquery.parsley.min.js"></script>
+
     <script type="text/javascript">
         var usp_custom_field = "usp_custom_field";
         var usp_custom_checkbox = "usp_custom_checkbox";
@@ -99,6 +105,7 @@
         var usp_max_images = 1;
         var usp_parsley_error = "\u9a8c\u8bc1\u9519\u8bef";
     </script>
+
     <script type="text/javascript" src="./static/js/common/jquery.usp.core.js"></script>
     <script type="text/javascript">
         /* <![CDATA[ */
@@ -689,7 +696,7 @@
 
                         <header class="entry-header">
 
-                            <h1 class="entry-title">苹果新品iPhone 9即将发布 颜值和配置有惊喜</h1>
+                            <h1 class="entry-title">Python代码规范和命名规范</h1>
                             <div class="entry-meta">
 
 
@@ -697,17 +704,17 @@
 			作者:
 			<a href="https://www.zhutibaba.com/demo/iux/author/zhutibaba">
 
-				网站小编			</a>
+				流云			</a>
 
 		</span><!-- .entry-author -->
 
 
                                 <span class="entry-source">
-			来源: 新浪		</span><!-- .entry-date -->
+			来源: 小课堂		</span><!-- .entry-date -->
 
 
                                 <span class="entry-date">
-			发布: 2018-11-13		</span><!-- .entry-date -->
+			发布: 2019-04-18		</span><!-- .entry-date -->
 
 
                                 <span class="entry-views"><i class="flaticon-eye"></i> 1,454<em>阅读</em></span>
@@ -723,57 +730,131 @@
                         </header><!-- .entry-header -->
 
                         <div class="entry-content">
-                            <img width="780" height="456" src="./static/css/iphone9-780x456.jpg"
-                                 class="attachment-iux_single_thumb size-iux_single_thumb wp-post-image" alt=""
-                                 srcset="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-780x456.jpg 780w, https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-600x350.jpg 600w, https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-190x110.jpg 190w"
-                                 sizes="(max-width: 780px) 100vw, 780px">
 
-                     <p>一、简介<br>Postman是一款非常流行的接口调试工具，测试人员可以轻松使用此工具创建接口测试。Postman比其他接口测试工具简单方便，功能更为强大。
-<p>二、安装</p>
-<ol>
-<li><p>Postman有chrome浏览器插件版本，你可以到chrome应用商店去下载安装。</p>
-</li><li><p>Postman提供了独立于chrome的浏览器的安装包，安装包支持MACOS、 Windows、Linux。</p>
-</li></ol>
-<p>推荐使用独立方式下载：<a href="https://www.getpostman.com/downloads/">https://www.getpostman.com/downloads/</a> 。</p>
-<p>独立安装包下载<br>三、简单使用
-<ol>
-<li><p>Get方法，以天气接口为栗子</p>
-<ul>
-<li><p>HTTP方法选择：GET</p>
-</li><li><p>HTTP的URL输入：<a href="http://www.weather.com.cn/data/sk/101010100.html">http://www.weather.com.cn/data/sk/101010100.html</a></p>
-</li><li><p>点击Send按钮</p>
-</li></ul>
-</li></ol>
-<p>请求及响应信息<br>响应信息：
-<pre><code>- HTTP状态码，200表示请求成功
+                            {# markdown展示#}
 
-- Time为请求消耗时间：41毫秒
+                            <div id="test-editormd-view">
+                                <textarea style="display:none;"
+                                          name="test-editormd-markdown-doc">
 
-- Size为响应内容大小：555字节
+# 测试环境
+* Windows 10
+* JDK 1.8以上
+* Python3.6以上
+* Pytest任意脚本
 
-- 响应内容为JSON字符串，表示当前北京市的天气状况。
-</code></pre><ol>
-<li><p>POST方法之form-data</p>
-<ul>
-<li><p>HTTP方法选择：POST</p>
-</li><li><p>HTTP的URL输入：<a href="http://ljtest.itblacklist.top/userLogin">http://ljtest.itblacklist.top/userLogin</a></p>
-</li><li><p>选择参数格式：form-data</p>
-</li><li><p>输入参数如下图</p>
-</li><li><p>点击Send按钮</p>
-</li></ul>
-</li></ol>
-<p>请求及响应信息</p>
-<ol>
-<li><p>POST方法之json</p>
-<ul>
-<li><p>HTTP方法选择：POST</p>
-</li><li><p>HTTP的URL输入：<a href="http://ljtest.itblacklist.top/userLoginByJson">http://ljtest.itblacklist.top/userLoginByJson</a></p>
-</li><li><p>选择参数格式为：raw -&gt; JSON（application/json）</p>
-</li><li><p>输出参数 {“username”:”ljtest”, “password”:”ljtest”, “captcha”:”9527”}</p>
-</li><li><p>点击Send按钮</p>
-</li></ul>
-</li></ol>
-<p>请求及响应信息</p>
+***
+
+# 一、安装allure-pytest插件
+```
+pip install allure-pytest
+```
+
+***
+# 二、运行pytest并生成allure测试报告
+```
+    pytest -q xxxx.py --alluredir=./report
+```
+
+***
+# 三、安装Allure-commandline
+
+- 下载并解压
+```
+下载链接：https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/2.10.0/allure-commandline-2.10.0.zip
+```
+- 将allure的bin目录添加到path目录中
+
+
+***
+# 四、安装并配置Jenkins
+```
+传送门：https://www.jianshu.com/p/575274af1700
+```
+
+***
+# 五、在jenkins上安装Allure插件
+```
+    系统设置 > 插件管理 > Available > 搜索Allure并安装
+```
+
+***
+# 六、在Jenkins上配置Allure Commandline
+
+```
+    系统设置 > 全局工具配置 > Allure Commandline > 新增 Allure Commandline
+
+    1. 别名：allure
+    2. 版本：选择下载的Allure Commandline版本
+    3. 点击应用
+
+```
+
+
+***
+# 七、配置自动化执行项目
+
+- 1.新建任务
+```
+    新建任务 > 构建一个自由风格的项目 > 确定
+```
+
+- 2.使用自定义空间
+```
+    General > 高级 > 使用自定义的工作空间 > 目录：D:\05 代码\小课堂\PytestTests（pytest脚本所在目录）
+
+```
+
+- 3.在构建中输入pytest执行代码
+```
+call pytest -s -q 01_pytest.py --alluredir ./allure_result
+exit 0
+
+```
+
+- 4.在构建后操作
+```
+在以下输入框中输入：
+
+    * Path中输入：allure_result
+    * 高级>Report path:allure_report
+```
+
+- 5.点击应用
+
+***
+# 八、重启tomcat
+
+
+***
+# 九、构建项目
+
+***
+
+
+
+                                </textarea>
+                            </div>
+                            <script src="./static/editormd/examples/js/jquery.min.js"></script>
+                            <script src="./static/editormd/lib/marked.min.js"></script>
+                            <script src="./static/editormd/lib/prettify.min.js"></script>
+                            <script src="./static/editormd/lib/raphael.min.js"></script>
+                            <script src="./static/editormd/lib/underscore.min.js"></script>
+                            <script src="./static/editormd/lib/sequence-diagram.min.js"></script>
+                            <script src="./static/editormd/lib/flowchart.min.js"></script>
+                            <script src="./static/editormd/lib/jquery.flowchart.min.js"></script>
+                            <script src="./static/editormd/editormd.js"></script>
+                            <script type="text/javascript">
+                                testEditormdView2 = editormd.markdownToHTML("test-editormd-view", {
+                                    htmlDecode: "style,script,iframe",  // you can filter tags decode
+                                    emoji: true,
+                                    taskList: true,
+                                    tex: true,  // 默认不解析
+                                    flowChart: true,  // 默认不解析
+                                    sequenceDiagram: true,  // 默认不解析
+                                });
+                            </script>
+
 
                         </div><!-- .entry-content -->
 
@@ -1048,17 +1129,7 @@
 <script type="text/javascript" src="./static/js/common/jquery.custom.js"></script>
 <script type="text/javascript" src="./static/js/common/comment-reply.min.js"></script>
 <script type="text/javascript" src="./static/js/common/wp-embed.min.js"></script>
-<script type="text/javascript">if (jQuery) {
-    jQuery(function ($) {
-        $.ajax({
-            url: 'https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=xunhuweb_cron',
-            type: 'post',
-            timeout: 60 * 1000,
-            async: true,
-            cache: false
-        });
-    });
-}</script>
+
 <div id="wsocial-dialog-login" style="display: none; position: fixed; z-index: 999; top: 89px; left: 482px;">
     <div class="xh-cover"></div>
     <div class="xh-regbox xh-window">
@@ -1240,7 +1311,7 @@
             "bdSize": "16"
         }, "share": {}
     };
-    with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '/static/js/common/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
 </script>
 
 
