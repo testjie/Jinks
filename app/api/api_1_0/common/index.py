@@ -39,3 +39,23 @@ def get_carousel():
     sql = "select * from tbl_carousels where status = 1 and starttime < '{}' and endtime > '{}'".format(now, now)
     result = get_json(data=query(sql))
     return result
+
+
+@bp.route("/getArticleCategories", methods=["GET"])
+def get_article_categories():
+    """
+    获取文章分类
+    :return:
+    """
+    sql = "select * from tbl_categories";
+    result = get_json(data=query(sql))
+    return result
+
+
+@bp.route("/goArticleDetails", methods=["GET"])
+def go_article_details():
+    """
+    跳转到文章详情页面
+    :return:
+    """
+    return render_template("articleDetails.html")

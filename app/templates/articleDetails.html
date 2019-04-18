@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://www.zhutibaba.com/demo/iux/582.html -->
+<html lang="zh-CN"
+      class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>文章详情</title>
+    <meta name="robots" content="noindex,follow">
+    <link rel="dns-prefetch" href="https://s.w.org/">
+
+    <script src="./static/js/common/hm.js"></script>
+    <script type="text/javascript">
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/",
+            "svgExt": ".svg",
+            "source": {"concatemoji": "https:\/\/www.zhutibaba.com\/demo\/iux\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}
+        };
+        !function (a, b, c) {
+            function d(a, b) {
+                var c = String.fromCharCode;
+                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, a), 0, 0);
+                var d = k.toDataURL();
+                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, b), 0, 0);
+                var e = k.toDataURL();
+                return d === e
+            }
+
+            function e(a) {
+                var b;
+                if (!l || !l.fillText) return !1;
+                switch (l.textBaseline = "top", l.font = "600 32px Arial", a) {
+                    case"flag":
+                        return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]), !b);
+                    case"emoji":
+                        return b = d([55358, 56760, 9792, 65039], [55358, 56760, 8203, 9792, 65039]), !b
+                }
+                return !1
+            }
+
+            function f(a) {
+                var c = b.createElement("script");
+                c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c)
+            }
+
+            var g, h, i, j, k = b.createElement("canvas"), l = k.getContext && k.getContext("2d");
+            for (j = Array("flag", "emoji"), c.supports = {
+                everything: !0,
+                everythingExceptFlag: !0
+            }, i = 0; i < j.length; i++) c.supports[j[i]] = e(j[i]), c.supports.everything = c.supports.everything && c.supports[j[i]], "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[j[i]]);
+            c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () {
+                c.DOMReady = !0
+            }, c.supports.everything || (h = function () {
+                c.readyCallback()
+            }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1), a.addEventListener("load", h, !1)) : (a.attachEvent("onload", h), b.attachEvent("onreadystatechange", function () {
+                "complete" === b.readyState && c.readyCallback()
+            })), g = c.source || {}, g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <script src="./static/js/common/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" id="wp-block-library-css" href="./static/css/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="usp_style-css" href="./static/css/usp.css" type="text/css" media="all">
+    <link rel="stylesheet" id="iux-style-css" href="./static/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="genericons-style-css" href="./static/css/genericons.css" type="text/css" media="all">
+    <link rel="stylesheet" id="flaticon-style-css" href="./static/css/flaticon.css" type="text/css" media="all">
+    <link rel="stylesheet" id="iux-responsive-style-css" href="./static/css/responsive.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wsocial-css" href="./static/css/social.css" type="text/css" media="all">
+    <script type="text/javascript" src="./static/js/common/jquery.js"></script>
+    <style type="text/css" abt="234"></style>
+    <script type="text/javascript" src="./static/js/common/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="./static/js/common/jquery.cookie.js"></script>
+    <script type="text/javascript" src="./static/js/common/jquery.parsley.min.js"></script>
+    <script type="text/javascript">
+        var usp_custom_field = "usp_custom_field";
+        var usp_custom_checkbox = "usp_custom_checkbox";
+        var usp_case_sensitivity = "false";
+        var usp_challenge_response = "2";
+        var usp_min_images = 0;
+        var usp_max_images = 1;
+        var usp_parsley_error = "\u9a8c\u8bc1\u9519\u8bef";
+    </script>
+    <script type="text/javascript" src="./static/js/common/jquery.usp.core.js"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var simpleLikes = {
+            "ajaxurl": "https:\/\/www.zhutibaba.com\/demo\/iux\/wp-admin\/admin-ajax.php",
+            "like": "\u70b9\u8d5e\u8fd9\u7bc7\u6587\u7ae0",
+            "unlike": "\u53d6\u6d88\u70b9\u8d5e"
+        };
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="./static/js/common/simple-likes-public.js"></script>
+    <link rel="https://api.w.org/" href="https://www.zhutibaba.com/demo/iux/wp-json/">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.zhutibaba.com/demo/iux/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+          href="https://www.zhutibaba.com/demo/iux/wp-includes/wlwmanifest.xml">
+    <link rel="prev" title="使用WordPress建站的好处" href="https://www.zhutibaba.com/demo/iux/843.html">
+    <link rel="next" title="2018十大最佳CEO：微软纳德拉第一" href="https://www.zhutibaba.com/demo/iux/815.html">
+    <meta name="generator" content="WordPress 5.1.1">
+    <link rel="canonical" href="https://www.zhutibaba.com/demo/iux/582.html">
+    <link rel="shortlink" href="https://www.zhutibaba.com/demo/iux/?p=582">
+    <link rel="alternate" type="application/json+oembed"
+          href="https://www.zhutibaba.com/demo/iux/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F582.html">
+    <link rel="alternate" type="text/xml+oembed"
+          href="https://www.zhutibaba.com/demo/iux/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F582.html&amp;format=xml">
+    <link rel="pingback" href="https://www.zhutibaba.com/demo/iux/xmlrpc.php">
+    <style type="text/css">
+
+        /* Theme Colors */
+        /* Primary Color */
+        a:hover,
+        .site-title a,
+        .site-header .search-icon:hover .fa,
+        .posts-nav-menu ul li a:hover,
+        .sidebar .widget a:hover,
+        .site-footer .widget a:hover,
+        .author-box a:hover,
+        article.hentry .edit-link a:hover,
+        .comment-content a:hover,
+        .entry-meta a:hover,
+        .entry-title a:hover,
+        .content-list .entry-title a:hover,
+        .content-list .entry-title a:hover span,
+        .content-list .entry-category a:after,
+        .pagination .page-numbers:hover,
+        .pagination .page-numbers.current,
+        .author-box .author-meta .author-name a:hover,
+        article.hentry .edit-link a,
+        .author-box a,
+        .page-content a,
+        .entry-content a,
+        .comment-author a,
+        .comment-content a,
+        .comment-reply-title small a:hover,
+        .sidebar .widget a,
+        .friend-nav li a:hover,
+        .tooltip .left .contact-info h3,
+        .single #primary .entry-footer .entry-like a,
+        .single #primary .entry-footer .entry-sponsor span,
+        .zhuanti-heading .section-more a:hover,
+        .mini-page h4 a:hover,
+        .mini-page ul li a:hover,
+        .single-breadcrumbs a:hover,
+        .bottom-right span.icon-link .text,
+        .bottom-right a .text,
+        #site-bottom a:hover {
+            color: #00aeff;
+        }
+
+        button,
+        .btn,
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"],
+        .friend .friend-title:before,
+        .partner-title:before,
+        .sidebar .widget .widget-title:before,
+        .related-content .section-title:before,
+        .comment-reply-title:before,
+        .comments-title:before,
+        .posts-nav-menu ul li a:after,
+        .single #primary .entry-footer .entry-like a:hover,
+        .single #primary .entry-footer .entry-sponsor span:hover,
+        .content-list .entry-category a,
+        .entry-tags .tag-links a:hover,
+        .must-log-in a,
+        .widget_tag_cloud .tagcloud a:hover {
+            background-color: #00aeff;
+        }
+
+        .sf-menu li li a:hover {
+            background-color: #00aeff !important;
+        }
+
+        @media only screen and (max-width: 959px) {
+            #primary-menu {
+                background-color: #00aeff;
+            }
+        }
+
+        .single #primary .entry-footer .entry-like a,
+        .single #primary .entry-footer .entry-like a:hover,
+        .single #primary .entry-footer .entry-sponsor span {
+            border-color: #00aeff;
+        }
+
+        /* Secondary Color */
+        .content-list .entry-title span,
+        .page-content a:hover,
+        .entry-content a:hover,
+        article.hentry .edit-link a:hover,
+        .author-box .author-meta .author-name a:hover,
+        .sidebar .widget_custom_text h4 {
+            color: #ff4c4c;
+        }
+
+        .sidebar .widget_custom_text:hover {
+            border-color: #ff4c4c;
+        }
+
+        .sidebar .widget_custom_text .widget-title {
+            background-color: #ff4c4c;
+        }
+
+        /* Tertiary Color */
+        .header-submit a {
+            background-color: #76b852;
+        }
+
+        .content-list .entry-meta .entry-like a.liked {
+            color: #76b852 !important;
+        }
+
+        .entry-content p {
+            text-indent: 2em;
+        }
+
+        #primary-menu {
+            margin-right: 30px;
+        }
+
+        /* Bottom Content Color */
+        .bottom-content {
+            background: linear-gradient(105deg, #0ecad4, #0ecad4, #50e3c2);
+        }
+    </style>
+
+    <script src="./static/js/common/share.js"></script>
+    <script>//remove 17173 video ad
+    doAdblock();
+
+    function doAdblock() {
+        (function () {
+            function A() {
+            }
+
+            A.prototype = {
+                rules: {
+                    '17173_in': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_in_20150522.swf"
+                    },
+                    '17173_out': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_out_20150522.swf"
+                    },
+                    '17173_live': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_stream_20150522.swf"
+                    },
+                    '17173_live_out': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173.out.Live.swf"
+                    }
+                },
+                _done: null,
+                get done() {
+                    if (!this._done) {
+                        this._done = new Array();
+                    }
+                    return this._done;
+                },
+                addAnimations: function () {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                },
+                animationsHandler: function (e) {
+                    if (e.animationName === 'playerInserted') {
+                        this.replace(e.target);
+                    }
+                },
+                replace: function (elem) {
+                    if (this.done.indexOf(elem) != -1) return;
+                    this.done.push(elem);
+                    var player = elem.data || elem.src;
+                    if (!player) return;
+                    var i, find, replace = false;
+                    for (i in this.rules) {
+                        find = this.rules[i]['find'];
+                        if (find.test(player)) {
+                            replace = this.rules[i]['replace'];
+                            if ('function' === typeof this.rules[i]['preHandle']) {
+                                this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                            } else {
+                                this.reallyReplace.bind(this, elem, find, replace)();
+                            }
+                            break;
+                        }
+                    }
+                },
+                reallyReplace: function (elem, find, replace) {
+                    elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                    var b = elem.querySelector("param[name='movie']");
+                    this.reloadPlugin(elem);
+                },
+                reloadPlugin: function (elem) {
+                    var nextSibling = elem.nextSibling;
+                    var parentNode = elem.parentNode;
+                    parentNode.removeChild(elem);
+                    var newElem = elem.cloneNode(true);
+                    this.done.push(newElem);
+                    if (nextSibling) {
+                        parentNode.insertBefore(newElem, nextSibling);
+                    } else {
+                        parentNode.appendChild(newElem);
+                    }
+                },
+                init: function () {
+                    var handler = this.animationsHandler.bind(this);
+                    document.body.addEventListener('webkitAnimationStart', handler, false);
+                    document.body.addEventListener('msAnimationStart', handler, false);
+                    document.body.addEventListener('oAnimationStart', handler, false);
+                    document.body.addEventListener('animationstart', handler, false);
+                    this.addAnimations();
+                }
+            };
+            new A().init();
+        })();
+    }
+
+    //remove baidu search ad
+    if (document.URL.indexOf('www.baidu.com') >= 0) {
+        if (document && document.getElementsByTagName && document.getElementById && document.body) {
+            var aa = function () {
+                var all = document.body.querySelectorAll("#content_left div,#content_left table");
+                for (var i = 0; i < all.length; i++) {
+                    if (/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))) {
+                        all[i].style.display = "none";
+                        all[i].style.visibility = 'hidden';
+                    }
+                }
+                all = document.body.querySelectorAll('.result.c-container[id="1"]');
+                //if(all.length == 1) return;
+                for (var i = 0; i < all.length; i++) {
+                    if (all[i].innerHTML && all[i].innerHTML.indexOf('广告') > -1) {
+                        all[i].style.display = "none";
+                        all[i].style.visibility = 'hidden';
+                    }
+                }
+            }
+            aa();
+            document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified', aa)
+        }
+        ;
+    }
+    //remove sohu video ad
+    if (document.URL.indexOf("tv.sohu.com") >= 0) {
+        if (document.cookie.indexOf("fee_status=true") == -1) {
+            document.cookie = 'fee_status=true'
+        }
+        ;
+    }
+    //remove 56.com video ad
+    if (document.URL.indexOf("56.com") >= 0) {
+        if (document.cookie.indexOf("fee_status=true") == -1) {
+            document.cookie = 'fee_status=true'
+        }
+        ;
+    }
+    //fore iqiyi enable html5 player function
+    if (document.URL.indexOf("iqiyi.com") >= 0) {
+        if (document.cookie.indexOf("player_forcedType=h5_VOD") == -1) {
+            document.cookie = 'player_forcedType=h5_VOD'
+            if (localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime) < 60000) {
+                console.log('no reload')
+            } else {
+                location.reload()
+                localStorage.reloadTime = Date.now();
+            }
+        }
+    }
+    </script>
+    <style type="text/css">object, embed {
+        -webkit-animation-duration: .001s;
+        -webkit-animation-name: playerInserted;
+        -ms-animation-duration: .001s;
+        -ms-animation-name: playerInserted;
+        -o-animation-duration: .001s;
+        -o-animation-name: playerInserted;
+        animation-duration: .001s;
+        animation-name: playerInserted;
+    }
+
+    @-webkit-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }</style>
+    <link rel="stylesheet" href="./static/css/share_style0_16.css">
+</head>
+
+<body class="post-template-default single single-post postid-582 single-format-standard wp-custom-logo">
+<div id="page" class="site">
+    <div class="top-bar clear">
+
+        <div class="container">
+
+            <nav id="top-nav" class="top-navigation">
+                <div class="menu-top-container">
+                    <ul id="top-menu" class="sf-menu">
+                        <li id="menu-item-830"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-830"><a href="#">回到首页</a>
+                        </li>
+                        <li id="menu-item-829"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-829">
+                            <a href="https://www.zhutibaba.com/demo/iux/zhuanti">专题列表</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-828"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a
+                                        href="https://www.zhutibaba.com/demo/iux/zhuanti-full">测试基础</a></li>
+                                <li id="menu-item-828"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a
+                                        href="https://www.zhutibaba.com/demo/iux/zhuanti-full">测试开发</a></li>
+                                <li id="menu-item-828"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a
+                                        href="https://www.zhutibaba.com/demo/iux/zhuanti-full">性能测试</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-790"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-790"><a
+                                target="_blank" href="https://www.zhutibaba.com/vip">加入会员</a></li>
+                    </ul>
+                </div>
+            </nav><!-- #primary-nav -->
+
+
+            <div class="header-right">
+                <ul>
+
+                    <li class="header-login">
+                        <a href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F582.html"
+                           title="登录">登录</a>
+                    </li>
+
+                    <li class="header-register">
+                        <a href="https://www.zhutibaba.com/demo/iux/register" title="注册">注册</a>
+                    </li>
+
+
+                    <li class="header-submit">
+                        <a href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F582.html?redirect_to=https://www.zhutibaba.com/demo/iux/tougao"
+                           title="用户投稿">投稿</a>
+                    </li>
+
+                </ul>
+
+            </div><!-- .header-right -->
+
+        </div><!-- .container -->
+
+    </div><!--.top-bar-->
+
+
+    <header id="masthead" class="site-header clear">
+        <div class="container">
+
+            <div class="site-branding">
+
+
+                <div id="logo">
+                    <span class="helper"></span>
+                    <a href="https://www.zhutibaba.com/demo/iux/" class="custom-logo-link" rel="home"
+                       itemprop="url"><img width="240" height="110" src="./static/imgs/logo.png" class="custom-logo"
+                                           alt="爱前端" itemprop="logo"></a></div><!-- #logo -->
+
+
+                <div class="site-desc">
+                    <div class="line1 has-line2">专业WP主题</div>
+                    <div class="line2">新一代网站模版</div>
+                </div><!-- .site-desc -->
+
+            </div><!-- .site-branding -->
+
+            <nav id="primary-nav" class="primary-navigation tablet_menu_col_8 phone_menu_col_4">
+                <div class="menu-primary-container">
+                    <ul id="primary-menu" class="sf-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                        <li id="menu-item-795"
+                            class="color1 menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-795">
+                            <a href="https://www.zhutibaba.com/demo/iux/"><i class="fa fa-home"></i> 首页</a></li>
+                        <li id="menu-item-784"
+                            class="color2 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-784">
+                            <a href="https://www.zhutibaba.com/demo/iux/zhuanti" class="sf-with-ul"><i
+                                    class="fa fa-tags"></i> 专题</a>
+                            <ul class="sub-menu" style="display: none;">
+                                <li id="menu-item-785"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-785"><a
+                                        href="https://www.zhutibaba.com/demo/iux/zhuanti-full">全宽专题列表</a></li>
+                                <li id="menu-item-771"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-771"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">专题页面</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-734"
+                            class="color3 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-734">
+                            <a href="https://www.zhutibaba.com/demo/iux/news" class="sf-with-ul"><i
+                                    class="fa fa-file-text"></i> 新闻</a>
+                            <ul class="sub-menu" style="display: none;">
+                                <li id="menu-item-742"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-742"><a
+                                        href="https://www.zhutibaba.com/demo/iux/news">下拉菜单 1</a></li>
+                                <li id="menu-item-741"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-741"><a
+                                        href="https://www.zhutibaba.com/demo/iux/news">下拉菜单 2</a></li>
+                                <li id="menu-item-743"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-743"><a
+                                        href="https://www.zhutibaba.com/demo/iux/news">下拉菜单 3</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-736"
+                            class="color4 menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-736">
+                            <a href="https://www.zhutibaba.com/demo/iux/tech" class="sf-with-ul"><i
+                                    class="fa fa-bookmark"></i> 科技</a>
+                            <ul class="sub-menu" style="display: none;">
+                                <li id="menu-item-744"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-744">
+                                    <a href="https://www.zhutibaba.com/demo/iux/tech">创业俱乐部</a></li>
+                                <li id="menu-item-745"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-745">
+                                    <a href="https://www.zhutibaba.com/demo/iux/tech">区块链</a></li>
+                                <li id="menu-item-746"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-746">
+                                    <a href="https://www.zhutibaba.com/demo/iux/tech">互联网</a></li>
+                                <li id="menu-item-756"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-756">
+                                    <a href="https://www.zhutibaba.com/demo/iux/tech">手机数码</a></li>
+                                <li id="menu-item-757"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-757">
+                                    <a href="https://www.zhutibaba.com/demo/iux/tech">WordPress</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-739"
+                            class="color5 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-739">
+                            <a href="https://www.zhutibaba.com/demo/iux/house" class="sf-with-ul"><i
+                                    class="fa fa-heart"></i> 房产</a>
+                            <ul class="sub-menu" style="display: none;">
+                                <li id="menu-item-758"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-758"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">新房</a></li>
+                                <li id="menu-item-759"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-759"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">二手房</a></li>
+                                <li id="menu-item-762"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-762"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">装修建材</a></li>
+                                <li id="menu-item-760"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-760"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">家具家居</a></li>
+                                <li id="menu-item-761"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-761"><a
+                                        href="https://www.zhutibaba.com/demo/iux/house">海外置业</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-735"
+                            class="color16 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-735">
+                            <a href="https://www.zhutibaba.com/demo/iux/auto" class="sf-with-ul"><i
+                                    class="fa fa-car"></i> 汽车</a>
+                            <ul class="sub-menu" style="display: none;">
+                                <li id="menu-item-747"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-747"><a
+                                        href="https://www.zhutibaba.com/demo/iux/auto">上市新车</a></li>
+                                <li id="menu-item-754"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-754"><a
+                                        href="https://www.zhutibaba.com/demo/iux/auto">用车小百科</a></li>
+                                <li id="menu-item-748"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-748"><a
+                                        href="https://www.zhutibaba.com/demo/iux/auto">车型对比</a></li>
+                                <li id="menu-item-755"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-755"><a
+                                        href="https://www.zhutibaba.com/demo/iux/auto">汽车测评</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-738"
+                            class="color17 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-738"><a
+                                href="https://www.zhutibaba.com/demo/iux/finance"><i class="fa fa-paper-plane"></i>
+                            财经</a></li>
+                        <li id="menu-item-737"
+                            class="color16 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-737"><a
+                                href="https://www.zhutibaba.com/demo/iux/food"><i class="fa fa-coffee"></i> 美食</a></li>
+                    </ul>
+                </div>
+            </nav><!-- #primary-nav -->
+
+
+            <div class="header-search-icon">
+					<span class="search-icon">
+						<i class="fa fa-search"></i>
+						<i class="fa fa-close"></i>
+					</span>
+            </div>
+
+
+            <div class="header-search">
+                <form id="searchform" method="get" action="https://www.zhutibaba.com/demo/iux/">
+                    <input type="search" name="s" class="search-input" placeholder="请输入关键词" autocomplete="off">
+                    <button type="submit" class="search-submit">搜索</button>
+                </form>
+            </div><!-- .header-search -->
+
+
+        </div><!-- .container -->
+
+    </header><!-- #masthead -->
+
+    <div class="header-space"></div>
+
+    <div class="single-breadcrumbs clear">
+        <div class="container">
+            <span>当前位置</span> <i class="fa fa-angle-right"></i> <a href="https://www.zhutibaba.com/demo/iux">爱前端</a> <i
+                class="fa fa-angle-right"></i> <a target="_blank" href="https://www.zhutibaba.com/demo/iux/tech">科技</a>
+            <i class="fa fa-angle-right"></i> 正文
+
+            <span class="single-posts-nav">
+					下一篇: <a href="https://www.zhutibaba.com/demo/iux/843.html" rel="prev">使用WordPress建站的好处</a> <i
+                    class="fa fa-angle-right"></i>				</span>
+        </div>
+    </div>
+
+    <div id="content" class="site-content site_container container clear">
+
+        <div id="primary" class="content-area">
+
+            <div class="content-wrapper">
+
+                <main id="main" class="site-main">
+
+
+                    <article id="post-582"
+                             class="post-582 post type-post status-publish format-standard has-post-thumbnail hentry category-tech tag-25 tag-26 tag-27">
+
+                        <header class="entry-header">
+
+                            <h1 class="entry-title">苹果新品iPhone 9即将发布 颜值和配置有惊喜</h1>
+                            <div class="entry-meta">
+
+
+		<span class="entry-author">
+			作者:
+			<a href="https://www.zhutibaba.com/demo/iux/author/zhutibaba">
+
+				网站小编			</a>
+
+		</span><!-- .entry-author -->
+
+
+                                <span class="entry-source">
+			来源: 新浪		</span><!-- .entry-date -->
+
+
+                                <span class="entry-date">
+			发布: 2018-11-13		</span><!-- .entry-date -->
+
+
+                                <span class="entry-views"><i class="flaticon-eye"></i> 1,454<em>阅读</em></span>
+
+
+                                <span class="entry-comment"><a
+                                        href="https://www.zhutibaba.com/demo/iux/582.html#comments"
+                                        class="comments-link"><i
+                                        class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 3<em>评论</em></a></span>
+
+                            </div><!-- .entry-meta -->
+
+                        </header><!-- .entry-header -->
+
+                        <div class="entry-content">
+                            <img width="780" height="456" src="./static/css/iphone9-780x456.jpg"
+                                 class="attachment-iux_single_thumb size-iux_single_thumb wp-post-image" alt=""
+                                 srcset="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-780x456.jpg 780w, https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-600x350.jpg 600w, https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-190x110.jpg 190w"
+                                 sizes="(max-width: 780px) 100vw, 780px">
+
+                     <p>一、简介<br>Postman是一款非常流行的接口调试工具，测试人员可以轻松使用此工具创建接口测试。Postman比其他接口测试工具简单方便，功能更为强大。
+<p>二、安装</p>
+<ol>
+<li><p>Postman有chrome浏览器插件版本，你可以到chrome应用商店去下载安装。</p>
+</li><li><p>Postman提供了独立于chrome的浏览器的安装包，安装包支持MACOS、 Windows、Linux。</p>
+</li></ol>
+<p>推荐使用独立方式下载：<a href="https://www.getpostman.com/downloads/">https://www.getpostman.com/downloads/</a> 。</p>
+<p>独立安装包下载<br>三、简单使用
+<ol>
+<li><p>Get方法，以天气接口为栗子</p>
+<ul>
+<li><p>HTTP方法选择：GET</p>
+</li><li><p>HTTP的URL输入：<a href="http://www.weather.com.cn/data/sk/101010100.html">http://www.weather.com.cn/data/sk/101010100.html</a></p>
+</li><li><p>点击Send按钮</p>
+</li></ul>
+</li></ol>
+<p>请求及响应信息<br>响应信息：
+<pre><code>- HTTP状态码，200表示请求成功
+
+- Time为请求消耗时间：41毫秒
+
+- Size为响应内容大小：555字节
+
+- 响应内容为JSON字符串，表示当前北京市的天气状况。
+</code></pre><ol>
+<li><p>POST方法之form-data</p>
+<ul>
+<li><p>HTTP方法选择：POST</p>
+</li><li><p>HTTP的URL输入：<a href="http://ljtest.itblacklist.top/userLogin">http://ljtest.itblacklist.top/userLogin</a></p>
+</li><li><p>选择参数格式：form-data</p>
+</li><li><p>输入参数如下图</p>
+</li><li><p>点击Send按钮</p>
+</li></ul>
+</li></ol>
+<p>请求及响应信息</p>
+<ol>
+<li><p>POST方法之json</p>
+<ul>
+<li><p>HTTP方法选择：POST</p>
+</li><li><p>HTTP的URL输入：<a href="http://ljtest.itblacklist.top/userLoginByJson">http://ljtest.itblacklist.top/userLoginByJson</a></p>
+</li><li><p>选择参数格式为：raw -&gt; JSON（application/json）</p>
+</li><li><p>输出参数 {“username”:”ljtest”, “password”:”ljtest”, “captcha”:”9527”}</p>
+</li><li><p>点击Send按钮</p>
+</li></ul>
+</li></ol>
+<p>请求及响应信息</p>
+
+                        </div><!-- .entry-content -->
+
+
+                        <div class="single-credit">
+                            本文来自网络，不代表爱前端立场，转载请注明出处：https://www.zhutibaba.com/demo/iux/582.html
+                        </div>
+
+
+                        <div class="entry-footer clear">
+
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+
+                                <!-- Modal content -->
+                            </div>
+                            <div class="entry-footer-right">
+					<span class="entry-sponsor">
+			</span>
+
+                                <span class="entry-like">
+					<span class="sl-wrapper"><a
+                            href="https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&amp;post_id=582&amp;nonce=04e3d97603&amp;is_comment=0&amp;disabled=true"
+                            class="sl-button sl-button-582" data-nonce="04e3d97603" data-post-id="582"
+                            data-iscomment="0" title="点赞这篇文章"><span class="sl-count"><i class="fa fa-thumbs-o-up"></i> 57<em>赞</em></span></a><span
+                            class="sl-loader"></span></span>				</span><!-- .entry-like -->
+                            </div>
+
+                        </div><!-- .entry-footer -->
+
+                        <div class="entry-bottom clear">
+                            <div class="entry-tags">
+
+                            </div><!-- .entry-tags -->
+                        </div>
+                    </article><!-- #post-## -->
+
+
+                    <div id="comments" class="comments-area">
+
+                        <div id="respond" class="comment-respond">
+                            <h3 id="reply-title" class="comment-reply-title">发表评论
+                                <small><a rel="nofollow" id="cancel-comment-reply-link"
+                                          href="https://www.zhutibaba.com/demo/iux/582.html#respond"
+                                          style="display:none;">取消回复</a></small>
+                            </h3>
+                            <p class="must-log-in">要发表评论，您必须先<a
+                                    href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F582.html">登录</a>。
+                            </p></div><!-- #respond -->
+                        <h2 class="comments-title">
+                            3条评论 </h2>
+
+                        <ol class="comment-list">
+                            <li id="comment-20"
+                                class="comment byuser comment-author-zhutibaba bypostauthor even thread-even depth-1 parent">
+                                <article id="div-comment-20" class="comment-body">
+                                    <footer class="comment-meta">
+                                        <div class="comment-author vcard">
+                                            <img alt="" src="./static/css/4c2ed72c6be86742f05e9750110d5731(1).png"
+                                                 srcset="https://secure.gravatar.com/avatar/4c2ed72c6be86742f05e9750110d5731?s=64&amp;d=mm&amp;r=g 2x"
+                                                 class="avatar avatar-32 photo" height="32" width="32"> <b class="fn">网站小编</b><span
+                                                class="says">说道：</span></div><!-- .comment-author -->
+
+                                        <div class="comment-metadata">
+                                            <a href="https://www.zhutibaba.com/demo/iux/582.html#comment-20">
+                                                <time datetime="2018-10-30T00:05:52+08:00">
+                                                    2018-10-30 上午12:05
+                                                </time>
+                                            </a>
+                                        </div><!-- .comment-metadata -->
+
+                                    </footer><!-- .comment-meta -->
+
+                                    <div class="comment-content">
+                                        <p>简单测试一下评论样式</p>
+                                    </div><!-- .comment-content -->
+
+                                    <div class="reply"><a rel="nofollow" class="comment-reply-login"
+                                                          href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F582.html">登录以回复</a>
+                                    </div>
+                                </article><!-- .comment-body -->
+                                <ol class="children">
+                                    <li id="comment-21"
+                                        class="comment byuser comment-author-zhutibaba bypostauthor odd alt depth-2">
+                                        <article id="div-comment-21" class="comment-body">
+                                            <footer class="comment-meta">
+                                                <div class="comment-author vcard">
+                                                    <img alt=""
+                                                         src="./static/css/4c2ed72c6be86742f05e9750110d5731(1).png"
+                                                         srcset="https://secure.gravatar.com/avatar/4c2ed72c6be86742f05e9750110d5731?s=64&amp;d=mm&amp;r=g 2x"
+                                                         class="avatar avatar-32 photo" height="32" width="32"> <b
+                                                        class="fn">网站小编</b><span class="says">说道：</span></div>
+                                                <!-- .comment-author -->
+
+                                                <div class="comment-metadata">
+                                                    <a href="https://www.zhutibaba.com/demo/iux/582.html#comment-21">
+                                                        <time datetime="2018-10-30T00:06:12+08:00">
+                                                            2018-10-30 上午12:06
+                                                        </time>
+                                                    </a>
+                                                </div><!-- .comment-metadata -->
+
+                                            </footer><!-- .comment-meta -->
+
+                                            <div class="comment-content">
+                                                <p>测试一下评论回复。看起来很不错啊！</p>
+                                            </div><!-- .comment-content -->
+
+                                            <div class="reply"><a rel="nofollow" class="comment-reply-login"
+                                                                  href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F582.html">登录以回复</a>
+                                            </div>
+                                        </article><!-- .comment-body -->
+                                    </li><!-- #comment-## -->
+                                </ol><!-- .children -->
+                            </li><!-- #comment-## -->
+                            <li id="comment-22"
+                                class="comment byuser comment-author-zhutibaba bypostauthor even thread-odd thread-alt depth-1">
+                                <article id="div-comment-22" class="comment-body">
+                                    <footer class="comment-meta">
+                                        <div class="comment-author vcard">
+                                            <img alt="" src="./static/css/4c2ed72c6be86742f05e9750110d5731(1).png"
+                                                 srcset="https://secure.gravatar.com/avatar/4c2ed72c6be86742f05e9750110d5731?s=64&amp;d=mm&amp;r=g 2x"
+                                                 class="avatar avatar-32 photo" height="32" width="32"> <b class="fn">网站小编</b><span
+                                                class="says">说道：</span></div><!-- .comment-author -->
+
+                                        <div class="comment-metadata">
+                                            <a href="https://www.zhutibaba.com/demo/iux/582.html#comment-22">
+                                                <time datetime="2018-10-30T00:06:22+08:00">
+                                                    2018-10-30 上午12:06
+                                                </time>
+                                            </a>
+                                        </div><!-- .comment-metadata -->
+
+                                    </footer><!-- .comment-meta -->
+
+                                    <div class="comment-content">
+                                        <p>是的，这个主题真的很棒！</p>
+                                    </div><!-- .comment-content -->
+
+                                    <div class="reply"><a rel="nofollow" class="comment-reply-login"
+                                                          href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F582.html">登录以回复</a>
+                                    </div>
+                                </article><!-- .comment-body -->
+                            </li><!-- #comment-## -->
+                        </ol><!-- .comment-list -->
+
+
+                    </div><!-- #comments -->
+
+                </main><!-- #main -->
+
+            </div><!-- .content-wrapper -->
+
+        </div><!-- #primary -->
+
+    </div><!-- #content .site-content -->
+
+    <footer id="colophon" class="site-footer clear">
+
+        <div class="clear"></div>
+
+
+        <div id="site-bottom" class="clear">
+
+            <div class="container">
+
+
+                <div class="menu-posts-container">
+                    <ul id="footer-menu" class="footer-nav">
+                        <li id="menu-item-781"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-781"><a
+                                href="https://www.zhutibaba.com/demo/iux/zhuanti-full">全宽专题</a></li>
+                        <li id="menu-item-777"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-777"><a
+                                target="_blank" href="https://www.zhutibaba.com/themes/iux">直达链接</a></li>
+                        <li id="menu-item-778"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-778"><a
+                                target="_blank" href="https://www.zhutibaba.com/themes">购买主题</a></li>
+                        <li id="menu-item-779"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-779"><a
+                                target="_blank" href="https://www.zhutibaba.com/demo/iux/posts-by-cat">按目录分类</a></li>
+                        <li id="menu-item-780"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-780"><a
+                                target="_blank" href="https://www.zhutibaba.com/demo/iux/posts-100">最新100篇</a></li>
+                    </ul>
+                </div>
+
+                <div class="site-info">
+
+                    &copy; 2019 <a href="#">浪晋测试小课堂</a> - 流云</a>
+
+                </div><!-- .site-info -->
+
+            </div><!-- .container -->
+
+        </div>
+        <!-- #site-bottom -->
+
+    </footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<div class="bottom-right" style="display: block;">
+    <div class="icon-contact tooltip bottom-icon">
+		<span class="icon-link">
+			<span class="icon"><i class="fa fa-phone"></i></span>
+			<span class="text">联系我们</span>
+		</span>
+        <div class="left-space">
+            <div class="left">
+                <div class="contact-info">
+                    <h3>联系我们</h3>
+
+                    <strong>0898-88881688</strong>
+
+                    <p>在线咨询: <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3599145122&amp;site=qq&amp;menu=yes"
+                                target="_blank"><img src="./static/css/qqchat.gif" alt="QQ交谈"></a></p>
+
+                    <p>邮箱: email@wangzhan.com</p>
+
+                    <p>工作时间：周一至周五，9:00-17:30，节假日休息</p></div>
+                <i></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="icon-weixin tooltip bottom-icon">
+		<span class="icon-link">
+			<span class="icon"><i class="fa fa-wechat"></i></span>
+			<span class="text">关注微信</span>
+		</span>
+        <div class="left-space">
+            <div class="left">
+                <img src="./static/css/weixin-qrcode.png" alt="微信扫一扫关注我们">
+                <h3>微信扫一扫关注我们</h3>
+                <i></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="icon-weibo bottom-icon">
+        <a href="https://weibo.com/zhutibaba" target="_blank">
+            <span class="icon"><i class="fa fa-weibo"></i></span>
+            <span class="text">关注微博</span>
+        </a>
+    </div>
+
+    <div id="back-top" class="bottom-icon">
+        <a href="https://www.zhutibaba.com/demo/iux/582.html#top" title="返回顶部">
+            <span class="icon"><i class="fa fa-chevron-up"></i></span>
+            <span class="text">返回顶部</span>
+        </a>
+    </div>
+</div><!-- .bottom-right -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?adffbbfa4c220a656094574941c145dc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script type="text/javascript" src="./static/js/common/superfish.js"></script>
+<script type="text/javascript" src="./static/js/common/jquery.slicknav.js"></script>
+<script type="text/javascript" src="./static/js/common/modernizr.js"></script>
+<script type="text/javascript" src="./static/js/common/html5.js"></script>
+<script type="text/javascript" src="./static/js/common/jquery.bxslider.js"></script>
+<script type="text/javascript" src="./static/js/common/jquery.custom.js"></script>
+<script type="text/javascript" src="./static/js/common/comment-reply.min.js"></script>
+<script type="text/javascript" src="./static/js/common/wp-embed.min.js"></script>
+<script type="text/javascript">if (jQuery) {
+    jQuery(function ($) {
+        $.ajax({
+            url: 'https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=xunhuweb_cron',
+            type: 'post',
+            timeout: 60 * 1000,
+            async: true,
+            cache: false
+        });
+    });
+}</script>
+<div id="wsocial-dialog-login" style="display: none; position: fixed; z-index: 999; top: 89px; left: 482px;">
+    <div class="xh-cover"></div>
+    <div class="xh-regbox xh-window">
+        <div class="xh-title">登录</div>
+        <form class="xh-form">
+            <div class="commonlogin646eaf64173c527c9740fe09ee5358b10 fields-error"></div>
+            <div class="xh-form-group">
+                <label class="required">用户名/邮箱/手机</label>
+                <input type="text" id="login646eaf64173c527c9740fe09ee5358b10_login_name" name="login_name" value=""
+                       placeholder="请输入用户名，邮箱或手机" class="form-control " style="">
+            </div>
+            <script type="text/javascript">
+                (function ($) {
+                    $(document).bind('on_form_login646eaf64173c527c9740fe09ee5358b10_submit', function (e, m) {
+                        m.login_name = $('#login646eaf64173c527c9740fe09ee5358b10_login_name').val();
+                    });
+
+                })(jQuery);
+            </script>
+            <div class="xh-form-group">
+                <label class="required">密码</label>
+                <input type="password" id="login646eaf64173c527c9740fe09ee5358b10_login_password" name="login_password"
+                       value="" placeholder="" class="form-control " style="">
+            </div>
+            <script type="text/javascript">
+                (function ($) {
+                    $(document).bind('on_form_login646eaf64173c527c9740fe09ee5358b10_submit', function (e, m) {
+                        m.login_password = $('#login646eaf64173c527c9740fe09ee5358b10_login_password').val();
+                    });
+
+                })(jQuery);
+            </script>
+            <div class="xh-form-group mt10">
+                <button type="button" id="btn-login" onclick="window.xh_social_view.login();"
+                        class="xh-btn xh-btn-primary xh-btn-block xh-btn-lg">登录
+                </button>
+            </div>
+        </form>
+        <script type="text/javascript">
+            (function ($) {
+                if (!window.xh_social_view) {
+                    window.xh_social_view = {};
+                }
+
+                window.xh_social_view.reset = function () {
+                    $('.xh-alert').empty().css('display', 'none');
+                };
+
+                window.xh_social_view.error = function (msg, parent) {
+                    var s = parent ? (parent + '.fields-error') : '.fields-error';
+                    $(s).html('<div class="xh-alert xh-alert-danger" role="alert">' + msg + '</div>').css('display', 'block');
+                };
+
+                window.xh_social_view.warning = function (msg, parent) {
+                    var s = parent ? (parent + '.fields-error') : '.fields-error';
+                    $(s).html('<div class="xh-alert xh-alert-warning" role="alert">' + msg + '</div>').css('display', 'block');
+                };
+
+                window.xh_social_view.success = function (msg, parent) {
+                    var s = parent ? (parent + '.fields-error') : '.fields-error';
+                    $(s).html('<div class="xh-alert xh-alert-success" role="alert">' + msg + '</div>').css('display', 'block');
+                };
+            })(jQuery);
+        </script>
+        <script type="text/javascript">
+            (function ($) {
+                $(document).keypress(function (e) {
+                    if (window.__wsocial_enable_entrl_submit) {
+                        if (e.which == 13) {
+                            window.xh_social_view.login();
+                        }
+                    }
+                });
+
+                window.xh_social_view.login = function () {
+                    window.xh_social_view.reset();
+                    var data = {};
+                    $(document).trigger('on_form_login646eaf64173c527c9740fe09ee5358b10_submit', data);
+                    $('#btn-login').attr('disabled', 'disabled').text('加载中...');
+                    this.loading = true;
+
+                    jQuery.ajax({
+                        url: 'https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=xh_social_add_ons_login&tab=login&xh_social_add_ons_login=efc0f5f8f6&notice_str=9681556565&hash=c4a302a780ebc30518afd3345bf51c9e',
+                        type: 'post',
+                        timeout: 60 * 1000,
+                        async: true,
+                        cache: false,
+                        data: data,
+                        dataType: 'json',
+                        complete: function () {
+                            $('#btn-login').removeAttr('disabled').text('登录');
+                        },
+                        success: function (m) {
+                            if (m.errcode == 405 || m.errcode == 0) {
+                                window.xh_social_view.success('登录成功！', '.commonlogin646eaf64173c527c9740fe09ee5358b10');
+
+                                if (window.top && window.top != window.self) {
+                                    var $wp_dialog = jQuery('#wp-auth-check-wrap', window.top.document);
+                                    if ($wp_dialog.length > 0) {
+                                        $wp_dialog.hide();
+                                        return;
+                                    }
+                                }
+
+                                location.href = 'https://www.zhutibaba.com/demo/iux/582.html';
+                                return;
+                            }
+
+                            window.xh_social_view.error(m.errmsg, '.commonlogin646eaf64173c527c9740fe09ee5358b10');
+                        },
+                        error: function (e) {
+                            window.xh_social_view.error('系统内部错误！', '.commonlogin646eaf64173c527c9740fe09ee5358b10');
+                            console.error(e.responseText);
+                        }
+                    });
+                };
+            })(jQuery);
+        </script>
+        <div class="xh-user-register xh-w">
+            <a href="https://www.zhutibaba.com/demo/iux/register">注册</a>|<a
+                href="https://www.zhutibaba.com/demo/iux/findpassword">忘记密码？</a>
+        </div>
+        <a class="xh-close" href="javascript:void(0);"></a>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    (function ($) {
+        $('#wsocial-dialog-login .xh-close,#wsocial-dialog-login .xh-cover').click(function () {
+            window.__wsocial_enable_entrl_submit = false;
+            $('#wsocial-dialog-login').hide();
+        });
+        window.wsocial_dialog_login_show = function () {
+            $('#wsocial-dialog-login').css('display', 'block');
+            window.__wsocial_enable_entrl_submit = true;
+            window.__modal_wsocial_login_resize();
+        };
+        $(function () {
+            $('.btn-wsocial-login').click(function (event) {
+                event.stopPropagation();
+                window.wsocial_dialog_login_show();
+                return false;
+            });
+        });
+        window.__modal_wsocial_login_resize = function () {
+            var $ul = $('#wsocial-dialog-login');
+            var width = window.innerWidth, height = window.innerHeight;
+            if (typeof width != 'number') {
+                if (document.compatMode == 'CSS1Compat') {
+                    width = document.documentElement.clientWidth;
+                    height = document.documentElement.clientHeight;
+                } else {
+                    width = document.body.clientWidth;
+                    height = document.body.clientHeight;
+                }
+            }
+            $ul.css({
+                top: ((height - $ul.height()) / 2) + "px",
+                left: ((width - $ul.width()) / 2) + "px"
+            });
+        };
+        $(window).resize(function () {
+            window.__modal_wsocial_login_resize();
+        });
+    })(jQuery);
+</script>
+
+
+<script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdMiniList": false,
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+        }, "share": {}
+    };
+    with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+</script>
+
+
+<script>
+    (function ($) { //create closure so we can safely use $ as alias for jQuery
+
+        $(document).ready(function () {
+
+            "use strict";
+
+            /*-----------------------------------------------------------------------------------*/
+            /*  Slick Mobile Menu
+            /*-----------------------------------------------------------------------------------*/
+            $('#primary-menu').slicknav({
+                prependTo: '#slick-mobile-menu',
+                allowParentLinks: true,
+                label: '导航'
+            });
+
+        });
+
+    })(jQuery);
+
+</script>
+
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+<script src="./static/js/common/sticky-sidebar.min.js"></script>
+
+<script>
+
+    (function ($) { //create closure so we can safely use $ as alias for jQuery
+
+        $(document).ready(function () {
+
+            "use strict";
+            $(window).load(function () {
+                var stickySidebar = new StickySidebar('#secondary', {
+                    topSpacing: 20,
+                    bottomSpacing: 20,
+                    containerSelector: '.site_container',
+                    innerWrapperSelector: '.sidebar__inner'
+                });
+            });
+
+        });
+
+
+    })(jQuery);
+</script>
+
+
+<script>
+    (function ($) { //create closure so we can safely use $ as alias for jQuery
+
+        $(document).ready(function () {
+
+            "use strict";
+
+            if ($(window).width() >= 960) {
+
+                var mn = $(".site-header");
+                var mns = "main-nav-scrolled";
+                var hdr = $('.top-bar').height();
+
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > hdr) {
+                        mn.addClass(mns);
+                        $('.header-space').css('display', 'block');
+                    } else {
+                        mn.removeClass(mns);
+                        $('.header-space').css('display', 'none');
+                    }
+                });
+
+            }
+
+        });
+
+
+    })(jQuery);
+</script>
+
+</body>
+</html>
