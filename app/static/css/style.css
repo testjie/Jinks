@@ -1,4 +1,8 @@
 @charset "UTF-8";
+
+/*--------------------------------------------------------------
+0. Reset
+--------------------------------------------------------------*/
 @import url(assets/css/font-awesome.min.css);
 /* line 24, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/style.scss */
 html {
@@ -1204,9 +1208,16 @@ a:active, a:focus {
 
 /* line 1004, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/style.scss */
 #primary {
+  float: left;
+  width: 800px;
+
+}
+
+#primary-article {
   /*float: left;*/
   margin:0 auto;
   width: 800px;
+
 }
 
 /* line 1008, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/style.scss */
@@ -4027,7 +4038,7 @@ ul.bxslider {
 /* line 3144, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/style.scss */
 #featured-slider.slider-with-grid {
   float: left;
-  width: 800px;
+  width: 100%;
 }
 
 /* line 3148, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/style.scss */
@@ -4663,7 +4674,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   /* line 3620, /Users/Roy/Local Sites/ztbb-themes/app/public/wp-content/themes/iux/scss/style.scss */
   .ht_grid_1_4 {
     float: none;

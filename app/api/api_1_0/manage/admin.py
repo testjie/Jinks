@@ -4,9 +4,9 @@ __author__ = "snake"
 from app import bp
 from functools import wraps
 from flask import request, session
-from app.utils.database import query, excute
-from app.utils.token import create_token
-from app.utils.json import get_json
+from app.api.utils.database import query, excute
+from app.api.utils.token import create_token
+from app.api.utils.json import get_json
 
 import traceback
 

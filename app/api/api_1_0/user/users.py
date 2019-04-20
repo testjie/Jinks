@@ -5,14 +5,14 @@ __author__ = 'snake'
 import os, config, traceback
 
 from app import bp
-from io import StringIO, BytesIO
+from io import BytesIO
 from functools import wraps
-from app.utils.json import get_json
-from flask import jsonify as json, request, session, render_template, make_response
-from app.utils.database import query, excute
-from app.utils.date import get_current_time
-from app.utils.captcha import captcha_picture
-from app.utils.token import create_token
+from app.api.utils.json import get_json
+from flask import jsonify as json, request, session, make_response
+from app.api.utils.database import query, excute
+from app.api.utils.date import get_current_time
+from app.api.utils.captcha import captcha_picture
+from app.api.utils.token import create_token
 
 
 def _is_logined():

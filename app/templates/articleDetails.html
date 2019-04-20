@@ -13,6 +13,16 @@
     <meta name="robots" content="noindex,follow">
     <link rel="dns-prefetch" href="https://s.w.org/">
 
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script type='text/javascript' src='./static/js/common/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='./static/js/common/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script type='text/javascript' src='./static/js/common/jquery.cookie.js?ver=20180822'></script>
+    <script type='text/javascript' src='./static/js/common/jquery.parsley.min.js?ver=20180822'></script>
+    <script type='text/javascript' src='./static/js/user/articleDetails.js'></script>
     <script src="./static/js/common/hm.js"></script>
     <script type="text/javascript">
         window._wpemojiSettings = {
@@ -700,31 +710,16 @@
                             <div class="entry-meta">
 
 
-		<span class="entry-author">
-			作者:
-			<a href="https://www.zhutibaba.com/demo/iux/author/zhutibaba">
-
-				流云			</a>
-
-		</span><!-- .entry-author -->
-
-
-                                <span class="entry-source">
-			来源: 小课堂		</span><!-- .entry-date -->
-
-
-                                <span class="entry-date">
-			发布: 2019-04-18		</span><!-- .entry-date -->
-
-
-                                <span class="entry-views"><i class="flaticon-eye"></i> 1,454<em>阅读</em></span>
-
-
-                                <span class="entry-comment"><a
-                                        href="https://www.zhutibaba.com/demo/iux/582.html#comments"
+{#                            <span class="entry-author" id="author"></span><!-- .entry-author -->#}
+{#                            <span class="entry-date" id="createtime">发布: 2019-04-18 </span><!-- .entry-date -->#}
+                            <span class="entry-date" id="level"></span><!-- .entry-date -->
+                            <span class="entry-date" id="duration"></span><!-- .entry-date -->
+                            <span class="entry-source" id="source"></span><!-- .entry-date -->
+                            <span class="entry-views"><i class="flaticon-eye"></i> <span id="readcount"></span><em>阅读</em></span>
+                            <span class="entry-comment"><a
+                                        href="#comments"
                                         class="comments-link"><i
-                                        class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 3<em>评论</em></a></span>
-
+                                        class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> <span id="commentcount"></span><em>评论</em></a></span>
                             </div><!-- .entry-meta -->
 
                         </header><!-- .entry-header -->
@@ -734,133 +729,15 @@
                             {# markdown展示#}
 
                             <div id="test-editormd-view">
-                                <textarea style="display:none;"
-                                          name="test-editormd-markdown-doc">
 
-# 测试环境
-* Windows 10
-* JDK 1.8以上
-* Python3.6以上
-* Pytest任意脚本
-
-***
-
-# 一、安装allure-pytest插件
-```
-pip install allure-pytest
-```
-
-***
-# 二、运行pytest并生成allure测试报告
-```
-    pytest -q xxxx.py --alluredir=./report
-```
-
-***
-# 三、安装Allure-commandline
-
-- 下载并解压
-```
-下载链接：https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/2.10.0/allure-commandline-2.10.0.zip
-```
-- 将allure的bin目录添加到path目录中
-
-
-***
-# 四、安装并配置Jenkins
-```
-传送门：https://www.jianshu.com/p/575274af1700
-```
-
-***
-# 五、在jenkins上安装Allure插件
-```
-    系统设置 > 插件管理 > Available > 搜索Allure并安装
-```
-
-***
-# 六、在Jenkins上配置Allure Commandline
-
-```
-    系统设置 > 全局工具配置 > Allure Commandline > 新增 Allure Commandline
-
-    1. 别名：allure
-    2. 版本：选择下载的Allure Commandline版本
-    3. 点击应用
-
-```
-
-
-***
-# 七、配置自动化执行项目
-
-- 1.新建任务
-```
-    新建任务 > 构建一个自由风格的项目 > 确定
-```
-
-- 2.使用自定义空间
-```
-    General > 高级 > 使用自定义的工作空间 > 目录：D:\05 代码\小课堂\PytestTests（pytest脚本所在目录）
-
-```
-
-- 3.在构建中输入pytest执行代码
-```
-call pytest -s -q 01_pytest.py --alluredir ./allure_result
-exit 0
-
-```
-
-- 4.在构建后操作
-```
-在以下输入框中输入：
-
-    * Path中输入：allure_result
-    * 高级>Report path:allure_report
-```
-
-- 5.点击应用
-
-***
-# 八、重启tomcat
-
-
-***
-# 九、构建项目
-
-***
-
-
-
-                                </textarea>
                             </div>
-                            <script src="./static/editormd/examples/js/jquery.min.js"></script>
-                            <script src="./static/editormd/lib/marked.min.js"></script>
-                            <script src="./static/editormd/lib/prettify.min.js"></script>
-                            <script src="./static/editormd/lib/raphael.min.js"></script>
-                            <script src="./static/editormd/lib/underscore.min.js"></script>
-                            <script src="./static/editormd/lib/sequence-diagram.min.js"></script>
-                            <script src="./static/editormd/lib/flowchart.min.js"></script>
-                            <script src="./static/editormd/lib/jquery.flowchart.min.js"></script>
-                            <script src="./static/editormd/editormd.js"></script>
-                            <script type="text/javascript">
-                                testEditormdView2 = editormd.markdownToHTML("test-editormd-view", {
-                                    htmlDecode: "style,script,iframe",  // you can filter tags decode
-                                    emoji: true,
-                                    taskList: true,
-                                    tex: true,  // 默认不解析
-                                    flowChart: true,  // 默认不解析
-                                    sequenceDiagram: true,  // 默认不解析
-                                });
-                            </script>
 
 
                         </div><!-- .entry-content -->
 
 
                         <div class="single-credit">
-                            本文来自网络，不代表爱前端立场，转载请注明出处：https://www.zhutibaba.com/demo/iux/582.html
+                            <span  id="author"></span>
                         </div>
 
 
@@ -879,7 +756,7 @@ exit 0
 					<span class="sl-wrapper"><a
                             href="https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&amp;post_id=582&amp;nonce=04e3d97603&amp;is_comment=0&amp;disabled=true"
                             class="sl-button sl-button-582" data-nonce="04e3d97603" data-post-id="582"
-                            data-iscomment="0" title="点赞这篇文章"><span class="sl-count"><i class="fa fa-thumbs-o-up"></i> 57<em>赞</em></span></a><span
+                            data-iscomment="0" title="已学习过的人数"><span class="sl-count"><i class="fa fa-heart-o"></i> <span id="studycount"></span> <em>已学习</em></span></a><span
                             class="sl-loader"></span></span>				</span><!-- .entry-like -->
                             </div>
 
@@ -1010,6 +887,102 @@ exit 0
 
         </div><!-- #primary -->
 
+
+        <aside id="secondary" class="widget-area sidebar">
+            <div class="sidebar__inner">
+                <div id="iux-custom-text-2" class="widget widget_custom_text custom-text-widget"><a class="widget-link"
+                                                                                                    href="#"
+                                                                                                    target="_blank"><h2
+                        class="widget-title">我们推荐</h2><h4>好好学习，天天向上</h4>
+                    <div class="custom-text">这就是测试的文章，怎么样，是不是很炫酷。</div>
+                </a></div>
+                <div id="iux-views-2" class="widget widget-iux-views widget_posts_thumbnail"><h2 class="widget-title">
+                    热门文章</h2>
+                    <ul>
+                        <li class="clear"><a href="https://www.zhutibaba.com/demo/iux/294.html" rel="bookmark">
+                            <div class="thumbnail-wrap"><img width="150" height="90"
+                                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/g17-150x90.jpg"
+                                                             class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image"
+                                                             alt=""/></div>
+                        </a>
+                            <div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/294.html"
+                                                       rel="bookmark">超美的三亚,5天4晚全五星酒店高大上自由行</a>
+                                <div class="entry-meta">2018-07-27</div>
+                            </div>
+                        </li>
+                        <li class="clear"><a href="https://www.zhutibaba.com/demo/iux/582.html" rel="bookmark">
+                            <div class="thumbnail-wrap"><img width="150" height="90"
+                                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-150x90.jpg"
+                                                             class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image"
+                                                             alt=""/></div>
+                        </a>
+                            <div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/582.html"
+                                                       rel="bookmark">苹果新品iPhone 9即将发布 颜值和配置有惊喜</a>
+                                <div class="entry-meta">2018-11-13</div>
+                            </div>
+                        </li>
+                        <li class="clear"><a href="https://www.zhutibaba.com/demo/iux/375.html" rel="bookmark">
+                            <div class="thumbnail-wrap"><img width="150" height="90"
+                                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/10/p2-150x90.jpeg"
+                                                             class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image"
+                                                             alt=""/></div>
+                        </a>
+                            <div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/375.html"
+                                                       rel="bookmark">美拟补贴贸易战中受损农场主遭反对: 不要补贴要市场</a>
+                                <div class="entry-meta">2018-10-02</div>
+                            </div>
+                        </li>
+                        <li class="clear"><a href="https://www.zhutibaba.com/demo/iux/176.html" rel="bookmark">
+                            <div class="thumbnail-wrap"><img width="150" height="90"
+                                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/g8-150x90.jpg"
+                                                             class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image"
+                                                             alt=""/></div>
+                        </a>
+                            <div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/176.html"
+                                                       rel="bookmark">呼伦贝尔: 你不可错过的辽阔草原和兴安秋色!</a>
+                                <div class="entry-meta">2018-08-03</div>
+                            </div>
+                        </li>
+                        <li class="clear"><a href="https://www.zhutibaba.com/demo/iux/560.html" rel="bookmark">
+                            <div class="thumbnail-wrap"><img width="150" height="90"
+                                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/b47-150x90.png"
+                                                             class="attachment-iux_widget_thumb size-iux_widget_thumb wp-post-image"
+                                                             alt=""/></div>
+                        </a>
+                            <div class="entry-wrap"><a href="https://www.zhutibaba.com/demo/iux/560.html"
+                                                       rel="bookmark">多地住房公积金政策收紧 异地购房提取难度加大</a>
+                                <div class="entry-meta">2018-07-29</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="media_gallery-2" class="widget widget_media_gallery"><h2 class="widget-title">学员风采</h2>
+                    <ul class="gallery-slider">
+                        <li><img
+                                src='https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/08/sticky6-780x460.jpeg'
+                                alt=""/></li>
+                        <li><img
+                                src='https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/08/sticky4-780x460.jpeg'
+                                alt=""/></li>
+                        <li><img
+                                src='https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/08/featured1-780x460.jpeg'
+                                alt=""/></li>
+                    </ul>
+                </div>
+                <div id="tag_cloud-2" class="widget widget_tag_cloud"><h2 class="widget-title">热门标签</h2>
+                    <div class="tagcloud"><a href="https://www.zhutibaba.com/demo/iux/tag/c%e7%bd%97"
+                                             class="tag-cloud-link tag-link-11 tag-link-position-1"
+                                             style="font-size: 8pt;" aria-label="C罗 (1个项目)">C罗<span
+                            class="tag-link-count"> (1)</span></a>
+                        <a href="#" class="tag-cloud-link tag-link-13 tag-link-position-3" style="font-size: 8pt;"
+                           aria-label="iPhone (1个项目)">iPhone<span class="tag-link-count"> (1)</span></a>
+                        <a href="#" class="tag-cloud-link tag-link-17 tag-link-position-8" style="font-size: 8pt;"
+                           aria-label="公积金 (1个项目)">公积金<span class="tag-link-count"> (1)</span></a>
+                    </div>
+                </div><!-- .sidebar__inner -->
+        </aside><!-- #secondary -->
+
+
     </div><!-- #content .site-content -->
 
     <footer id="colophon" class="site-footer clear">
@@ -1111,6 +1084,8 @@ exit 0
         </a>
     </div>
 </div><!-- .bottom-right -->
+
+<input type="hidden" value="{{ aid }}" id="aid"/>
 
 <script>
     var _hmt = _hmt || [];
