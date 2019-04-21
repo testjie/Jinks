@@ -34,7 +34,7 @@ def go_article_list():
     跳转到文章列表页面
     :return:
     """
-    return render_template("articleList.html", aid=request.values.get("page"))
+    return render_template("articleList.html", alid=request.values.get("p"))
 
 
 @bp.route("/articleDetails", methods=["POST"])
@@ -58,33 +58,42 @@ def article_details():
     return result
 
 
-@bp.route("/getPaging", methods=["GET"])
-def get_paging():
+@bp.route("/getArticleList", methods=["GET"])
+def get_article_list():
     p = request.values.get("p")
+
 
     # 设置首页
     show_shouye_status = 0  # 显示首页状态
-    if p == "" or p is None:
+    if p == "" or p is None or p == "None":
         p = 1
     else:
         p = int(p)
         show_shouye_status = 1
 
-    limit_start = (int(p) - 1) * 5
+    limit_start = (int(p) - 1) * 10
 
     # 查询n-10*n条记录，首页
-    sql = "select * from tbl_article limit {0},10".format(limit_start)
+    sql = """
+            SELECT
+                tbl_article.*,
+                (select count(*) from tbl_article_study where artcleid=tbl_article.id) as studycount,
+                (select count(*) from tbl_comment where acticleid=tbl_article.id) as commentcount
+            FROM
+                tbl_article WHERE tbl_article.status = 0 ORDER BY tbl_article.createtime DESC limit {0},10
+          """.format(limit_start)
+    # sql = "select * from tbl_article ORDER BY tbl_article.createtime limit {0},10".format(limit_start)
     article_list = query(sql)
 
     # 查询总条数
     sql = "select count(*) as pageTotal from tbl_article where status=0"
     count = query(sql)[0].get("pageTotal")
-    total = int(math.ceil(count / 5.0))  # 总页数
+    total = int(math.ceil(count / 10.0))  # 总页数
     dic = _get_page(total, p)
 
     # 返回数据给前端
     data = {
-        "company_list": article_list,
+        "data": article_list,
         "p": int(p),
         'total': total,
         'show_shouye_status': show_shouye_status,

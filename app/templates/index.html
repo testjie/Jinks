@@ -493,20 +493,22 @@
 
                 <div id="recent-content" class="content-list">
 
-                    <div class="posts-loop clear" id="artcleList">
+                    <div class="posts-loop clear" id="artcleList"></div>
 
                         {#文章列表#}
 
             </main><!-- .site-main -->
 
             {#文章翻页#}
-            <nav class="navigation pagination" role="navigation">
-                <h2 class="screen-reader-text">文章导航</h2>
-                <div class="nav-links"><span aria-current='page' class='page-numbers current'>1</span>
-                    <a class='page-numbers' href='https://www.zhutibaba.com/demo/iux/page/2'>2</a>
-                    <span class="page-numbers dots">&hellip;</span>
-                    <a class='page-numbers' href='https://www.zhutibaba.com/demo/iux/page/6'>6</a>
-                    <a class="next page-numbers" href="https://www.zhutibaba.com/demo/iux/page/2">下一页</a></div>
+            <nav class="navigation pagination" role="navigation" id="articlePaging">
+{#                <h2 class="screen-reader-text">文章导航</h2>#}
+{#                <div class="nav-links"><a class="prev page-numbers" href="https://www.zhutibaba.com/demo/iux/">上一页</a>#}
+{#                    <a class="page-numbers" href="https://www.zhutibaba.com/demo/iux/">1</a>#}
+{#                    <span aria-current="page" class="page-numbers current">2</span>#}
+{#                    <a class="page-numbers" href="https://www.zhutibaba.com/demo/iux/page/3">3</a>#}
+{#                    <span class="page-numbers dots">…</span>#}
+{#                    <a class="page-numbers" href="https://www.zhutibaba.com/demo/iux/page/6">6</a>#}
+{#                    <a class="next page-numbers" href="https://www.zhutibaba.com/demo/iux/page/3">下一页</a></div>#}
             </nav>
 
 

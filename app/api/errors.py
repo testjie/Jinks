@@ -14,6 +14,10 @@ def page_not_found(e):
     """
     return get_json(msg="请求接口不存在", code=404, url="/")
 
+@bp.app_errorhandler(403)
+def need_params(e):
+    return get_json(msg="没有获取到参数", code=420, url="/")
+
 
 @bp.app_errorhandler(406)
 def page_not_found(e):
