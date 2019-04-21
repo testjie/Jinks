@@ -140,3 +140,10 @@ var getAritcles = function () {
         }
     });
 };
+
+
+// 分页
+var getPaging = function () {
+    var crrentPage = 1;
+    
+};

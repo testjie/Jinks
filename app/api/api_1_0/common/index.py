@@ -64,38 +64,8 @@ def get_articles():
                 (select count(*) from tbl_article_study where artcleid=tbl_article.id) as studycount,
                 (select count(*) from tbl_comment where acticleid=tbl_article.id) as commentcount
             FROM
-                tbl_article WHERE tbl_article.status = 0 ORDER BY tbl_article.createtime DESC limit 0, 2
+                tbl_article WHERE tbl_article.status = 0 ORDER BY tbl_article.createtime DESC limit 0, 5
           """
-    result = get_json(data=query(sql))
-    return result
-
-
-@bp.route("/goArticleDetails", methods=["GET"])
-def go_article_details():
-    """
-    跳转到文章详情页面
-    :return:
-    """
-    return render_template("articleDetails.html", aid=request.values.get("id"))
-
-
-@bp.route("/articleDetails", methods=["POST"])
-@params_json_required
-def article_details():
-    """
-    获取文章详情
-    :return:
-    """
-    id = request.get_json().get("aid")
-    sql = """
-        SELECT
-            tbl_article.*,
-            (select count(*) from tbl_article_study where artcleid=tbl_article.id) as studycount,
-            (select count(*) from tbl_comment where acticleid=tbl_article.id) as commentcount
-        FROM
-            tbl_article 
-        WHERE
-            tbl_article.id = {} AND tbl_article.status = 0""".format(id)
     result = get_json(data=query(sql))
     return result
 

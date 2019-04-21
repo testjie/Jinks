@@ -6,8 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="true">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <title>浪晋测试小课堂</title>
+    <title>爱前端 &#8211; 第2页 &#8211; WordPress主题</title>
     <meta name='robots' content='noindex,follow'/>
+    <link rel='dns-prefetch' href='//s.w.org'/>
+    <link rel="alternate" type="application/rss+xml" title="爱前端 &raquo; Feed"
+          href="https://www.zhutibaba.com/demo/iux/feed"/>
+    <link rel="alternate" type="application/rss+xml" title="爱前端 &raquo; 评论Feed"
+          href="https://www.zhutibaba.com/demo/iux/comments/feed"/>
     <script type="text/javascript">
         window._wpemojiSettings = {
             "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/",
@@ -71,29 +76,21 @@
             padding: 0 !important;
         }
     </style>
-    <link rel='stylesheet' id='wp-block-library-css' href='./static/css/style.min.css?ver=5.1.1' type='text/css'
-          media='all'/>
+    <link rel='stylesheet' id='wp-block-library-css' href='./static/css/style.min.css?ver=5.1.1style.min.css?ver=5.1.1'
+          type='text/css' media='all'/>
     <link rel='stylesheet' id='usp_style-css' href='./static/css/usp.css?ver=20180822' type='text/css' media='all'/>
-    <link rel='stylesheet' id='iux-style-css' href='./static/css/style.css?ver=20181203' type='text/css' media='all'/>
+    <link rel='stylesheet' id='iux-style-css' href=./static/css/style.css?ver=20181203' type='text/css' media='all'/>
     <link rel='stylesheet' id='genericons-style-css' href='./static/css/genericons.css?ver=5.1.1' type='text/css'
           media='all'/>
     <link rel='stylesheet' id='flaticon-style-css' href='./static/css/flaticon.css?ver=20181102' type='text/css'
           media='all'/>
     <link rel='stylesheet' id='iux-responsive-style-css' href='./static/css/responsive.css?ver=20181114' type='text/css'
           media='all'/>
-    <link rel='stylesheet' id='wsocial-css'
-          href='https://www.zhutibaba.com/demo/iux/wp-content/plugins/wechat-social-login/assets/css/social.css?ver=1.2.6'
-          type='text/css' media='all'/>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+    <link rel='stylesheet' id='wsocial-css' href='./static/css/social.css?ver=1.2.6' type='text/css' media='all'/>
     <script type='text/javascript' src='./static/js/common/jquery.js?ver=1.12.4'></script>
     <script type='text/javascript' src='./static/js/common/jquery-migrate.min.js?ver=1.4.1'></script>
     <script type='text/javascript' src='./static/js/common/jquery.cookie.js?ver=20180822'></script>
     <script type='text/javascript' src='./static/js/common/jquery.parsley.min.js?ver=20180822'></script>
-    <script type='text/javascript' src='./static/js/user/index.js'></script>
-
     <script type='text/javascript'>
         var usp_custom_field = "usp_custom_field";
         var usp_custom_checkbox = "usp_custom_checkbox";
@@ -105,9 +102,20 @@
     </script>
     <script type='text/javascript' src='./static/js/common/jquery.usp.core.js?ver=20180822'></script>
     <script type='text/javascript'>
+        /* <![CDATA[ */
+        var simpleLikes = {
+            "ajaxurl": "https:\/\/www.zhutibaba.com\/demo\/iux\/wp-admin\/admin-ajax.php",
+            "like": "\u70b9\u8d5e\u8fd9\u7bc7\u6587\u7ae0",
+            "unlike": "\u53d6\u6d88\u70b9\u8d5e"
+        };
+        /* ]]> */
     </script>
     <script type='text/javascript' src='./static/js/common/simple-likes-public.js?ver=0.5'></script>
+    <link rel='https://api.w.org/' href='https://www.zhutibaba.com/demo/iux/wp-json/'/>
     <style type="text/css">
+
+        /* Theme Colors */
+        /* Primary Color */
         a:hover,
         .site-title a,
         .site-header .search-icon:hover .fa,
@@ -227,13 +235,13 @@
 
 </head>
 
-<body class="home blog wp-custom-logo hfeed">
+<body class="home blog paged wp-custom-logo paged-2 hfeed">
 <div id="page" class="site">
     <div class="top-bar clear">
-        <!-- 导航条 -->
 
         <div class="container">
 
+            {#            顶部导航#}
             <nav id="top-nav" class="top-navigation">
                 <div class="menu-top-container">
                     <ul id="top-menu" class="sf-menu">
@@ -262,11 +270,12 @@
                 </div>
             </nav><!-- #primary-nav -->
 
+
             <div class="header-right">
                 <ul>
 
                     <li class="header-login">
-                        <a href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F"
+                        <a href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2Fpage%2F2"
                            title="登录">登录</a>
                     </li>
 
@@ -276,7 +285,7 @@
 
 
                     <li class="header-submit">
-                        <a href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F?redirect_to=https://www.zhutibaba.com/demo/iux/tougao"
+                        <a href="https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2Fpage%2F2?redirect_to=https://www.zhutibaba.com/demo/iux/tougao"
                            title="用户投稿">投稿</a>
                     </li>
 
@@ -314,9 +323,8 @@
                 <div class="menu-primary-container">
                     <ul id="primary-menu" class="sf-menu">
                         <li id="menu-item-795"
-                            class="color1 menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-795">
-                            <a href="https://www.zhutibaba.com/demo/iux/" aria-current="page"><i class="fa fa-home"></i>
-                                首页</a></li>
+                            class="color1 menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-795">
+                            <a href="https://www.zhutibaba.com/demo/iux/"><i class="fa fa-home"></i> 首页</a></li>
                         <li id="menu-item-784"
                             class="color2 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-784">
                             <a href="https://www.zhutibaba.com/demo/iux/zhuanti"><i class="fa fa-tags"></i> 专题</a>
@@ -419,7 +427,7 @@
             <div class="header-search-icon">
 					<span class="search-icon">
 						<i class="fa fa-search"></i>
-						<i class="fa fa-close"></i>			
+						<i class="fa fa-close"></i>
 					</span>
             </div>
 
@@ -443,35 +451,9 @@
 
         <div id="primary" class="content-area clear">
 
-            <div id="featured-slider" class="slider-with-grid">
-                {# js动态添加 #}
-                <ul class="bxslider" id="carouselList">
-                </ul><!-- .bxslider -->
-                <div class="ribbon"><span>编辑推荐</span></div>
-            </div><!-- #featured-slider -->
-
 
             <div class="clear"></div>
 
-            <div class="home-zhuanti-section">
-
-                <!-- 文章分类列表 -->
-                <div class="zhuanti-heading clear">
-                    <div class="custom-wrap clear">
-                        <h2>课程列表</h2>
-                        <div class="desc">
-                            专业课程，值得期待
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 文章分类 -->
-                <div class="home-zhuanti-list clear" id="articleCategories">
-                </div><!-- .home-zhuanti-list -->
-
-            </div>
-
-            {#网页左侧#}
 
             <main id="main" class="site-main clear">
 
@@ -482,6 +464,19 @@
                     <div class="posts-nav-menu">
                         <div class="menu-posts-container">
                             <ul id="posts-menu" class="posts-menu">
+                                <li id="menu-item-781"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-781"><a
+                                        href="https://www.zhutibaba.com/demo/iux/zhuanti-full">全宽专题</a></li>
+                                <li id="menu-item-777"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-777"><a
+                                        target="_blank" href="https://www.zhutibaba.com/themes/iux">直达链接</a></li>
+                                <li id="menu-item-778"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-778"><a
+                                        target="_blank" href="https://www.zhutibaba.com/themes">购买主题</a></li>
+                                <li id="menu-item-779"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-779"><a
+                                        target="_blank" href="https://www.zhutibaba.com/demo/iux/posts-by-cat">按目录分类</a>
+                                </li>
                                 <li id="menu-item-780"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-780"><a
                                         target="_blank" href="https://www.zhutibaba.com/demo/iux/posts-100">最新100篇</a>
@@ -493,27 +488,343 @@
 
                 <div id="recent-content" class="content-list">
 
-                    <div class="posts-loop clear" id="artcleList">
+                    <div class="posts-loop clear">
+                        <div id="post-392"
+                             class="clear post-392 post type-post status-publish format-standard has-post-thumbnail hentry category-finance tag-21 tag-25 tag-27">
 
-                        {#文章列表#}
+
+                            <a target="_blank" class="thumbnail-link"
+                               href="https://www.zhutibaba.com/demo/iux/392.html">
+                                <div class="thumbnail-wrap">
+                                    <img width="300" height="193"
+                                         src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/ivanka-300x193.jpeg"
+                                         class="attachment-iux_list_thumb size-iux_list_thumb wp-post-image" alt=""/>
+                                </div><!-- .thumbnail-wrap -->
+                            </a>
+
+
+                            <header class="entry-header">
+
+		<span class="entry-category">
+			<a target="_blank" href="https://www.zhutibaba.com/demo/iux/finance ">财经</a>
+		</span><!-- .entry-category -->
+
+
+                                <h2 class="entry-title"><a target="_blank"
+                                                           href="https://www.zhutibaba.com/demo/iux/392.html">首页可显示自定义文章标题</a>
+                                </h2>
+                            </header>
+
+                            <div class="entry-overview 	">
+
+
+                                <div class="entry-meta">
+
+
+			<span class="entry-date">
+				2018-07-26			</span><!-- .entry-date -->
+
+
+                                    <span class="entry-like">
+					<span class="sl-wrapper"><a
+                            href="https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&post_id=392&nonce=521ebf29bf&is_comment=0&disabled=true"
+                            class="sl-button sl-button-392" data-nonce="521ebf29bf" data-post-id="392"
+                            data-iscomment="0" title="点赞这篇文章"><span class="sl-count"><i class="fa fa-thumbs-o-up"></i> 42<em>赞</em></span></a><span
+                            class="sl-loader"></span></span>				</span><!-- .entry-like -->
+
+
+                                    <span class="entry-views"><a href="https://www.zhutibaba.com/demo/iux/392.html"><i
+                                            class="flaticon-eye"></i> 678<em>阅读</em></a></span>
+
+                                    <span class="entry-comment"><a
+                                            href="https://www.zhutibaba.com/demo/iux/392.html#respond"
+                                            class="comments-link"><i
+                                            class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 0<em>评论</em></a></span>
+
+                                </div><!-- .entry-meta -->
+
+                                <div class="entry-summary">
+                                    <p>今年36岁的伊万卡在一份声明中称：“在华盛顿待了17个月之后，我不知道我什么时候以及是否会再回到（时尚）行业，&hellip;</p>
+                                </div><!-- .entry-summary -->
+
+
+                            </div><!-- .entry-overview -->
+
+                        </div><!-- #post-392 -->
+                        <div id="post-195"
+                             class="clear post-195 post type-post status-publish format-standard has-post-thumbnail hentry category-auto tag-22 tag-23 tag-24">
+
+
+                            <a target="_blank" class="thumbnail-link"
+                               href="https://www.zhutibaba.com/demo/iux/195.html">
+                                <div class="thumbnail-wrap">
+                                    <img width="300" height="193"
+                                         src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/g12-300x193.jpg"
+                                         class="attachment-iux_list_thumb size-iux_list_thumb wp-post-image" alt=""/>
+                                </div><!-- .thumbnail-wrap -->
+                            </a>
+
+
+                            <header class="entry-header">
+
+		<span class="entry-category">
+			<a target="_blank" href="https://www.zhutibaba.com/demo/iux/auto ">汽车</a>
+		</span><!-- .entry-category -->
+
+
+                                <h2 class="entry-title"><a target="_blank"
+                                                           href="https://www.zhutibaba.com/demo/iux/195.html">特斯拉Model
+                                    3高清官图公布:设计极简 配15英寸大号iPad</a></h2>
+                            </header>
+
+                            <div class="entry-overview 	">
+
+
+                                <div class="entry-meta">
+
+
+			<span class="entry-date">
+				2018-07-26			</span><!-- .entry-date -->
+
+
+                                    <span class="entry-like">
+					<span class="sl-wrapper"><a
+                            href="https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&post_id=195&nonce=521ebf29bf&is_comment=0&disabled=true"
+                            class="sl-button sl-button-195" data-nonce="521ebf29bf" data-post-id="195"
+                            data-iscomment="0" title="点赞这篇文章"><span class="sl-count"><i class="fa fa-thumbs-o-up"></i> 45<em>赞</em></span></a><span
+                            class="sl-loader"></span></span>				</span><!-- .entry-like -->
+
+
+                                    <span class="entry-views"><a href="https://www.zhutibaba.com/demo/iux/195.html"><i
+                                            class="flaticon-eye"></i> 611<em>阅读</em></a></span>
+
+                                    <span class="entry-comment"><a
+                                            href="https://www.zhutibaba.com/demo/iux/195.html#respond"
+                                            class="comments-link"><i
+                                            class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 0<em>评论</em></a></span>
+
+                                </div><!-- .entry-meta -->
+
+                                <div class="entry-summary">
+                                    <p>特斯拉Model 3是是特斯拉Model X系列的新品，北京时间2016年4月1日11点30分在美国发布，基础&hellip;</p>
+                                </div><!-- .entry-summary -->
+
+
+                            </div><!-- .entry-overview -->
+
+                        </div><!-- #post-195 -->
+                        <div id="happythemes-ad-3" class="content-ad widget_ad ad-widget">
+                            <div id="post-49"
+                                 class="clear post-49 post type-post status-publish format-standard has-post-thumbnail hentry category-tech tag-22 tag-23 tag-24">
+
+
+                                <a target="_blank" class="thumbnail-link"
+                                   href="https://www.zhutibaba.com/demo/iux/49.html">
+                                    <div class="thumbnail-wrap">
+                                        <img width="300" height="193"
+                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/facebook-app-image-300x193.jpg"
+                                             class="attachment-iux_list_thumb size-iux_list_thumb wp-post-image"
+                                             alt=""/></div><!-- .thumbnail-wrap -->
+                                </a>
+
+
+                                <header class="entry-header">
+
+		<span class="entry-category">
+			<a target="_blank" href="https://www.zhutibaba.com/demo/iux/tech ">科技</a>
+		</span><!-- .entry-category -->
+
+
+                                    <h2 class="entry-title"><a target="_blank"
+                                                               href="https://www.zhutibaba.com/demo/iux/49.html">自定义标题可长可短，完美适配主题</a>
+                                    </h2>
+                                </header>
+
+                                <div class="entry-overview 	">
+
+
+                                    <div class="entry-meta">
+
+
+			<span class="entry-date">
+				2018-07-26			</span><!-- .entry-date -->
+
+
+                                        <span class="entry-like">
+					<span class="sl-wrapper"><a
+                            href="https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&post_id=49&nonce=521ebf29bf&is_comment=0&disabled=true"
+                            class="sl-button sl-button-49" data-nonce="521ebf29bf" data-post-id="49" data-iscomment="0"
+                            title="点赞这篇文章"><span class="sl-count"><i class="fa fa-thumbs-o-up"></i> 37<em>赞</em></span></a><span
+                            class="sl-loader"></span></span>				</span><!-- .entry-like -->
+
+
+                                        <span class="entry-views"><a
+                                                href="https://www.zhutibaba.com/demo/iux/49.html"><i
+                                                class="flaticon-eye"></i> 708<em>阅读</em></a></span>
+
+                                        <span class="entry-comment"><a
+                                                href="https://www.zhutibaba.com/demo/iux/49.html#respond"
+                                                class="comments-link"><i
+                                                class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 0<em>评论</em></a></span>
+
+                                    </div><!-- .entry-meta -->
+
+                                    <div class="entry-summary">
+                                        <p>今年34岁的克里斯·休斯是Facebook的联合创始人之一，2004年，他和马克-扎克伯格以及另外三位哈佛大学同窗共同创办了这家公司。</p>
+                                    </div><!-- .entry-summary -->
+
+
+                                </div><!-- .entry-overview -->
+
+                            </div><!-- #post-49 -->
+                            <div id="post-380"
+                                 class="clear post-380 post type-post status-publish format-standard has-post-thumbnail hentry category-food tag-25 tag-27 tag-29">
+
+
+                                <a target="_blank" class="thumbnail-link"
+                                   href="https://www.zhutibaba.com/demo/iux/380.html">
+                                    <div class="thumbnail-wrap">
+                                        <img width="300" height="193"
+                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/b54-300x193.jpg"
+                                             class="attachment-iux_list_thumb size-iux_list_thumb wp-post-image"
+                                             alt=""/></div><!-- .thumbnail-wrap -->
+                                </a>
+
+
+                                <header class="entry-header">
+
+		<span class="entry-category">
+			<a target="_blank" href="https://www.zhutibaba.com/demo/iux/food ">美食</a>
+		</span><!-- .entry-category -->
+
+
+                                    <h2 class="entry-title"><a target="_blank"
+                                                               href="https://www.zhutibaba.com/demo/iux/380.html">菜市场的这4种猪肉，再便宜也不能买，主妇必看</a>
+                                    </h2>
+                                </header>
+
+                                <div class="entry-overview 	">
+
+
+                                    <div class="entry-meta">
+
+
+			<span class="entry-date">
+				2018-07-25			</span><!-- .entry-date -->
+
+
+                                        <span class="entry-like">
+					<span class="sl-wrapper"><a
+                            href="https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&post_id=380&nonce=521ebf29bf&is_comment=0&disabled=true"
+                            class="sl-button sl-button-380" data-nonce="521ebf29bf" data-post-id="380"
+                            data-iscomment="0" title="点赞这篇文章"><span class="sl-count"><i class="fa fa-thumbs-o-up"></i> 39<em>赞</em></span></a><span
+                            class="sl-loader"></span></span>				</span><!-- .entry-like -->
+
+
+                                        <span class="entry-views"><a href="https://www.zhutibaba.com/demo/iux/380.html"><i
+                                                class="flaticon-eye"></i> 486<em>阅读</em></a></span>
+
+                                        <span class="entry-comment"><a
+                                                href="https://www.zhutibaba.com/demo/iux/380.html#respond"
+                                                class="comments-link"><i
+                                                class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 0<em>评论</em></a></span>
+
+                                    </div><!-- .entry-meta -->
+
+                                    <div class="entry-summary">
+                                        <p>现如今，越来越多的小伙伴加入到无肉不欢的队伍中来，可见肉是多么勾人胃口。今天发哥要说的，是最常见的猪肉，菜场的&hellip;</p>
+                                    </div><!-- .entry-summary -->
+
+
+                                </div><!-- .entry-overview -->
+
+                            </div><!-- #post-380 -->
+                            <div id="post-380"
+                                 class="clear post-380 post type-post status-publish format-standard has-post-thumbnail hentry category-food tag-25 tag-27 tag-29">
+
+
+                                <a target="_blank" class="thumbnail-link"
+                                   href="https://www.zhutibaba.com/demo/iux/380.html">
+                                    <div class="thumbnail-wrap">
+                                        <img width="300" height="193"
+                                             src="https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/b54-300x193.jpg"
+                                             class="attachment-iux_list_thumb size-iux_list_thumb wp-post-image"
+                                             alt=""/></div><!-- .thumbnail-wrap -->
+                                </a>
+
+
+                                <header class="entry-header">
+
+		<span class="entry-category">
+			<a target="_blank" href="https://www.zhutibaba.com/demo/iux/food ">美食</a>
+		</span><!-- .entry-category -->
+
+
+                                    <h2 class="entry-title"><a target="_blank"
+                                                               href="https://www.zhutibaba.com/demo/iux/380.html">菜市场的这4种猪肉，再便宜也不能买，主妇必看</a>
+                                    </h2>
+                                </header>
+
+                                <div class="entry-overview 	">
+
+
+                                    <div class="entry-meta">
+
+
+			<span class="entry-date">
+				2018-07-25			</span><!-- .entry-date -->
+
+
+                                        <span class="entry-like">
+					<span class="sl-wrapper"><a
+                            href="https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&post_id=380&nonce=521ebf29bf&is_comment=0&disabled=true"
+                            class="sl-button sl-button-380" data-nonce="521ebf29bf" data-post-id="380"
+                            data-iscomment="0" title="点赞这篇文章"><span class="sl-count"><i class="fa fa-thumbs-o-up"></i> 39<em>赞</em></span></a><span
+                            class="sl-loader"></span></span>				</span><!-- .entry-like -->
+
+
+                                        <span class="entry-views"><a href="https://www.zhutibaba.com/demo/iux/380.html"><i
+                                                class="flaticon-eye"></i> 486<em>阅读</em></a></span>
+
+                                        <span class="entry-comment"><a
+                                                href="https://www.zhutibaba.com/demo/iux/380.html#respond"
+                                                class="comments-link"><i
+                                                class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 0<em>评论</em></a></span>
+
+                                    </div><!-- .entry-meta -->
+
+                                    <div class="entry-summary">
+                                        <p>现如今，越来越多的小伙伴加入到无肉不欢的队伍中来，可见肉是多么勾人胃口。今天发哥要说的，是最常见的猪肉，菜场的&hellip;</p>
+                                    </div><!-- .entry-summary -->
+
+
+                                </div><!-- .entry-overview -->
+
+                            </div><!-- #post-380 -->
+
+                        </div><!-- #recent-content -->
+
+
+
 
             </main><!-- .site-main -->
 
-            {#文章翻页#}
+
             <nav class="navigation pagination" role="navigation">
                 <h2 class="screen-reader-text">文章导航</h2>
-                <div class="nav-links"><span aria-current='page' class='page-numbers current'>1</span>
-                    <a class='page-numbers' href='https://www.zhutibaba.com/demo/iux/page/2'>2</a>
+                <div class="nav-links"><a class="prev page-numbers" href="https://www.zhutibaba.com/demo/iux/">上一页</a>
+                    <a class='page-numbers' href='https://www.zhutibaba.com/demo/iux/'>1</a>
+                    <span aria-current='page' class='page-numbers current'>2</span>
+                    <a class='page-numbers' href='https://www.zhutibaba.com/demo/iux/page/3'>3</a>
                     <span class="page-numbers dots">&hellip;</span>
                     <a class='page-numbers' href='https://www.zhutibaba.com/demo/iux/page/6'>6</a>
-                    <a class="next page-numbers" href="https://www.zhutibaba.com/demo/iux/page/2">下一页</a></div>
+                    <a class="next page-numbers" href="https://www.zhutibaba.com/demo/iux/page/3">下一页</a></div>
             </nav>
 
 
         </div><!-- #primary -->
 
 
-        {#网页右侧模块#}
         <aside id="secondary" class="widget-area sidebar">
             <div class="sidebar__inner">
                 <div id="iux-custom-text-2" class="widget widget_custom_text custom-text-widget"><a class="widget-link"
@@ -614,6 +925,8 @@
 
     <footer id="colophon" class="site-footer clear">
 
+        <div class="clear"></div>
+
 
         <div id="site-bottom" class="clear">
 
@@ -625,13 +938,13 @@
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-781"><a
                                 href="https://www.zhutibaba.com/demo/iux/zhuanti-full">全宽专题</a></li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-777"><a
-                                target="_blank" href="#">直达链接</a></li>
+                                target="_blank" href="https://www.zhutibaba.com/themes/iux">直达链接</a></li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-778"><a
-                                target="_blank" href="#">购买主题</a></li>
+                                target="_blank" href="https://www.zhutibaba.com/themes">购买主题</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-779"><a
-                                target="_blank" href="#">按目录分类</a></li>
+                                target="_blank" href="https://www.zhutibaba.com/demo/iux/posts-by-cat">按目录分类</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-780"><a
-                                target="_blank" href="#">最新100篇</a></li>
+                                target="_blank" href="https://www.zhutibaba.com/demo/iux/posts-100">最新100篇</a></li>
                     </ul>
                 </div>
 
@@ -709,68 +1022,41 @@
     </div>
 </div><!-- .bottom-right -->
 
-<script>
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?adffbbfa4c220a656094574941c145dc";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-<script type='text/javascript'
-        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/superfish.js?ver=5.1.1'></script>
-<script type='text/javascript'
-        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/jquery.slicknav.js?ver=5.1.1'></script>
-<script type='text/javascript'
-        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/modernizr.js?ver=5.1.1'></script>
-<script type='text/javascript'
-        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/html5.js?ver=5.1.1'></script>
-<script type='text/javascript'
-        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/jquery.bxslider.js?ver=5.1.1'></script>
-<script type='text/javascript'
-        src='https://www.zhutibaba.com/demo/iux/wp-content/themes/iux/assets/js/jquery.custom.js?ver=20181120'></script>
-<script type='text/javascript'
-        src='https://www.zhutibaba.com/demo/iux/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
-<script type="text/javascript">if (jQuery) {
-    jQuery(function ($) {
-        $.ajax({
-            url: 'https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=xunhuweb_cron',
-            type: 'post',
-            timeout: 60 * 1000,
-            async: true,
-            cache: false
-        });
-    });
-}</script>
+<script type='text/javascript' src='./static/js/common/superfish.js?ver=5.1.1'></script>
+<script type='text/javascript' src='./static/js/common/jquery.slicknav.js?ver=5.1.1'></script>
+<script type='text/javascript' src='./static/js/common/modernizr.js?ver=5.1.1'></script>
+<script type='text/javascript' src='./static/js/common/html5.js?ver=5.1.1'></script>
+<script type='text/javascript' src='./static/js/common/jquery.bxslider.js?ver=5.1.1'></script>
+<script type='text/javascript' src='./static/js/common/jquery.custom.js?ver=20181120'></script>
+<script type='text/javascript' src='./static/js/common/wp-embed.min.js?ver=5.1.1'></script>
 <div id="wsocial-dialog-login" style="display:none;position: fixed;z-index: 999;">
     <div class="xh-cover"></div>
     <div class="xh-regbox xh-window">
         <div class="xh-title">登录</div>
         <form class="xh-form">
-            <div class="commonlogin631790736b834aa61cb9c5b6cbdec8ec0 fields-error"></div>
+            <div class="commonlogin1ac7378e8047f4b4f3cdc917558d1b0b0 fields-error"></div>
             <div class="xh-form-group">
                 <label class="required">用户名/邮箱/手机</label>
-                <input type="text" id="login631790736b834aa61cb9c5b6cbdec8ec0_login_name" name="login_name" value=""
+                <input type="text" id="login1ac7378e8047f4b4f3cdc917558d1b0b0_login_name" name="login_name" value=""
                        placeholder="请输入用户名，邮箱或手机" class="form-control " style=""/>
             </div>
             <script type="text/javascript">
                 (function ($) {
-                    $(document).bind('on_form_login631790736b834aa61cb9c5b6cbdec8ec0_submit', function (e, m) {
-                        m.login_name = $('#login631790736b834aa61cb9c5b6cbdec8ec0_login_name').val();
+                    $(document).bind('on_form_login1ac7378e8047f4b4f3cdc917558d1b0b0_submit', function (e, m) {
+                        m.login_name = $('#login1ac7378e8047f4b4f3cdc917558d1b0b0_login_name').val();
                     });
 
                 })(jQuery);
             </script>
             <div class="xh-form-group">
                 <label class="required">密码</label>
-                <input type="password" id="login631790736b834aa61cb9c5b6cbdec8ec0_login_password" name="login_password"
+                <input type="password" id="login1ac7378e8047f4b4f3cdc917558d1b0b0_login_password" name="login_password"
                        value="" placeholder="" class="form-control " style=""/>
             </div>
             <script type="text/javascript">
                 (function ($) {
-                    $(document).bind('on_form_login631790736b834aa61cb9c5b6cbdec8ec0_submit', function (e, m) {
-                        m.login_password = $('#login631790736b834aa61cb9c5b6cbdec8ec0_login_password').val();
+                    $(document).bind('on_form_login1ac7378e8047f4b4f3cdc917558d1b0b0_submit', function (e, m) {
+                        m.login_password = $('#login1ac7378e8047f4b4f3cdc917558d1b0b0_login_password').val();
                     });
 
                 })(jQuery);
@@ -820,12 +1106,12 @@
                 window.xh_social_view.login = function () {
                     window.xh_social_view.reset();
                     var data = {};
-                    $(document).trigger('on_form_login631790736b834aa61cb9c5b6cbdec8ec0_submit', data);
+                    $(document).trigger('on_form_login1ac7378e8047f4b4f3cdc917558d1b0b0_submit', data);
                     $('#btn-login').attr('disabled', 'disabled').text('加载中...');
                     this.loading = true;
 
                     jQuery.ajax({
-                        url: 'https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=xh_social_add_ons_login&tab=login&xh_social_add_ons_login=5fe80d3e47&notice_str=5513150235&hash=c0fb46d1657598fa3cc15e8eb290d4a4',
+                        url: 'https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=xh_social_add_ons_login&tab=login&xh_social_add_ons_login=6cb09c5199&notice_str=5160563583&hash=ecbef93b776204974f0defc73a1cf904',
                         type: 'post',
                         timeout: 60 * 1000,
                         async: true,
@@ -837,7 +1123,7 @@
                         },
                         success: function (m) {
                             if (m.errcode == 405 || m.errcode == 0) {
-                                window.xh_social_view.success('登录成功！', '.commonlogin631790736b834aa61cb9c5b6cbdec8ec0');
+                                window.xh_social_view.success('登录成功！', '.commonlogin1ac7378e8047f4b4f3cdc917558d1b0b0');
 
                                 if (window.top && window.top != window.self) {
                                     var $wp_dialog = jQuery('#wp-auth-check-wrap', window.top.document);
@@ -847,14 +1133,14 @@
                                     }
                                 }
 
-                                location.href = 'https://www.zhutibaba.com/demo/iux/';
+                                location.href = 'https://www.zhutibaba.com/demo/iux/page/2';
                                 return;
                             }
 
-                            window.xh_social_view.error(m.errmsg, '.commonlogin631790736b834aa61cb9c5b6cbdec8ec0');
+                            window.xh_social_view.error(m.errmsg, '.commonlogin1ac7378e8047f4b4f3cdc917558d1b0b0');
                         },
                         error: function (e) {
-                            window.xh_social_view.error('系统内部错误！', '.commonlogin631790736b834aa61cb9c5b6cbdec8ec0');
+                            window.xh_social_view.error('系统内部错误！', '.commonlogin1ac7378e8047f4b4f3cdc917558d1b0b0');
                             console.error(e.responseText);
                         }
                     });
@@ -993,8 +1279,7 @@
 </body>
 </html>
 
-<!-- Dynamic page generated in 1.201 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2019-04-14 21:58:51 -->
+<!-- Dynamic page generated in 0.634 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2019-04-21 16:41:03 -->
 
 <!-- Compression = gzip -->
-<!-- super cache -->
