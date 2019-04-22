@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)https://www.zhutibaba.com/demo/iux/login?redirect_to=https%3A%2F%2Fwww.zhutibaba.com%2Fdemo%2Fiux%2F -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>登录</title>
+		
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link media="all" type="text/css" rel="stylesheet" href="./login_files/social.css">	
+		<script src="./login_files/jquery.js.下载"></script>
+		<style type="text/css">body{background:#f5f5f5;}</style>
+			<style type="text/css" abt="234"></style><script>//remove 17173 video ad
+doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+//remove baidu search ad
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+            all = document.body.querySelectorAll('.result.c-container[id="1"]');
+            //if(all.length == 1) return;
+            for(var i = 0; i < all.length; i++){
+                if(all[i].innerHTML && all[i].innerHTML.indexOf('广告')>-1){
+                    all[i].style.display= "none";all[i].style.visibility='hidden';
+                }
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',aa)
+    };
+}
+//remove sohu video ad
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//remove 56.com video ad
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//fore iqiyi enable html5 player function
+if (document.URL.indexOf("iqiyi.com") >= 0){
+    if (document.cookie.indexOf("player_forcedType=h5_VOD")==-1){
+        document.cookie='player_forcedType=h5_VOD'
+        if(localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime)<60000){
+            console.log('no reload')
+        }else{
+            location.reload()
+            localStorage.reloadTime = Date.now();
+        }
+    }
+}
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+	<body>	
+	<div class="xh-reglogo"><a href="https://www.zhutibaba.com/demo/iux/"><img style="max-width: 400px;" src="./login_files/iux-logo.png"></a></div>
+	 <script type="text/javascript">
+window.__wsocial_enable_entrl_submit=true;
+</script>
+<div class="xh-regbox">
+	<div class="xh-title">登录</div>
+<form class="xh-form">
+	<div class="commonlogin00dee0428ac9477f1e5e6da2323a8ad80 fields-error"></div>
+                <div class="xh-form-group">
+            <label class="required">用户名/邮箱/手机</label>
+            <input type="text" id="login00dee0428ac9477f1e5e6da2323a8ad80_login_name" name="login_name" value="" placeholder="请输入用户名，邮箱或手机" class="form-control " style="">
+                    </div>
+              <script type="text/javascript">
+      	(function($){
+			$(document).bind('on_form_login00dee0428ac9477f1e5e6da2323a8ad80_submit',function(e,m){
+				m.login_name=$('#login00dee0428ac9477f1e5e6da2323a8ad80_login_name').val();
+			});
+
+		})(jQuery);
+		</script>
+              <div class="xh-form-group">
+            <label class="required">密码</label>
+            <input type="password" id="login00dee0428ac9477f1e5e6da2323a8ad80_login_password" name="login_password" value="" placeholder="" class="form-control " style="">
+                    </div>
+              <script type="text/javascript">
+      	(function($){
+			$(document).bind('on_form_login00dee0428ac9477f1e5e6da2323a8ad80_submit',function(e,m){
+				m.login_password=$('#login00dee0428ac9477f1e5e6da2323a8ad80_login_password').val();
+			});
+
+		})(jQuery);
+		</script>
+              <div class="xh-form-group mt10">
+            <button type="button" id="btn-login" onclick="window.xh_social_view.login();" class="xh-btn xh-btn-primary xh-btn-block xh-btn-lg">登录</button>
+        </div>
+    	</form>
+<script type="text/javascript">
+	(function($){
+		if(!window.xh_social_view){
+			window.xh_social_view={};
+		}
+
+		window.xh_social_view.reset=function(){
+			$('.xh-alert').empty().css('display','none');
+		};
+
+		window.xh_social_view.error=function(msg,parent){
+			var s = parent?(parent+'.fields-error'):'.fields-error';
+			$(s).html('<div class="xh-alert xh-alert-danger" role="alert">'+msg+'</div>').css('display','block');
+		};
+
+		window.xh_social_view.warning=function(msg,parent){
+			var s = parent?(parent+'.fields-error'):'.fields-error';
+			$(s).html('<div class="xh-alert xh-alert-warning" role="alert">'+msg+'</div>').css('display','block');
+		};
+
+		window.xh_social_view.success=function(msg,parent){
+			var s = parent?(parent+'.fields-error'):'.fields-error';
+			$(s).html('<div class="xh-alert xh-alert-success" role="alert">'+msg+'</div>').css('display','block');
+		};
+	})(jQuery);
+</script><script type="text/javascript">
+	(function($){
+	   $(document).keypress(function(e) {
+		   if(window.__wsocial_enable_entrl_submit){
+    			if (e.which == 13){
+    			　　window.xh_social_view.login();
+    			}
+		   }
+		});
+		
+	   window.xh_social_view.login=function(){
+		   window.xh_social_view.reset();
+			var data={};
+			       $(document).trigger('on_form_login00dee0428ac9477f1e5e6da2323a8ad80_submit',data);
+       			$('#btn-login').attr('disabled','disabled').text('加载中...');
+			this.loading=true;
+
+			jQuery.ajax({
+	            url: 'https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=xh_social_add_ons_login&tab=login&xh_social_add_ons_login=3fb568aee9&notice_str=7559552501&hash=30d1a7660792b08224c405127d577120',
+	            type: 'post',
+	            timeout: 60 * 1000,
+	            async: true,
+	            cache: false,
+	            data: data,
+	            dataType: 'json',
+	            complete: function() {
+	            	$('#btn-login').removeAttr('disabled').text('登录');
+	            },
+	            success: function(m) {
+	            	if(m.errcode==405||m.errcode==0){
+	            		window.xh_social_view.success('登录成功！','.commonlogin00dee0428ac9477f1e5e6da2323a8ad80');   				           
+
+	            		if (window.top&&window.top != window.self) {
+		            		var $wp_dialog = jQuery('#wp-auth-check-wrap',window.top.document);
+		            		if($wp_dialog.length>0){$wp_dialog.hide();return;}
+	            	    }
+	            	    
+	            		location.href='https://www.zhutibaba.com/demo/iux/';
+						return;
+					}
+	            	
+	            	window.xh_social_view.error(m.errmsg,'.commonlogin00dee0428ac9477f1e5e6da2323a8ad80');
+	            },
+	            error:function(e){
+	            	window.xh_social_view.error('系统内部错误！','.commonlogin00dee0428ac9477f1e5e6da2323a8ad80');
+	            	console.error(e.responseText);
+	            }
+	         });
+		};
+	})(jQuery);
+</script></div>
+
+
+	  <div class="xh-user-register"><a href="https://www.zhutibaba.com/demo/iux/">首页</a>|<a href="https://www.zhutibaba.com/demo/iux/register">注册</a>|<a href="https://www.zhutibaba.com/demo/iux/findpassword">忘记密码？</a></div>
+	
+
+<!-- Dynamic page generated in 0.931 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2019-04-22 17:32:50 -->
+
+<!-- Compression = gzip --></body></html>

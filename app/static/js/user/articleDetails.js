@@ -48,7 +48,7 @@ var getArticleinfo = function (id) {
                 $("#level").html("难度: " + str.data[0].level);
                 $("#duration").html("时长: " + str.data[0].duration);
                 $("#readcount").html(str.data[0].readcount);
-                $("#commentcount").html("发布: " + str.data[0].commentcount);
+                $("#commentcount").html(str.data[0].commentcount);
                 $("#author").html("<center>作者: " + str.data[0].author + "<p>发布时间: " + str.data[0].createtime+"</p></center>");
                 $("#studycount").html(str.data[0].studycount);
 

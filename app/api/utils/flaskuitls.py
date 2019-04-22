@@ -20,7 +20,7 @@ def is_logined():
     return False
 
 
-def _set_user_session(user):
+def set_user_session(user):
     """
     设置user的session，内容为user的数据库信息
     :param user: user数据库信息
@@ -47,6 +47,20 @@ def params_json_required(func):
             abort(500)
 
     return wrapper
+
+
+def upload_files(file, file_name):
+    """
+    上传图片公共方法
+    :param file: 上传的file文件
+    :return: True:成功;False失败
+    """
+    try:
+        upload_path = os.path.join(config.upload_config.get("UPLOAD_FOLDER"), file_name)  # 注意：没有的文件夹一定要先创建，不然会提示没有该路径
+        file.save(upload_path)
+        return True
+    except:
+        return False
 
 
 def user_permission_required(func):
