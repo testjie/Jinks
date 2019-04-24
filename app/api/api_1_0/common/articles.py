@@ -28,15 +28,6 @@ def go_article_details():
     return render_template("articleDetails.html", aid=request.values.get("id"))
 
 
-@bp.route("/goArticleList", methods=["GET"])
-def go_article_list():
-    """
-    跳转到文章列表页面
-    :return:
-    """
-    return render_template("articleList.html", alid=request.values.get("p"))
-
-
 @bp.route("/articleDetails", methods=["POST"])
 @params_json_required
 def article_details():
@@ -61,7 +52,6 @@ def article_details():
 @bp.route("/getArticleList", methods=["GET"])
 def get_article_list():
     p = request.values.get("p")
-
 
     # 设置首页
     show_shouye_status = 0  # 显示首页状态

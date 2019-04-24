@@ -8,7 +8,104 @@
             getAritcleList();
         });
     })
+
+    // 页面到底部时，就触发此事件
+    $(window).scroll(function () {
+        if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+            getAritcleList();
+            // setTimeOut(addArticle(), d)
+        }
+    });
+
 }(window.jQuery);
+
+var showLoading = function () {
+    $('#scroller-status').show();
+    $('#loading').show();
+};
+
+var showFinshed = function () {
+    $('#scroller-status').show();
+    $('#finshed').show();
+};
+
+var hiddenLoading = function () {
+    $('#scroller-status').hide();
+    $('#loading').hide();
+};
+
+var hiddenFinshed = function () {
+    $('#scroller-status').hide();
+    $('#finshed').hide();
+};
+
+var loadDoneLoading = function () {
+    $('#scroller-status').show();
+    $('#loadDone').show();
+};
+
+var loadDoneFinshed = function () {
+    $('#scroller-status').hide();
+    $('#loadDone').hide();
+};
+
+// 滑动添加事件
+var addArticle = function (id) {
+    for(var a=1; a<10; a++){
+      var article = "<div id=\"post-582\" class=\"clear post-582 post type-post status-publish format-standard has-post-thumbnail hentry category-tech tag-25 tag-26 tag-27\">\t\n" +
+          "\n" +
+          "\t\n" +
+          "\t\t\t\t\t<a target=\"_blank\" class=\"thumbnail-link\" href=\"https://www.zhutibaba.com/demo/iux/582.html\">\n" +
+          "\t\t\t\t<div class=\"thumbnail-wrap\">\n" +
+          "\t\t\t\t\t\t<img width=\"300\" height=\"193\" src=\"https://www.zhutibaba.com/demo/iux/wp-content/uploads/sites/13/2018/07/iphone9-300x193.jpg\" class=\"attachment-iux_list_thumb size-iux_list_thumb wp-post-image\" alt=\"\">\t\t\t\t</div><!-- .thumbnail-wrap -->\n" +
+          "\t\t\t</a>\n" +
+          "\t\t\n" +
+          "\t\n" +
+          "\t<header class=\"entry-header\">\n" +
+          "\t\n" +
+          "\t\t<span class=\"entry-category\">\n" +
+          "\t\t\t<a target=\"_blank\" href=\"https://www.zhutibaba.com/demo/iux/tech \">科技</a> \t\n" +
+          "\t\t</span><!-- .entry-category -->\n" +
+          "\n" +
+          "\t\n" +
+          "\t<h2 class=\"entry-title\"><a target=\"_blank\" href=\"https://www.zhutibaba.com/demo/iux/582.html\">苹果新品iPhone 9即将发布 颜值和配置有惊喜</a></h2>\n" +
+          "\t</header>\n" +
+          "\t\n" +
+          "\t<div class=\"entry-overview \t\">\n" +
+          "\n" +
+          "\t\t\n" +
+          "\t\t<div class=\"entry-meta\">\n" +
+          "\n" +
+          "\t\t\n" +
+          "\t\t\t<span class=\"entry-date\">\n" +
+          "\t\t\t\t2018-11-13\t\t\t</span><!-- .entry-date -->\n" +
+          "\n" +
+          "\t\t\n" +
+          "\t\t\t\t\t\t<span class=\"entry-like\">\n" +
+          "\t\t\t\t\t<span class=\"sl-wrapper\"><a href=\"https://www.zhutibaba.com/demo/iux/wp-admin/admin-ajax.php?action=process_simple_like&amp;post_id=582&amp;nonce=da5da17f74&amp;is_comment=0&amp;disabled=true\" class=\"sl-button sl-button-582\" data-nonce=\"da5da17f74\" data-post-id=\"582\" data-iscomment=\"0\" title=\"点赞这篇文章\"><span class=\"sl-count\"><i class=\"fa fa-thumbs-o-up\"></i> 60<em>赞</em></span></a><span class=\"sl-loader\"></span></span>\t\t\t\t</span><!-- .entry-like -->\n" +
+          "\n" +
+          "\t\t\n" +
+          "\t\t\t\t\t<span class=\"entry-views\"><a href=\"https://www.zhutibaba.com/demo/iux/582.html\"><i class=\"flaticon-eye\"></i> 1,493<em>阅读</em></a></span>\n" +
+          "\t\t\n" +
+          "\t\t\t\t\t<span class=\"entry-comment\"><a href=\"https://www.zhutibaba.com/demo/iux/582.html#comments\" class=\"comments-link\"><i class=\"flaticon-chat-comment-oval-speech-bubble-with-text-lines\"></i> 3<em>评论</em></a></span>\n" +
+          "\t\t\n" +
+          "</div><!-- .entry-meta -->\n" +
+          "\t\t\n" +
+          "\t\t\t<div class=\"entry-summary\">\n" +
+          "\t\t\t\t<p>来自外媒的报道称，即将上市的iPhone 9在外观和颜值上都做出了巨大的变革，再加上更合理的价格，果粉圈迅速沸腾了。</p>\n" +
+          "\t\t\t</div><!-- .entry-summary -->\n" +
+          "\n" +
+          "\t\t\t\t\t\n" +
+          "\t</div><!-- .entry-overview -->\n" +
+          "\n" +
+          "</div>";
+      $("#artcleList").append(article);
+    }
+
+
+
+}
+
 
 
 // 获取文章分类
@@ -145,7 +242,17 @@ var getAritcles = function () {
 
 // 分页
 var getAritcleList = function () {
-    var p = 1;
+    showLoading();
+
+    // 如果是最后一页，就不加载了
+    if ($("#pageno").val() == "true"){
+        hiddenLoading();
+        loadDoneLoading();
+        return ;
+    }
+
+    // 如果不是最后一页，就继续加载
+    var p = $("#pageno").val();
     $.ajax({
         type: 'get',
         url: '/getArticleList?p=' + p,
@@ -153,7 +260,15 @@ var getAritcleList = function () {
             // 成功和未登录都进行跳转
             if (str.code == 200) {
                 addArticleList(str.data); // 加载文章列表
-                addArticlePaging(str)
+                $("#pageno").val(parseInt(p) + 1);    // 设置当前页数
+                hiddenLoading();
+
+                if(p == str.data.total){
+                    $("#pageno").val("true");
+                    loadDoneLoading();
+                }
+                // addArticlePaging(str)
+
             } else {
                 alert(str.msg);
             }
@@ -161,6 +276,7 @@ var getAritcleList = function () {
         },
         fail: function (err, status) {
             console.log(err);
+            hiddenLoading();
         }
     });
 };
