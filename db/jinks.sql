@@ -11,7 +11,7 @@
  Target Server Version : 50723
  File Encoding         : 65001
 
- Date: 22/04/2019 00:29:20
+ Date: 26/04/2019 17:43:11
 */
 
 SET NAMES utf8mb4;
@@ -21,7 +21,6 @@ DROP DATABASE IF EXISTS jinks;
 CREATE DATABASE jinks DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_general_ci;
 
 USE jinks;
-
 -- ----------------------------
 -- Table structure for tbl_admin
 -- ----------------------------
@@ -189,12 +188,14 @@ CREATE TABLE `tbl_carousels`  (
   `updatetime` datetime(0) NULL DEFAULT NULL COMMENT '修改时间',
   `bakup` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '备用',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tbl_carousels
 -- ----------------------------
-INSERT INTO `tbl_carousels` VALUES (1, '百度地图宣布汤唯为代言人', '/static/uploads/Tang-Wei-800x333.png', 'https://www.zhutibaba.com/demo/iux2/wp-content/uploads/sites/14/2018/12/WeChat_logo_wordmark-800x333.png', 2, 1, '2019-04-17 11:46:26', '2019-04-16 11:50:29', '2019-04-30 11:46:32', NULL, NULL);
+INSERT INTO `tbl_carousels` VALUES (1, '百度地图宣布汤唯为代言人1', '/static/uploads/Tang-Wei-800x333.png', 'http://localhost:5000/goArticleDetails?id=59', 2, 1, '2019-04-17 11:46:26', '2019-04-16 11:50:29', '2019-04-30 11:46:32', NULL, NULL);
+INSERT INTO `tbl_carousels` VALUES (2, '百度地图宣布汤唯为代言人222222', '/static/uploads/WeChat_logo_wordmark-800x333.png', 'http://localhost:5000/goArticleDetails?id=55', 2, 1, '2019-04-17 11:46:26', '2019-04-16 11:50:29', '2019-04-30 11:46:32', NULL, NULL);
+INSERT INTO `tbl_carousels` VALUES (3, '百度地图宣布汤唯为代言人3', '/static/uploads/Tang-Wei-800x333.png', 'http://localhost:5000/goArticleDetails?id=53', 2, 1, '2019-04-17 11:46:26', '2019-04-16 11:50:29', '2019-04-30 11:46:32', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tbl_categories
@@ -245,7 +246,7 @@ CREATE TABLE `tbl_user`  (
   `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '用户名',
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '密码',
   `nickname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '昵称',
-  `userimage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '用户头像相对路径',
+  `headimage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '用户头像相对路径',
   `sex` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '性别',
   `phone` int(11) NULL DEFAULT NULL COMMENT '电话',
   `resume` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '个人介绍',

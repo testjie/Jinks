@@ -81,6 +81,8 @@
           media='all'/>
     <link rel='stylesheet' id='iux-responsive-style-css' href='./static/css/responsive.css?ver=20181114' type='text/css'
           media='all'/>
+    {#    <link rel='stylesheet' id='iux-responsive-style-css' href='./static/css/jquery.bxslider.css?ver=20181114' type='text/css'#}
+    {#          media='all'/>#}
     <link rel='stylesheet' id='wsocial-css'
           href='https://www.zhutibaba.com/demo/iux/wp-content/plugins/wechat-social-login/assets/css/social.css?ver=1.2.6'
           type='text/css' media='all'/>
@@ -443,13 +445,54 @@
 
         <div id="primary" class="content-area clear">
 
-            <div id="featured-slider" class="slider-with-grid">
-                {# js动态添加 #}
-                <ul class="bxslider" id="carouselList">
-                </ul><!-- .bxslider -->
-                <div class="ribbon"><span>编辑推荐</span></div>
-            </div><!-- #featured-slider -->
+            <div id="featured-slider">
+                <div class="bx-wrapper" style="max-width: 100%;">
+                    <div class="bx-viewport" aria-live="polite"
+                         style="width: 100%; overflow: hidden; position: relative; height: auto;">
+                        <ul class="bxslider" style="width: auto; position: relative; display: block;" id="carouselList"></ul>
+{#                        放在这里动态加载#}
+                            <script type="text/javascript">
+                                (function ($) {
+                                    $.ajax({
+                                        type: 'get',
+                                        url: '/getCarousel',
+                                        success: function (str) { //返回json结果
+                                            // 成功和未登录都进行跳转
+                                            if (str.code == 200) {
+                                                for (var i = 0; i < str.data.length; i++) {
+                                                        var carousel = "<li class=\"featured-slide hentry\" style=\"float: none; list-style: none; position: absolute; width: 800px; z-index: 0; \"aria-hidden=\"true\">\n" +
+                                                            "\t<a class=\"thumbnail-link\" href=\""+str.data[i].content+"\" target=\"_self\">\n" +
+                                                            "\t\t<div class=\"thumbnail-wrap\">\n" +
+                                                            "\t\t\t<img width=\"800\" height=\"333\" src=\""+str.data[i].img_url+"\"\n" +
+                                                            "\t\t\t\t\t\t\t\t\t\t  class=\"attachment-iux_featured_large_thumb size-iux_featured_large_thumb wp-post-image\"\n" +
+                                                            "\t\t\t\t\t\t\t\t\t\t  alt=\"\"/>\n" +
+                                                            "\t\t</div>\n" +
+                                                            "\t</a>\n" +
+                                                            "\t<div class=\"entry-header clear\" style=\"display: block;\">\n" +
+                                                            "\t\t<h2 class=\"entry-title\">\n" +
+                                                            "\t\t\t<a target=\"_blank\" href=\""+str.data[i].content+"\">"+str.data[i].title+"</a>\n" +
+                                                            "\t\t</h2>\n" +
+                                                            "\t</div>\n" +
+                                                            "\t<div class=\"gradient\"></div>\n" +
+                                                            "</li>";
 
+                                                    $("#carouselList").append(carousel);
+                                                }
+                                            } else {
+                                                alert(str.msg);
+                                            }
+                                        },
+                                        fail: function (err, status) {
+                                            console.log(err);
+                                        }
+                                    });
+                                })(jQuery);
+                            </script>
+                    </div>
+
+                </div>
+                <div class="ribbon" style="display: block;"><span>编辑推荐</span></div>
+            </div>
 
             <div class="clear"></div>
 
@@ -498,7 +541,7 @@
                     {#文章列表#}
 
             </main><!-- .site-main -->
-            <input type="hidden" id="pageno" value="1" />
+            <input type="hidden" id="pageno" value="1"/>
             <input type="hidden" id="lastpage" value="false"/>
             <div class="scroller-status" id="scroller-status">
                 <div class="infinite-scroll-request loader-ellips" id="loading">
