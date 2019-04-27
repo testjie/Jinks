@@ -2,12 +2,13 @@
 __author__ = 'snake'
 
 import os, sys
-
+from datetime import timedelta
 
 # 开发环境
 DevelopConfig = {
     "DEBUG": True,
     "HOST": "0.0.0.0",
+    "SEND_FILE_MAX_AGE_DEFAULT":timedelta(seconds=0),
     "JSON_AS_ASCII": False,  # json 中文支持
     "BABEL_DEFAULT_LOCALE": "zh",
     "SECRET_KEY": os.urandom(24)  # SESSION配置
@@ -17,6 +18,7 @@ DevelopConfig = {
 ProductionConfig = {
     "DEBUG": False,
     "HOST": "0.0.0.0",
+    "SEND_FILE_MAX_AGE_DEFAULT": timedelta(seconds=0),
     "JSON_AS_ASCII": False,  # json 中文支持
     "BABEL_DEFAULT_LOCALE": "zh",
     "SECRET_KEY": os.urandom(24)  # SESSION配置

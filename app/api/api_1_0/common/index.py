@@ -23,7 +23,16 @@ def index():
     访问首页接口
     :return: 跳转到index
     """
-    return render_template("index.html")
+    now = get_current_time()
+    carousel_sql = "select * from tbl_carousels where status = 1 and starttime < '{}' and endtime > '{}'".format(now, now)
+    categorie_sql = "select * from tbl_categories";
+
+    context = {
+        "carousel":query(carousel_sql),
+        "categorie":query(categorie_sql)
+    }
+
+    return render_template("index.html", **context)
 
 
 @bp.route("/getCarousel", methods=["GET"])

@@ -536,14 +536,14 @@
 
                 <div id="logo">
                     <span class="helper"></span>
-                    <a href="https://www.zhutibaba.com/demo/iux/" class="custom-logo-link" rel="home"
+                    <a href="/" class="custom-logo-link" rel="home"
                        itemprop="url"><img width="240" height="110" src="./static/imgs/logo.png" class="custom-logo"
-                                           alt="爱前端" itemprop="logo"></a></div><!-- #logo -->
+                                           alt="浪晋测试小课堂" itemprop="logo"></a></div><!-- #logo -->
 
 
                 <div class="site-desc">
-                    <div class="line1 has-line2">专业WP主题</div>
-                    <div class="line2">新一代网站模版</div>
+                    <div class="line1 has-line2">让每个人类</div>
+                    <div class="line2">平等地提升自己！</div>
                 </div><!-- .site-desc -->
 
             </div><!-- .site-branding -->
@@ -956,6 +956,8 @@
                         </li>
                     </ul>
                 </div>
+
+
                 <div id="media_gallery-2" class="widget widget_media_gallery"><h2 class="widget-title">学员风采</h2>
                     <ul class="gallery-slider">
                         <li><img
@@ -969,6 +971,8 @@
                                 alt=""/></li>
                     </ul>
                 </div>
+
+
                 <div id="tag_cloud-2" class="widget widget_tag_cloud"><h2 class="widget-title">热门标签</h2>
                     <div class="tagcloud"><a href="https://www.zhutibaba.com/demo/iux/tag/c%e7%bd%97"
                                              class="tag-cloud-link tag-link-11 tag-link-position-1"
@@ -980,6 +984,7 @@
                            aria-label="公积金 (1个项目)">公积金<span class="tag-link-count"> (1)</span></a>
                     </div>
                 </div><!-- .sidebar__inner -->
+            </div>
         </aside><!-- #secondary -->
 
 
@@ -1343,7 +1348,6 @@
 
 
 <script src="./static/js/common/sticky-sidebar.min.js"></script>
-
 <script>
 
     (function ($) { //create closure so we can safely use $ as alias for jQuery
@@ -1353,10 +1357,12 @@
             "use strict";
             $(window).load(function () {
                 var stickySidebar = new StickySidebar('#secondary', {
-                    topSpacing: 20,
-                    bottomSpacing: 20,
-                    containerSelector: '.site_container',
-                    innerWrapperSelector: '.sidebar__inner'
+                    topSpacing: 80,
+                    bottomSpacing: 20
+
+                    {#,#}
+                    {#containerSelector: '.site_container',#}
+                    {#innerWrapperSelector: '.sidebar__inner'#}
                 });
             });
 
